@@ -1,0 +1,3403 @@
+{
+  "screens": {
+    "addressStackTitle": {
+      "BackupPrivateKey": "Backup Private Key",
+      "CreateMnemonicBackup": "Backup da seed phrase",
+      "SafeAddressList": "Endereço Seguro",
+      "ImportSafeAddress2024": "Adicionar Endereço Safe",
+      "RestoreFromCloud": "Restaurar a partir de {{type}}",
+      "ImportMnemonic": "Importar Seed Phrase",
+      "VerifySeedPhrase": "Verificar frase semente",
+      "ImportPrivateKey": "Importar Private Key",
+      "SetPassword2024": "2. Definir palavra-passe",
+      "CreateSelectMethod": "1. Selecionar Método de Criação",
+      "CreateChooseBackup": "3. Escolha um método de backup",
+      "ImportMethods": "Selecionar Método de Importação",
+      "AddMnemonic": "Adicionar a partir da Frase Semente Atual",
+      "ImportSuccess": "Adicionado com sucesso",
+      "BackupSeedPhrase": "Frase de Recuperação de Backup",
+      "ImportHardwareAddress": "Ligar Carteiras de Hardware",
+      "CreateNewAddress": "1. Confirme a Sua Wallet",
+      "WatchAddressList": "Carte de observação",
+      "AddressDetail": "Detalhe da carteira",
+      "ImportWatchAddress2024": "Adicionar Carteira Somente para Consulta",
+      "ImportMoreAddress": "Importar mais Carteiras",
+      "CreateSelectOnCurrentSeed": "2. Adicionar Carteira",
+      "ConfrimAddress": "Confirme a Sua Carteira",
+      "ImportNewAddress": "Adicionar uma Carteira",
+      "SetPassword": "Definir palavra-passe",
+      "CreateWallet": "Criar Wallet",
+      "ChooseBackup": "Escolha um método de backup"
+    }
+  },
+  "native": {
+    "authentication": {
+      "auth_prompt_title": "Autenticação necessária",
+      "auth_prompt_cancel": "Cancelar",
+      "auth_prompt_desc": "Por favor, autentique-se para usar o Rabby"
+    },
+    "biometrics": {
+      "enable_fingerprint": "Desbloquear com impressão digital?",
+      "enable_faceid": "Desbloquear com Face ID?",
+      "enable_device_passcode_android": "Desbloquear com o PIN do dispositivo?",
+      "enable_biometrics": "Desbloquear com biometria?",
+      "enable_touchid": "Desbloquear com Touch ID?",
+      "enable_device_passcode_ios": "Desbloquear com o código de acesso do dispositivo?"
+    }
+  },
+  "component": {
+    "accountSwitcher": {
+      "all": "Todos",
+      "screenHeaderSubTitle_other": "{{count}} carteiras",
+      "screenHeaderSubTitle_one": "1 carteira"
+    },
+    "NFTNumberInput": {
+      "erc1155Tips": "O seu saldo é {{amount}}",
+      "erc721Tips": "Só pode ser enviado um NFT de ERC 721 de cada vez."
+    },
+    "NFTDetailModal": {
+      "FieldLabel": {
+        "Chain": "Chain",
+        "Collection": "Coleção",
+        "PurschaseDate": "Data de Compra",
+        "LastPrice": "Último Preço"
+      }
+    },
+    "AuthenticationModal": {
+      "passwordPlaceholder": "Insira a Password para Confirmar"
+    },
+    "AccountSelectDrawer": {
+      "btn": {
+        "cancel": "Cancelar",
+        "proceed": "Prosseguir"
+      }
+    },
+    "signPermissionCheckModal": {
+      "reconnect": "Reconnectar Dapp",
+      "title": "Você só permite que este Dapp assine em testnets"
+    },
+    "TokenSelector": {
+      "hot": "Quente",
+      "recent": "Recente",
+      "searchPlaceHolder1": "Procurar por Nome / Endereço",
+      "common": "Comum",
+      "searchPlaceHolder2": "Procurar Token",
+      "contextMenu": {
+        "viewDetail": "Ver Detalhes"
+      },
+      "bridgeTo": {
+        "low": "Baixa liquidez",
+        "high": "Alta liquidez"
+      },
+      "favoriteFilter": {
+        "all": "Todos"
+      },
+      "riskDetected": {
+        "simpleExplanation": "Não suportado",
+        "title": "Risco Detectado",
+        "proceedBtn": "Prosseguir"
+      },
+      "placeholders": {
+        "noTokens": "Sem tokens",
+        "noLpTokens": "Nenhum Token de Fornecedor de Liquidez (LP)"
+      }
+    },
+    "PillsSwitch": {
+      "NetSwitchTabs": {
+        "testnet": "Rede personalizada",
+        "mainnet": "Rede Integrada"
+      }
+    },
+    "ModalPreviewNFTItem": {
+      "FieldLabel": {
+        "Chain": "Cadeia",
+        "Collection": "Coleção",
+        "PurschaseDate": "Data de Compra",
+        "LastPrice": "Último Preço"
+      }
+    },
+    "ReserveGasPopup": {
+      "doNotReserve": "Não reserve Gas",
+      "fast": "Normal",
+      "instant": "Rápido",
+      "normal": "Lento",
+      "title": "Reservar Gas"
+    },
+    "AuthenticationModals": {
+      "biometrics": {
+        "enable": "Ativar {{ bioType }}",
+        "disable": "Desativar {{ bioType }}",
+        "disableTip": "Desativar {{ bioType }} para desbloquear Rabby",
+        "enableTip": "Ative {{ bioType }} para desbloquear Rabby"
+      },
+      "processBiometrics": {
+        "title": "Autenticação Biométrica",
+        "cancel": "Cancelar",
+        "notEnabled": "A biometria não está ativada",
+        "authFailed": "A autenticação biométrica falhou",
+        "desc": "Por favor, use a impressão digital/FaceID para desbloquear"
+      }
+    },
+    "gasAccount": {
+      "history": {
+        "noHistory": "Sem histórico"
+      },
+      "deposit": "Depósito",
+      "withdraw": "Levantar",
+      "loginConfirmModal": {
+        "desc": "Uma vez logado, pode apenas depositar neste endereço.",
+        "title": "Selecionar Carteira para Iniciar Sessão"
+      },
+      "loginInTip": {
+        "login": "Iniciar sessão GasAccount",
+        "desc": "Pagar Taxas de Gas em Todas as Chains",
+        "title": "Depositar USDC / USDT",
+        "loginAndClaim": "Inicie sessão e reivindique {{amount}}",
+        "loginTips3": "quando você estiver sem Gas",
+        "loginTips1": "Pague taxas de gás para",
+        "loginTips2": "qualquer endereço em qualquer cadeia",
+        "depositDesc": "em Todas as Chains quando você estiver sem gas",
+        "learnAbout": "Saiba mais sobre GasAccount",
+        "depositTitle": "Depositar USDC/USDT Pagar Taxas de Gas"
+      },
+      "gasExceed": "O saldo do GasAccount não pode exceder $1000",
+      "withdrawConfirmModal": {
+        "title": "Transferido para a sua Carteira DeBank L2",
+        "button": "Ver no APP DeBank"
+      },
+      "depositPopup": {
+        "title": "Depósito",
+        "amount": "Montante",
+        "token": "Token",
+        "selectToken": "Selecionar Token para Depósito",
+        "desc": "Faça um depósito na conta DeBank L2 da Rabby sem taxas extras — retire a qualquer momento."
+      },
+      "withdrawPopup": {
+        "amount": "Quantia",
+        "to": "Para",
+        "title": "Retirar",
+        "desc": "Pode retirar o saldo da sua GasAccount para a sua DeBank L2 Wallet. Inicie sessão na sua DeBank L2 Wallet para transferir os fundos para uma blockchain compatível, conforme necessário."
+      },
+      "depositWithPay": "Comprar com",
+      "depositWithToken": "Depósito com Token",
+      "depositWithTokenDesc": "Sem taxas adicionais, levantamentos instantâneos",
+      "depositWithPayDesc": "30% de fee, sem levantamentos",
+      "giftInfo": {
+        "gotIt": "Eu consegui",
+        "noWithdrawableBalanceTitle": "{{amount}} Não retirável",
+        "giftTips": "Recompensa de Gas para utilizadores ativos",
+        "noWithdrawableBalanceDescription": "{{amount}} do seu saldo de gas não pode ser retirado:\n1. Apple Pay / Google Pay\n2. Gas Rewards"
+      },
+      "about": {
+        "title4": "O GasAccount é seguro?",
+        "title3": "O GasAccount tem taxas adicionais?",
+        "title2": "Como usar a Gas Account",
+        "title1": "O que é GasAccount",
+        "desc3": "A Rabby Wallet não cobra taxas adicionais. Você paga apenas o gás pela sua transação e uma pequena quantidade de gás para enviar esse gás da GasAccount para o seu endereço.",
+        "desc1": "GasAccount é uma nova forma de pagar taxas de gas. Em vez de usar tokens nativos em cada cadeia, você pode usar uma conta para cobrir o gas de todos os seus endereços em todas as cadeias. Simples, opcional e nunca sem gas.",
+        "desc2": "Adicione fundos à sua GasAccount e use-a para qualquer transação. Ao assinar, escolha pagar o gás com tokens nativos ou GasAccount, mude a qualquer momento.",
+        "desc4": "GasAccount não requer aprovações ou permissões de contrato. Você deposita no endereço GasAccount do Rabby, e o Rabby envia gás para o seu endereço quando necessário. Totalmente seguro por design."
+      }
+    },
+    "Contact": {
+      "EditModal": {
+        "title": "Editar nota de endereço"
+      },
+      "EditWhitelist": {
+        "backModalTitle": "Rejeitar Alterações",
+        "backModalContent": "As alterações que fez não serão guardadas"
+      },
+      "ListModal": {
+        "authModal": {
+          "title": "Guardar na lista branca"
+        },
+        "whitelistDisabled": "A lista de permissões está desativada. Pode enviar ativos para qualquer endereço",
+        "whitelistEnabled": "A lista de permissões está ativada. Só pode enviar ativos para um endereço da lista de permissões ou pode desativá-la em \"Configurações\".",
+        "title": "Selecionar Endereço"
+      }
+    },
+    "NoLongerSupports": {
+      "title": "Os endereços de carteiras móveis não são mais suportados",
+      "desc": "Os seguintes endereços serão removidos. Ainda pode encontrá-los na aplicação original da carteira. Importe a frase-semente ou chave privada para usá-los aqui.",
+      "button": "Entendi"
+    },
+    "externalSwapBrideDappPopup": {
+      "chainNotSupported": "Não suportado nesta cadeia",
+      "noDapp": "Sem Dapps disponíveis",
+      "viewDappOptions": "Ver Opções de Dapp",
+      "noQuotesForChain": "Ainda não há cotações disponíveis para esta cadeia",
+      "selectADapp": "Selecione um Dapp",
+      "help": "Por favor, entre em contacto com a equipa oficial desta cadeia para suporte.",
+      "swapOnDapp": "Troca no Dapp",
+      "bridgeOnDapp": "Ponte na Dapp",
+      "thirdPartyDappToProceed": "Por favor, use uma Dapp de terceiros para prosseguir.",
+      "noDapps": "Não há Dapp disponível nesta cadeia"
+    },
+    "selectCexModal": {
+      "title": "Selecionar Fonte de Câmbio"
+    },
+    "AccountSelector": {
+      "title": "Selecionar Carteira"
+    },
+    "globalWarning": {
+      "networkError": {
+        "title": "Erro de conexão do serviço:",
+        "globalDesc": "A informação pode estar desatualizada, mas os seus fundos permanecem seguros."
+      },
+      "serviceError": {
+        "balanceDesc": "falha ao carregar o saldo.",
+        "quotesDesc": "falha ao carregar a citação.",
+        "title": "Problema de rede:",
+        "globalDesc": "A informação pode estar desatualizada, mas os seus fundos permanecem seguros."
+      },
+      "offlineText": "Erro de Rede",
+      "buttonText": "Atualizar",
+      "serviceErrorText": "Erro de Serviço"
+    },
+    "screenshotModal": {
+      "feedbackInput": {
+        "placeholder": "Descreva o problema"
+      },
+      "submitButtonText": "Enviar",
+      "switchArea": {
+        "skipText": "Ignorar este popup por 1 dia"
+      },
+      "title": "Captura de Ecrã para Reportar Erro"
+    },
+    "feedbackModal": {
+      "issueDescriptionLabel": "Descrição:",
+      "title": "Resposta do Suporte Rabby",
+      "repliedTitle": "O suporte da Rabby respondeu:",
+      "issueDescription": "Aqui está o problema que você relatou:",
+      "pendingTitle": "O suporte do Rabby ainda não respondeu."
+    },
+    "submitFeedbackSuccessModal": {
+      "desc": "Submetido com Sucesso!"
+    },
+    "GlobalTipsPopup": {
+      "btn": "Eu entendi"
+    },
+    "Prediction": {
+      "usdValue": "Valor em USD",
+      "amount": "Montante",
+      "price": "Preço",
+      "side": "Lado"
+    },
+    "accountSelectModalTx": {
+      "addTrustedAddress": {
+        "addBtn": "Adicionar agora",
+        "desc": "Adicionar endereço confiável à Whitelist"
+      },
+      "whitelistAccounts": "Lista Branca",
+      "recentAccounts": "Recente",
+      "importedAccounts": "Carteiras Importadas"
+    },
+    "portfolios": {
+      "manage": "Gerir"
+    },
+    "multiAddressModal": {
+      "title": "Carteiras"
+    },
+    "lpTokenModal": {
+      "desc": "Este é um Token de Fornecedor de Liquidez (LP) para {{protocolId}}"
+    }
+  },
+  "global": {
+    "Cancel": "Cancelar",
+    "cancelButton": "Cancelar",
+    "assets": "ativos",
+    "next": "Próximo",
+    "copied": "Copiado",
+    "appName": "Rabby Wallet",
+    "closeButton": "Fechar",
+    "ok": "OK",
+    "Price": "Preço",
+    "Nonce": "Nonce",
+    "Paste": "Colar",
+    "Balance": "Saldo",
+    "folded": "Dobrada",
+    "Confirm": "Confirmar",
+    "backButton": "Voltar",
+    "confirm": "Confirmar",
+    "nonce": "nonce",
+    "time": {
+      "mins": "{{t}} mins",
+      "hours": "{{t}} horas",
+      "hour": "{{t}} hora"
+    },
+    "Deleted": "deletado",
+    "unknownNFT": "NFT Desconhecido",
+    "addButton": "Adicionar",
+    "proceedButton": "Prosseguir",
+    "Done": "Concluído",
+    "cancel": "Cancelar",
+    "appDescription": "A carteira revolucionária para Ethereum e todas as cadeias EVM",
+    "refresh": "Atualizar",
+    "pin": "PIN",
+    "themeMode": {
+      "option_Light": "Claro",
+      "option_Dark": "Escuro",
+      "option_System": "Sistema"
+    },
+    "Unknown": "Desconhecido",
+    "unlimited": "ilimitado",
+    "Addresses": "Endereços",
+    "24h": "24h",
+    "Edit": "Editar",
+    "Wallets": "Selecionar Carteira",
+    "permissionRequest": {
+      "common": {
+        "askMeLater": "pergunteMeMaisTarde"
+      },
+      "mediaLibrary": {
+        "title": "Permissão da Biblioteca de Media",
+        "message": "Este aplicativo precisa de acesso à sua biblioteca de mídia para detectar capturas de ecrã."
+      },
+      "camera": {
+        "title": "Permissão da Câmara",
+        "message": "Este aplicativo precisa de acesso à sua câmara para tirar fotos."
+      },
+      "bluetoothScan": {
+        "title": "Permissão de Escaneamento Bluetooth",
+        "message": "Este aplicativo precisa de acesso ao seu Bluetooth para escanear dispositivos."
+      },
+      "bluetoothConnect": {
+        "title": "Permissão de Conexão Bluetooth",
+        "message": "Este aplicativo precisa de acesso ao seu Bluetooth para se conectar a dispositivos."
+      },
+      "bluetoothAdmin": {
+        "title": "Permissão de Administração do Bluetooth",
+        "message": "Esta aplicação precisa de acesso ao seu Bluetooth para gerenciar dispositivos."
+      },
+      "location": {
+        "title": "Permissão de Localização",
+        "message": "Este app precisa de acesso à sua localização para oferecer funcionalidades baseadas na localização."
+      }
+    },
+    "gotIt": "Entendi",
+    "check": "Verifique",
+    "Dapp": "Dapp",
+    "Token": "Token",
+    "GotIt": "Entendi",
+    "Other": "Outro",
+    "Backup": "Cópia de segurança",
+    "copy": "Copiar",
+    "toast": {
+      "clipboard": {
+        "copiedPrivateKey": "Chave privada copiada. O clipboard será limpo em 1 minuto.",
+        "copiedSeedPhrase": "Frase-semente copiada. A área de transferência será limpa em 1 minuto.",
+        "pasted_and_cleared": "Colado e área de transferência limpa"
+      }
+    },
+    "autolock": {
+      "never": "Nunca"
+    }
+  },
+  "page": {
+    "getStart": {
+      "goToHome": "Ir para Home",
+      "createNewAddress": "Criar Nova Carteira",
+      "sync": "Digitalizar para Sincronizar a Carteira da Extensão Rabby",
+      "alreadyHaveAddress": "Eu já tenho uma wallet"
+    },
+    "transactions": {
+      "explain": {
+        "cancel": "Cancelou uma transação pendente",
+        "unknown": "Interação de Contrato"
+      },
+      "itemTitle": {
+        "Swap": "Trocado",
+        "Approve": "Aprovado",
+        "Default": "Interação",
+        "Contract": "Implementar Contrato",
+        "Send": "Enviado",
+        "Recieve": "Recebido",
+        "Cancel": "Cancelar Transação Pendente",
+        "Bridge": "Bridgeado",
+        "Buy": "Adquirido",
+        "Revoke": "Revogação de Aprovação de {{token}}",
+        "ReceivedGas": "Recebido Gas",
+        "DepositedGas": "Gás depositado",
+        "WithdrawnGas": "Gás Retirado",
+        "LendingSupply": "Fornecer",
+        "LendingWithdraw": "Retirar",
+        "LendingBorrow": "Emprestar",
+        "LendingRepay": "Reembolsar",
+        "LendingOnCollateral": "Ativar uso como colateral",
+        "LendingOffCollateral": "Desligar uso como colateral",
+        "LendingManageEMode": "Ativar o E-Mode",
+        "LendingManageEModeDisable": "Desligar o E-Mode",
+        "LendingDebtSwap": "Troca de Dívida",
+        "LendingRepayWithCollateral": "Reembolsar com Colateral"
+      },
+      "detail": {
+        "SpeedUp": "Acelerar",
+        "Pending": "Pendente",
+        "Cancel": "Cancelar",
+        "Succeeded": "Sucedido",
+        "Date": "Data",
+        "To": "Para",
+        "SendAgain": "Enviar novamente",
+        "ApproveToken": "Aprovar token",
+        "GasFee": "Gas Fee",
+        "Unknown": "Desconhecido",
+        "ViewOn": "Ver em",
+        "Failed": "Falhou",
+        "Unlimited": "Ilimitado",
+        "NoApproveNeed": "Não é necessário revogar: Nenhuma autorização restante.",
+        "SwapAgain": "Trocar Novamente",
+        "Revoke": "Revogar",
+        "From": "De",
+        "Chain": "Cadeia",
+        "RevokeFrom": "Revogar de",
+        "RevokeToken": "Revogar Token",
+        "name": "Nome",
+        "Status": "Status",
+        "InteractedContract": "Contrato interagido",
+        "InteractionResults": "Resultados de Interação",
+        "ApproveTo": "Aprovar para",
+        "BuyAgain": "Comprar Novamente",
+        "Name": "Nome",
+        "PurchaseFrom": "Comprado de",
+        "Collection": "Coleção",
+        "totalApprovedAmount": "Montante Aprovado Atual",
+        "WillReceive": "Receberá: ≈ {{token}}",
+        "AddToWhitelist": "Adicionar à Lista Branca",
+        "RecipientAddress": "Carteira de destinatário",
+        "Simulation Results": "Resultados da Simulação"
+      },
+      "empty": {
+        "title": "Sem transações",
+        "desc": "Sem transações encontradas em <1>supported chains</1>"
+      },
+      "txHistory": {
+        "tipInputData": "A transação inclui uma mensagem",
+        "parseInputDataError": "Falha na análise da mensagem",
+        "scamToolTip": "Esta transação é iniciada por burlões para enviar tokens e NFTs fraudulentos. Por favor, evite interagir com ela."
+      },
+      "modalViewMessage": {
+        "title": "Ver Mensagem"
+      },
+      "filterScam": {
+        "title": "Ocultar transações fraudulentas",
+        "btn": "Ocultar transações fraudulentas",
+        "loading": "O carregamento pode demorar um momento e são possíveis atrasos de dados"
+      },
+      "ViewHiddenItems": "Ver transações fraudulentas",
+      "title": "Transações",
+      "ShowHiddenItems": "Mostrar transações ocultas",
+      "Yesterday": "Ontem",
+      "ViewSmallItems": "Ver transações < $0,1",
+      "Today": "Hoje",
+      "NotShowAllTransactionsToast": "Transações ocultas escondidas",
+      "ShowAllTransactionsToast": "Transações ocultas mostradas",
+      "TransactionAlert": {
+        "clearPendingSuccess": "Transação pendente local removida",
+        "clearPendingText": "{{chainName}} Transação ({{nonces}}) está pendente há mais de 3 minutos. Você pode <5></5> <6>Limpar Pendentes Localmente</6> <7></7> e reenviar a transação.",
+        "skipNonceText": "Nonce #{{nonce}} ignorado na cadeia {{chainName}}. Isso pode causar transações pendentes à frente. <5></5> <6>Submeter uma tx</6> <7></7> na cadeia para resolver."
+      },
+      "ShowScamTransactions": "Mostrar transações fraudulentas",
+      "HideScamTransactions": "Ocultar transações fraudulentas",
+      "scam": "Golpe",
+      "scamTips": "Esta transação é iniciada por golpistas para enviar tokens e NFTs fraudulentos. Por favor, evite interagir com ela."
+    },
+    "importSeedPhrase": {
+      "enterYourSeedPhrase": "Insira a sua seed phrase"
+    },
+    "importSuccess": {
+      "success": "{{type}} com sucesso!",
+      "addressCount": "{{count}} Endereços",
+      "addressCount_other": "{{count}} Carteiras",
+      "addressCount_one": "{{count}} Carteira",
+      "importMore": "Importar mais Wallets",
+      "viewAddress": "Ver Carteira"
+    },
+    "receive": {
+      "title": "Receber {{token}} em {{chain}}",
+      "watchModeAlert": "Este é um endereço apenas para visualização. Tem a certeza de que quer usá-lo para receber ativos?",
+      "allEVMChain": "Todas as cadeias EVM",
+      "copyAddress": "Copiar Endereço",
+      "newTitle": "Receba ativos em"
+    },
+    "activities": {
+      "signedTx": {
+        "message": {
+          "cancelSuccess": "Cancelado",
+          "deleteSuccess": "Transação pendente local removida"
+        },
+        "status": {
+          "submitFailed": "Falha ao submeter",
+          "pendingBroadcasted": "Pendente: transmitido",
+          "pending": "Pendente",
+          "canceled": "Cancelado",
+          "pendingBroadcastFailed": "Pendente: Falha na transmissão",
+          "withdrawed": "Cancelamento rápido",
+          "pendingBroadcast": "Pendente: para ser transmitido",
+          "failed": "Falha"
+        },
+        "common": {
+          "unknownProtocol": "Protocolo desconhecido",
+          "pendingDetail": "Detalhe pendente",
+          "unlimited": "ilimitado"
+        },
+        "tips": {
+          "canNotCancel": "Não é possível acelerar ou cancelar: Não é a primeira txn pendente",
+          "pendingDetail": "Apenas uma transação será concluída, e é quase sempre aquela com o preço de gas mais alto"
+        },
+        "empty": {
+          "title": "Ainda não há transações assinadas",
+          "desc": "Todas as transações assinadas via Rabby serão listadas aqui.",
+          "titleLastThreeMonths": "Sem histórico de transações nos últimos 90 dias"
+        },
+        "explain": {
+          "send": "Enviar {{amount}} {{symbol}}",
+          "nftCollectionApproval": "Aprovação da Coleção NFT para {{protocol}}",
+          "singleNFTApproval": "Aprovação única de NFT para {{protocol}}",
+          "cancelSingleNFTApproval": "Cancelar aprovação de NFT único para {{protocol}}",
+          "cancelNFTCollectionApproval": "Cancelar Aprovação da Coleção NFT para {{protocol}}",
+          "cancel": "Cancelar {{token}} Aprovar para {{protocol}}",
+          "approve": "Aprovar {{count}} {{token}} para {{protocol}}",
+          "unknown": "Transação Desconhecida"
+        },
+        "CancelTxPopup": {
+          "title": "Cancelar transação",
+          "options": {
+            "onChainCancel": {
+              "title": "Cancelamento on-chain",
+              "desc": "Nova transação para cancelar, requer gas"
+            },
+            "quickCancel": {
+              "title": "Cancelamento Rápido",
+              "desc": "Cancelar antes de transmitir, sem taxa de gas",
+              "tips": "Apenas suportado para transações que não foram transmitidas"
+            },
+            "removeLocalPendingTx": {
+              "title": "Limpar Pendentes Localmente",
+              "desc": "Remover a transação pendente da interface"
+            }
+          }
+        },
+        "CancelTxConfirmPopup": {
+          "title": "Limpar Pendente Localmente",
+          "desc": "Isto irá remover a transação pendente da sua interface. Você pode então iniciar uma nova transação.",
+          "warning": "A transação removida ainda pode ser confirmada na cadeia, a menos que seja substituída."
+        }
+      }
+    },
+    "sendNFT": {
+      "sendButton": "Enviar",
+      "Contract": "Contrato",
+      "Collection": "Coleção",
+      "SendAmount": "Enviar valor",
+      "Chain": "Cadeia",
+      "NFT": "NFT"
+    },
+    "signTx": {
+      "revokePermit2": {
+        "title": "Revogar Aprovação do Permit2"
+      },
+      "gasNotRequireForSafeTransaction": "Não é necessária taxa de Gas para transações Safe",
+      "manuallySetGasLimitAlert": "Você definiu manualmente o limite de Gas para",
+      "interactContract": "Interagir com o contrato",
+      "contractPopularity": "N.º {{0}} em {{1}}",
+      "gasSelectorTitle": "Gas",
+      "nonceTitle": "Nonce",
+      "nativeTokenNotEngouthForGas": "O saldo de Gas não é suficiente",
+      "gasPriceTitle": "Gas Price (Gwei)",
+      "gasLimitTitle": "Gas limit",
+      "myNativeTokenBalance": "O meu saldo de Gas:",
+      "noGasRequired": "Nenhum gas necessário",
+      "myMark": "Minha marca",
+      "contractAddress": "Endereço do contrato",
+      "blocked": "Bloqueado",
+      "failToFetchGasCost": "Falha ao estimar gas",
+      "interacted": "Interagido antes",
+      "transacted": "Transacionado antes",
+      "chain": "Chain",
+      "markAsBlock": "Marcado como bloqueado",
+      "revokeNFTApprove": {
+        "revokeNFT": "Revogar NFT",
+        "title": "Revogar Aprovação de NFT"
+      },
+      "addressTypeTitle": "Tipo de address",
+      "trusted": "Confiável",
+      "floorPrice": "Preço mínimo",
+      "safeAdminSigned": "Assinado",
+      "gasLimitMinValueAlert": "O limite de Gas deve ser superior a 21000",
+      "gasAccount": {
+        "maxGas": "Max Gas: ",
+        "estimatedGas": "Estimativa de Gas:",
+        "sendGas": "A transferência de Gas para si na transação atual:",
+        "gasCost": "Custo de Gas para transferir gas para o seu endereço:",
+        "description": "Usando GasAccount para pagar as taxas de gás. Veja os detalhes do pagamento abaixo:"
+      },
+      "gasLimitEmptyAlert": "Por favor, insira o limite de gas",
+      "revokePermit": {
+        "title": "Revogar aprovação de token de Permissão"
+      },
+      "gasAccountForGas": "Usar USD da minha GasAccount para pagar o gás",
+      "nativeTokenForGas": "Use a token {{tokenName}} em {{chainName}} para pagar o gas",
+      "markAsTrust": "Marcado como confiável",
+      "swapAndCross": {
+        "title": "Trocar Token e Cross Chain"
+      },
+      "addressNote": "Nota de endereço",
+      "noMark": "Sem marca",
+      "crossChain": {
+        "title": "Cross Chain"
+      },
+      "assetOrder": {
+        "title": "Ordem de Ativos",
+        "listAsset": "Listar ativo",
+        "receiveAsset": "Receber ativo"
+      },
+      "unknownAction": "Tipo de Assinatura Desconhecido",
+      "firstOnChain": "Primeiro on-chain",
+      "viewRaw": "Ver Raw",
+      "enoughSafeSigCollected": "Assinaturas suficientes recolhidas",
+      "collectionTitle": "Coleção",
+      "unknownActionType": "Tipo de Ação Desconhecida",
+      "wrapToken": "Envolver Token",
+      "recommendGasLimitTip": "Est. {{est}}. Current {{current}}x, recomendado",
+      "multiSigChainNotMatch": "Endereços multi-assinatura não estão nesta chain e não podem iniciar transações",
+      "transferOwner": {
+        "description": "Descrição",
+        "title": "Transferir a Propriedade dos Ativos"
+      },
+      "moreSafeSigNeeded": "Faltam mais {{0}} confirmações.",
+      "protocolTitle": "Protocolo",
+      "safeAddressNotSupportChain": "O endereço seguro atual não é suportado na cadeia {{0}}",
+      "nonceLowerThanExpect": "O nonce é muito baixo, o mínimo deve ser {{0}}",
+      "maxPriorityFee": "Taxa Máxima de Prioridade (Gwei)",
+      "canOnlyUseImportedAddress": "Não é possível assinar transações com um endereço apenas de visualização.",
+      "nftCollectionApprove": {
+        "approveCollection": "Aprovar coleção",
+        "title": "Aprovação de Coleção NFT"
+      },
+      "gasLimitModifyOnlyNecessaryAlert": "Apenas modifique quando necessário",
+      "deployTimeTitle": "Hora de deploy",
+      "importedAddress": "Endereço importado",
+      "sendNFT": {
+        "nftNotSupport": "NFT não suportado",
+        "title": "Enviar NFT"
+      },
+      "swapLimitPay": {
+        "maxPay": "Pagamento máximo",
+        "title": "Trocar Limite de Pagamento de Token"
+      },
+      "submitMultisig": {
+        "multisigAddress": "Endereço multisig",
+        "title": "Submeter Transação Multisig"
+      },
+      "swap": {
+        "valueDiff": "Diferença de valor",
+        "payToken": "Pagar",
+        "title": "Trocar Token",
+        "simulationFailed": "Simulação de transação falhou",
+        "failLoadReceiveToken": "Falha ao carregar",
+        "receiveToken": "Receber",
+        "unknownAddress": "Endereço desconhecido",
+        "receiver": "Recetor",
+        "minReceive": "Recebimento Mínimo",
+        "slippageTolerance": "Tolerância de slippage",
+        "slippageFailToLoad": "Falha ao carregar",
+        "simulationNotSupport": "Simulação de transação não suportada nesta cadeia",
+        "notPaymentAddress": "Não é a carteira de pagamento"
+      },
+      "hardwareSupport1559Alert": "Certifique-se de que o firmware da sua hardware wallet foi atualizado para a versão que suporta o EIP 1559",
+      "customRPCErrorModal": {
+        "button": "Desativar Custom RPC",
+        "title": "Erro RPC Personalizado",
+        "content": "Seu RPC personalizado está indisponível no momento. Você pode desativá-lo e continuar assinando usando o RPC oficial do Rabby."
+      },
+      "batchRevokePermit2": {
+        "title": "Revogar em Lote Aprovação Permit2"
+      },
+      "revokeTokenApprove": {
+        "revokeToken": "Revogar token",
+        "revokeFrom": "Revogar de",
+        "title": "Revogar Aprovação de Token"
+      },
+      "markRemoved": "Mark removido",
+      "nftCollection": "Coleção de NFT",
+      "deployContract": {
+        "title": "Desplegar um Contrato",
+        "descriptionTitle": "Descrição",
+        "description": "Está a implementar um smart contract"
+      },
+      "balanceChange": {
+        "failedTitle": "Simulação Falhou",
+        "notSupport": "Simulação Não Suportada",
+        "successTitle": "Resultados da Simulação",
+        "noBalanceChange": "Sem alteração de saldo",
+        "errorTitle": "Falha ao obter a alteração de saldo"
+      },
+      "contractCall": {
+        "receiver": "Endereço do Destinatário",
+        "operationCantDecode": "Operação não decodificada",
+        "operation": "Operação",
+        "title": "Chamada de Contrato",
+        "payNativeToken": "Pagar {{symbol}}",
+        "operationABIDesc": "Operação é decodificada de ABI"
+      },
+      "trustValue": "Confie no valor",
+      "noDelegatedAddress": "Nenhum endereço delegado importado",
+      "eip1559Desc1": "Nas cadeias que suportam EIP-1559, a Taxa de Prioridade é a gorjeta para que os mineradores processem a sua transação. Pode poupar no custo final de gas reduzindo a Taxa de Prioridade, o que poderá aumentar o tempo necessário para que a transação seja processada.",
+      "speedUpTooltip": "Esta transação acelerada e a transação original, apenas uma delas será eventualmente concluída",
+      "gasLimitLessThanExpect": "O limite de Gas é baixo. Há 1% de chance de que a transação possa falhar.",
+      "SafeNonceSelector": {
+        "option": {
+          "new": "Nova Transação"
+        },
+        "optionGroup": {
+          "replaceTitle": "Substituir a transação na fila",
+          "recommendTitle": "Nonce recomendada"
+        }
+      },
+      "popularity": "Popularidade",
+      "nftApprove": {
+        "title": "Aprovação de NFT",
+        "approveNFT": "Aprovar NFT",
+        "nftContractTrustValueTip": "O valor de confiança refere-se ao valor mais alto de NFT gasto por este contrato. Um valor de confiança baixo indica risco ou inatividade por 180 dias."
+      },
+      "unwrap": "Desembrulhar Token",
+      "send": {
+        "cexAddress": "Endereço CEX",
+        "contractNotOnThisChain": "Não nesta cadeia",
+        "title": "Enviar Token",
+        "whitelistTitle": "Lista branca",
+        "tokenNotSupport": "{{0}} não suportado",
+        "sendTo": "Enviar para",
+        "notOnThisChain": "Não nesta cadeia",
+        "fromMySeedPhrase": "A partir da minha seed phrase",
+        "fromMyPrivateKey": "A partir da minha chave privada",
+        "onMyWhitelist": "Na minha whitelist",
+        "notOnWhitelist": "Não na minha whitelist",
+        "notTopupAddress": "Não é um endereço de depósito",
+        "addressBalanceTitle": "Saldo do endereço",
+        "receiverIsTokenAddress": "Endereço do token",
+        "scamAddress": "Endereço de scam",
+        "sendToken": "Enviar token"
+      },
+      "gasLimitNotEnough": "O limite de Gas é inferior a 21000. A transação não pode ser submetida",
+      "gasPriceMedian": "Mediana das últimas 100 transações on-chain:",
+      "gasLimitLessThanGasUsed": "O limite de Gas é muito baixo. Há 95% de probabilidade de que a transação falhe.",
+      "revokeNFTCollectionApprove": {
+        "title": "Revogar NFT Collection",
+        "revokeCollection": "Revogar coleção"
+      },
+      "cancelTx": {
+        "txToBeCanceled": "Transação a ser cancelada",
+        "title": "Cancelar Transação Pendente",
+        "gasPriceAlert": "Defina o preço atual do gás em mais de {{value}} Gwei para cancelar a transação pendente"
+      },
+      "myMarkWithContract": "A minha marca no contrato {{chainName}}",
+      "eip1559Desc2": "Aqui no Rabby, Taxa de Prioridade (Gorjeta) = Taxa Máxima - Taxa Base. Após configurar a Taxa Máxima de Prioridade, a Taxa Base será deduzida dela e o restante será dado como gorjeta aos mineradores.",
+      "tokenApprove": {
+        "deployTimeLessThan": "< {{value}} dias",
+        "approveToken": "Aprovar token",
+        "eoaAddress": "EOA",
+        "amountPopupTitle": "Aprovar quantia",
+        "flagByRabby": "Sinalizado pelo Rabby",
+        "approveTo": "Aprovar para",
+        "myBalance": "O meu saldo",
+        "title": "Aprovação de Token",
+        "contractTrustValueTip": "Valor de confiança refere-se ao valor total dos ativos gastos por este contrato. Um valor de confiança baixo indica risco ou inatividade por 180 dias."
+      },
+      "sigCantDecode": "Esta assinatura não pode ser descodificada pela Rabby Wallet",
+      "amount": "Montante",
+      "no": "Não",
+      "common": {
+        "interactContract": "Interagir com contrato",
+        "description": "Descrição"
+      },
+      "hasInteraction": "Interagiu antes",
+      "typedDataMessage": "Assinar Dados Digitados",
+      "protocol": "Protocolo",
+      "trustValueTitle": "Valor de confiança",
+      "addressSource": "Fonte do Address",
+      "coboSafeCreate": {
+        "title": "Criar Cobo Safe",
+        "safeWalletTitle": "Seguro{Wallet}",
+        "descriptionTitle": "Descrição"
+      },
+      "address": "Endereço",
+      "contract": "Smart contract",
+      "coboSafeModificationDelegatedAddress": {
+        "descriptionTitle": "Descrição",
+        "title": "Submeter Modificação de Endereço Delegado",
+        "safeWalletTitle": "Safe{Wallet}"
+      },
+      "label": "Etiqueta",
+      "BroadcastMode": {
+        "mev": {
+          "desc": "As transações serão transmitidas para o nó MEV designado",
+          "title": "Protegido por MEV"
+        },
+        "tips": {
+          "notSupportChain": "Não suportado nesta cadeia",
+          "notSupported": "Não suportado",
+          "walletConnect": "Não é suportado pelo WalletConnect",
+          "customRPC": "Não é suportado quando se utiliza RPC personalizado"
+        },
+        "title": "Modo Broadcast",
+        "lowGasDeadline": {
+          "1h": "1h",
+          "label": "Tempo esgotado",
+          "4h": "4h",
+          "24h": "24h"
+        },
+        "instant": {
+          "title": "Instantâneo",
+          "desc": "As transações serão imediatamente transmitidas para a rede"
+        }
+      },
+      "yes": "Sim",
+      "maxPriorityFeeDisabledAlert": "Por favor, defina primeiro o Gas Price.",
+      "coboSafeModificationTokenApproval": {
+        "descriptionTitle": "Descrição",
+        "safeWalletTitle": "Safe{Wallet}",
+        "title": "Submeter Alteração de Aprovação de Token"
+      },
+      "importedDelegatedAddress": "Endereço delegado importado",
+      "advancedSettings": "Configurações Avançadas",
+      "coboSafeModificationRole": {
+        "descriptionTitle": "Descrição",
+        "title": "Submeter Modificação de Função Segura",
+        "safeWalletTitle": "Safe{Wallet}"
+      },
+      "l2GasEstimateTooltip": "A estimativa de gas para a cadeia L2 não inclui a taxa de gas da L1. A taxa real será superior à estimativa atual.",
+      "safeTx": {
+        "selfHostConfirm": {
+          "button": "OK",
+          "title": "Mudar para o Serviço Seguro do Rabby",
+          "content": "A API da Safe está indisponível. Mude para o serviço Safe implementado por Rabby para manter o seu Safe funcional. <1></1><2>Todos os signatários Safe devem usar a Rabby Wallet para autorizar transações.<2>"
+        }
+      },
+      "errorRetry": {
+        "nonceTooHigh": "Nonce demasiado alto. Por favor, ajuste o nonce e tente novamente.",
+        "defaultTips": "Algo está errado. Por favor, tente novamente mais tarde.",
+        "gasLimitTooLow": "Limite de gás muito baixo",
+        "nonceTooLow": "Nonce muito baixo. Vamos atualizá-lo para {{nonce}}. Clique em \"Tentar novamente\" para confirmar e tentar de novo.",
+        "gasExceedsBlockGasLimit": "O gás excede o limite de gás do bloco. Por favor, ajuste e tente novamente.",
+        "insufficient": "O seu saldo de gás não é suficiente para cobrir a taxa de gás da rede. Adicione fundos para o gás e tente novamente.",
+        "InvalidTx": "Transação inválida.",
+        "gasPriceTooLow": "Preço do gás muito baixo. Vamos ajustá-lo em 30% para ajudar a confirmar a sua transação. Clique em “Retry” para confirmar e tentar novamente.",
+        "alreadySubmitted": "Transação já submetida. Transação duplicada detectada."
+      },
+      "addLiquidity": {
+        "marketPrice": "Preço de Mercado",
+        "token1": "Adicionar Token 2",
+        "title": "Adicionar Liquidez",
+        "token0": "Adicionar Token 1",
+        "receiver": "Receptor",
+        "priceDiff": "Diferença de Preço",
+        "poolPrice": "Preço do Pool"
+      },
+      "gasSetting": "Configuração de Gas"
+    },
+    "signTypedData": {
+      "permit": {
+        "title": "Permitir Aprovação de Token"
+      },
+      "swapTokenOrder": {
+        "title": "Ordem de Token"
+      },
+      "contractCall": {
+        "operationDecoded": "A operação é decodificada a partir da mensagem"
+      },
+      "verifyAddress": {
+        "title": "Verificar Endereço"
+      },
+      "signMultiSig": {
+        "title": "Confirmar Transação"
+      },
+      "sellNFT": {
+        "specificBuyer": "Comprador específico",
+        "listNFT": "Listar NFT",
+        "receiveToken": "Receber token",
+        "title": "Ordem NFT"
+      },
+      "buyNFT": {
+        "payToken": "Token de pagamento",
+        "receiveNFT": "Receber NFT",
+        "expireTime": "Tempo de expiração",
+        "listOn": "List on"
+      },
+      "createKey": {
+        "title": "Criar Key"
+      },
+      "safeCantSignText": "Este é um endereço Safe, e não pode ser usado para assinar texto.",
+      "permit2": {
+        "sigExpireTime": "Tempo de expiração da assinatura",
+        "approvalExpiretime": "Tempo de expiração da aprovação",
+        "sigExpireTimeTip": "A duração para esta assinatura ser válida na cadeia",
+        "title": "Permit2 Token Approval"
+      },
+      "safeCantSignTypedData": "Este é um endereço Safe, e suporta apenas a assinatura de dados tipados EIP-712 ou strings."
+    },
+    "sendToken": {
+      "Chain": "Chain",
+      "modalConfirmAddToContacts": {
+        "title": "Adicionar aos contactos"
+      },
+      "sectionBalance": {
+        "title": "Saldo"
+      },
+      "balanceWarn": {
+        "gasFeeReservation": "É necessária a reserva de Gas fee"
+      },
+      "whitelistAlert__whitelisted": "O endereço está na lista branca",
+      "whitelistAlert__temporaryGranted": "Permissão temporária concedida",
+      "Amount": "Montante:",
+      "sectionTo": {
+        "addrValidator__empty": "Por favor, insira o endereço",
+        "addrValidator__invalid": "Este endereço é inválido",
+        "searchInputPlaceholder": "Insira um endereço ou digitalize",
+        "positiveTips": {
+          "whitelistedAddress": "Morada na lista branca",
+          "yourOwnAddress": "O seu próprio endereço",
+          "sentRecently": "Enviado recentemente"
+        },
+        "selectPlaceholder": "Selecionar Endereço"
+      },
+      "To": "Para",
+      "AddToContactsModal": {
+        "editAddressNote": "Editar nota de endereço",
+        "addedAsContacts": "Adicionado como contactos",
+        "editAddr": {
+          "placeholder": "Inserir Nota de Endereço",
+          "validator__empty": "Por favor, introduza a nota do endereço"
+        }
+      },
+      "allowTransferModal": {
+        "addWhitelist": "Adicionar à whitelist",
+        "placeholder": "Digite a Palavra-passe para Confirmar",
+        "title": "Confirmar para permitir a transação"
+      },
+      "whitelistAlert__notWhitelisted_tip": "O endereço não está na lista de permissões.",
+      "whitelistAlert__notWhitelisted": "O endereço não está na lista de permitidos. Concordo em conceder permissão temporária para transferir.",
+      "whitelistAlert__disabled": "Whitelist desativada. Você pode transferir para qualquer endereço.",
+      "ContractAddress": "Endereço do Contrato",
+      "GasSelector": {
+        "confirm": "Confirmar",
+        "level": {
+          "$unknown": "Desconhecido",
+          "custom": "Personalizado",
+          "normal": "Normal",
+          "slow": "Lento",
+          "fast": "Rápido"
+        },
+        "popupDesc": "O custo de gas será reservado a partir do montante da transferência com base no preço de gas que definir."
+      },
+      "balanceError": {
+        "insufficientBalance": "Saldo insuficiente"
+      },
+      "addressNotInContract": "Não está na lista de endereços. <1></1><2>Adicionar aos contactos</2>",
+      "noSupportBtns": {
+        "cancel": "Cancelar",
+        "confirm": "Prosseguir"
+      },
+      "From": "De",
+      "addressDetail": "Detalhe do Endereço",
+      "newAmount": "Quantidade",
+      "noSupportTokenReason": {
+        "forSafeSimple": "Este endereço Safe não está implantado nesta cadeia",
+        "forDexSimple": "Este token pode não ser suportado por esta bolsa.",
+        "forChain": "O endereço do destinatário é um endereço de contrato em uma cadeia diferente. Verifique antes de prosseguir para evitar perdas.",
+        "forChainSimple": "O endereço do destinatário é um endereço de contrato em uma cadeia diferente",
+        "forDex": "Este token pode não ser suportado por esta exchange. Verifique antes de prosseguir para evitar perdas.",
+        "forSafe": "O endereço Safe para o qual está a enviar tokens não está implementado nesta cadeia. Verifique antes de prosseguir para evitar perdas."
+      }
+    },
+    "signFooterBar": {
+      "importedByLedger": "Importado por Ledger",
+      "signAndSubmitButton": "Assinar",
+      "submitTx": "Submeter Transação",
+      "cancelCurrentTransaction": "Cancelar a transação atual",
+      "confirm": "Confirmar",
+      "confirmWithPassword": "Confirmar",
+      "oneKeySign": "Assinar",
+      "ledgerSign": "Assinar",
+      "beginSigning": "Iniciar processo de assinatura",
+      "resend": "Tentar novamente",
+      "cancelAll": "Cancelar todos os {{count}} pedidos do Dapp",
+      "processRiskAlert": "Por favor, processe o alerta antes de assinar",
+      "ignoreAll": "Ignorar tudo",
+      "cancelConnection": "Cancelar ligação",
+      "cancelTransaction": "Cancelar Transação",
+      "cancelCurrentConnection": "Cancelar ligação atual",
+      "detectedMultipleRequestsFromThisDapp": "Detectado múltiplos pedidos deste Dapp",
+      "gasless": {
+        "customRpcUnavailableTip": "Custom RPCs não são suportados para Free Gas",
+        "notEnough": "O saldo de Gas não é suficiente",
+        "GetFreeGasToSign": "Obtenha Gas Grátis",
+        "walletConnectUnavailableTip": "A carteira móvel conectada via WalletConnect não é suportada para Free Gas",
+        "watchUnavailableTip": "A carteira Watch-Only não é suportada para Gas Gratuito."
+      },
+      "blockDappFromSendingRequests": "Bloquear o Dapp de enviar solicitações durante 1 min",
+      "gasAccount": {
+        "deposit": "Depósito",
+        "login": "Iniciar sessão",
+        "useGasAccount": "Use GasAccount",
+        "WalletConnectTips": "GasAccount não suporta WalletConnect",
+        "chainNotSupported": "Esta cadeia não é suportada pelo GasAccount",
+        "notEnough": "GasAccount não é suficiente",
+        "loginFirst": "Por favor, inicie sessão no GasAccount primeiro.",
+        "customRPC": "Não é suportado ao utilizar RPC personalizado"
+      },
+      "qrcode": {
+        "signWith": "Assinar com {{brand}}",
+        "afterSignDesc": "Digitalize o código QR no Keystone para obter a assinatura",
+        "txFailed": "Falha ao criar",
+        "getSig": "Obter assinatura",
+        "unknownQRCode": "Erro: Não conseguimos identificar esse código QR",
+        "submitting": "Assinado. A criar transação",
+        "sigCompleted": "Transação criada",
+        "failedToGetExplain": "Falha ao obter explicação",
+        "misMatchSignId": "Dados da transação incongruentes. Por favor, verifique os detalhes da transação.",
+        "qrcodeDesc": "Digitalize com o seu {{brand}} para assinar  \nApós assinar, clique no botão abaixo para receber a assinatura",
+        "txFailedRetry": "Falha ao criar: Por favor, tente novamente"
+      },
+      "ledger": {
+        "resubmited": "Reenviado",
+        "submitting": "Assinado. A criar transação",
+        "resent": "Reenviar",
+        "txRejectedByLedger": "A transação foi rejeitada no seu Ledger",
+        "txRejected": "Transação rejeitada",
+        "siging": "A enviar pedido de assinatura",
+        "unlockAlert": "Por favor, ligue e desbloqueie o seu Ledger e abra Ethereum nele.",
+        "updateFirmwareAlert": "Por favor, atualize o firmware e o aplicativo Ethereum no seu Ledger."
+      },
+      "startSigning": "Começar a Assinar",
+      "keystoneSign": "Assinar",
+      "oneKeyConfirm": "Confirmar",
+      "ledgerConfirm": "Confirmar",
+      "got": "Eu entendi"
+    },
+    "sendTokenComponents": {
+      "GasReserved": "Reservado <1>0</1> {{ tokenName }} para custo de gás"
+    },
+    "gasTopUp": {
+      "InsufficientBalanceTips": "Saldo insuficiente",
+      "Select-from-supported-tokens": "Selecione dos tokens suportados",
+      "Deposit-tip": "Depositar com USDC/USDT",
+      "Value": "Valor",
+      "No_Tokens": "Sem Tokens",
+      "Loading_Tokens": "A carregar Tokens...",
+      "Token": "Token",
+      "Balance": "Saldo"
+    },
+    "home": {
+      "services": {
+        "send": "Enviar",
+        "approvals": "Aprovações",
+        "history": "Histórico",
+        "queue": "Fila",
+        "receive": "Receber",
+        "more": "Mais",
+        "dapps": "Dapps",
+        "swap": "Swap",
+        "bridge": "Bridge",
+        "gasAccount": "GasAccount",
+        "websites": "Websites",
+        "search": "Pesquisar Token",
+        "copyTrading": "Copy Trading",
+        "watchlist": "Lista de Observação",
+        "perpsMarketList": "Mais Perps",
+        "perps": "Perps",
+        "lending": "Empréstimo"
+      },
+      "swipeUp": {
+        "desc": "Deslize para cima para explorar websites",
+        "descAndroid": "Clique para explorar dApps",
+        "descAndroidMore": "Clique para explorar mais dApps",
+        "descMore": "Deslize para cima para explorar mais websites"
+      },
+      "DappDrawer": {
+        "favorite": "Favorito",
+        "search": "Pesquisar",
+        "emptyAndroid": "Nenhum dApp adicionado a favoritos",
+        "empty": "Nenhum site adicionado aos favoritos"
+      }
+    },
+    "manageAddress": {
+      "enterPassphraseTitle": "Digite a frase secreta para assinar",
+      "seed-phrase": "Seed Phrase",
+      "confirm": "Confirmar",
+      "passphraseError": "Passphrase inválida",
+      "cancel": "Cancelar",
+      "watch-address": "Observar Endereço",
+      "enterThePassphrase": "Introduza a frase de acesso",
+      "delete-checklist-2": "Confirmo que fiz o backup da chave privada ou frase-semente e estou pronto para excluí-la agora.",
+      "private-key": "Chave Privada",
+      "quickAddressTitle_one": "{{count}} Endereço",
+      "quickAddressTitle_other": "{{count}} Endereços",
+      "add-address": "Adicionar carteira",
+      "delete-checklist-1": "Eu entendo que se eu deletar esta carteira, a chave privada e a frase semente correspondentes serão deletadas, e a Rabby NÃO será capaz de recuperá-las."
+    },
+    "bridge": {
+      "bridge-from": "Ponte de",
+      "price-impact": "Impacto no Preço",
+      "no-quote": "Sem cotação",
+      "est-payment": "Est. Payment:",
+      "Select": "Selecionar",
+      "bridgeFrom": "Bridge From",
+      "est-receiving": "Est. Receiving:",
+      "value": "Saldo",
+      "liquidity": "Liquidez",
+      "token": "Token",
+      "via-bridge": "via {{bridge}}",
+      "gas-fee": "GasFee: {{gasUsed}}",
+      "From": "De",
+      "for-available-quote": "para uma cotação disponível",
+      "history": "Histórico da Bridge",
+      "loss-tips": "Está a perder {{usd}}. Tente um valor diferente.",
+      "Pending": "Pendente",
+      "To": "Para",
+      "estimate": "Estimativa:",
+      "approve-and-bridge": "Aprovar e Faz a Ponte",
+      "no-quote-found": "Nenhuma cotação encontrada. Por favor, tente outros pares de tokens.",
+      "showMore": {
+        "title": "Mostrar mais",
+        "source": "Fonte Bridge",
+        "signWarning": "Eu entendo o alerta e quero continuar"
+      },
+      "detail-tx": "Detalhe",
+      "title": "Bridge",
+      "bridgeTo": "Ponte para",
+      "best": "Melhor",
+      "need-to-approve-token-before-bridge": "Necessário aprovar token antes da bridge",
+      "actual": "Atual:",
+      "est-difference": "Diferença Est.:",
+      "the-following-bridge-route-are-found": "Encontradas as seguintes taxas",
+      "no-route-found": "Nenhuma rota encontrada",
+      "gas-x-price": "Preço do Gas: {{price}} Gwei.",
+      "duration": "{{duration}} min",
+      "bridged": "Ponte",
+      "gasFeeTooHight": "A taxa de Gas é superior ao normal. Confirme apenas se desejar prosseguir.",
+      "pendingItem": {
+        "swap": "Trocar",
+        "completed": "Concluído",
+        "bridgeStatus": "Estado da Ponte",
+        "pending": "Pendentes",
+        "failed": "Falhou",
+        "beReturnFailed": "A ponte falhou. Os seus ativos foram devolvidos.",
+        "receivedDifferentTokenFromSource": "A ponte falhou. Um token diferente foi retornado na cadeia de origem.",
+        "fromFailed": "A transação não foi concluída. Tente novamente.",
+        "estimatedTime": "Tempo estimado",
+        "sendingFrom": "A enviar de {{chain}}",
+        "receivingTo": "Recebendo em {{chain}}",
+        "receivedDifferentTokenNeedSwap": "Você recebeu um token diferente. Você pode trocá-lo pelo token que selecionou.",
+        "longTimeNoReceive": "A rede está ocupada. Isso pode levar mais tempo do que o habitual. Por favor, aguarde pacientemente.",
+        "queued": "Em fila",
+        "BridgeStatusUnavailable": "Estado da bridge indisponível. Por favor, verifique o seu histórico de transações para confirmar que os fundos chegaram."
+      },
+      "gasXUsd": "Gas: {{gasUsd}}"
+    },
+    "dashboard": {
+      "home": {
+        "search": "Pesquisar",
+        "chain": "cadeia,",
+        "chainEnd": "cadeia",
+        "missingDataTooltip": "O saldo pode não estar atualizado devido a problemas atuais na rede com {{text}}."
+      },
+      "hd": {
+        "howToSwitch": "Como alternar"
+      },
+      "tokenDetail": {
+        "swap": "Swap",
+        "send": "Enviar",
+        "blocked": "Bloqueado",
+        "customized": "Personalizado",
+        "blockedTip": "Token bloqueados não serão mostrados na lista de tokens",
+        "receive": "Receber",
+        "selectedCustom": "O token não está listado pelo Rabby. Você adicionou-o à lista de tokens manualmente.",
+        "notSelectedCustom": "O Token não está listado pelo Rabby. Será adicionado à lista de tokens se o ativar.",
+        "noTransactions": "Sem Transações",
+        "notSupported": "O token nesta cadeia não é suportado"
+      },
+      "settings": {
+        "disableWhitelist": "Desativar Whitelist",
+        "enableWhitelistTip": "Uma vez ativado, você só pode enviar ativos para os endereços na lista branca usando Rabby.",
+        "cancel": "Cancelar",
+        "enableWhitelist": "Ativar Whitelist",
+        "disableWhitelistTip": "Pode enviar ativos para qualquer endereço uma vez desativado"
+      },
+      "assets": {
+        "AddMainnetToken": {
+          "isBuiltInToken": "Token já suportado"
+        },
+        "comingSoon": "Em breve...",
+        "table": {
+          "customizeTokens_zero": "{{count}} custom token",
+          "customizeTokens_one": "{{count}} custom token",
+          "blockedTokens_one": "{{count}} blocked token",
+          "customizeTokens_other": "{{count}} custom tokens",
+          "testnetTokens_other": "{{count}} tokens de rede personalizados",
+          "blockedTokens_other": "{{count}} blocked Tokens",
+          "blockedTokens_zero": "{{count}} blocked token",
+          "testnetTokens_one": "{{count}} custom network token",
+          "testnetTokens_zero": "{{count}} custom network token"
+        }
+      },
+      "offlineChain": {
+        "chain": "{{chain}} em breve não será integrado.",
+        "tips": "A {{chain}} Chain não será integrada em {{date}}. Os seus ativos não serão afetados, mas não serão incluídos no seu saldo total. Para acedê-los, pode adicioná-la como uma rede personalizada nas \"Definições\"."
+      }
+    },
+    "swap": {
+      "title": "Swap",
+      "Pending": "Pendente",
+      "no-transaction-records": "Sem registos de transações",
+      "hidden-no-quote-rates_other": "{{count}} taxas indisponíveis",
+      "pendingTip": "Tx submetida. Se a tx estiver pendente por muitas horas, pode tentar limpar pendentes nas definições.",
+      "preferMEV": "Preferir MEV Guarded",
+      "from": "De",
+      "insufficient-balance": "Saldo insuficiente",
+      "no-slippage-for-wrap": "Sem slippage para Wrap",
+      "hidden-no-quote-rates_one": "{{count}} taxa indisponível",
+      "wrap-contract": "Contrato Wrap",
+      "fail-to-simulate-transaction": "Falha ao simular transação",
+      "best": "Melhor",
+      "security-verification-failed": "Falha na verificação de segurança",
+      "Auto": "Auto",
+      "unable-to-fetch-the-price": "Não foi possível obter o preço",
+      "no-fees-for-wrap": "Sem taxa Rabby para Wrap",
+      "completedTip": "Transação na cadeia, decodificando dados para gerar registro",
+      "slippage_tolerance": "Tolerância de slippage:",
+      "Completed": "Concluído",
+      "to": "Para",
+      "gas-fee-too-high": "Gas fee demasiado alta",
+      "search-by-name-address": "Pesquisar por Nome / Endereço",
+      "Gas-fee-too-high": "Taxa de Gas demasiado alta",
+      "slippage-tolerance": "Tolerância de slippage",
+      "sort-with-gas": "Ordenar com gas",
+      "gas-fee": "TaxaDeGas: {{gasUsed}}",
+      "approve-swap": "Aprovar e Trocar",
+      "chain": "Cadeia",
+      "token": "Token",
+      "estimate": "Estimativa:",
+      "recommend-slippage": "Para evitar a front-running, recomendamos uma derrapagem de <2>{{ slippage }}</2>%",
+      "insufficient": "Saldo insuficiente:",
+      "actual-slippage": "Desvio Real:",
+      "by-transaction-simulation-the-quote-is-valid": "Através da simulação de transação, a cotação é válida",
+      "need-to-approve-token-before-swap": "Precisa aprovar o token antes de trocar",
+      "source": "Fonte",
+      "low-slippage-may-cause-failed-transactions-due-to-high-volatility": "Baixa derrapagem pode causar falhas nas transações devido à alta volatilidade",
+      "transaction-might-be-frontrun-because-of-high-slippage-tolerance": "A transação pode ser antecipada devido à alta tolerância ao slippage.",
+      "actual": "Atual:",
+      "directlySwap": "Envio direto de tokens {{symbol}} com o smart contract",
+      "usd-after-fees": "≈ {{usd}}",
+      "no-quote-found": "Nenhuma cotação encontrada",
+      "select-token": "Selecionar Token",
+      "lowCreditModal": {
+        "title": "Este token tem um baixo valor de crédito",
+        "desc": "Um baixo valor de crédito muitas vezes indica alto risco, como um token honeypot ou liquidez muito baixa."
+      },
+      "rabbyFee": {
+        "title": "Taxa Rabby",
+        "wallet": "Carteira",
+        "button": "Entendi",
+        "rate": "Taxa de comissão",
+        "bridgeDesc": "Rabby Wallet encontrará sempre a melhor taxa possível dos principais agregadores e verificará a fiabilidade das suas ofertas. Rabby cobra uma <1>taxa de 0,25%</1>, que está automaticamente incluída na cotação.",
+        "swapDesc": "A Rabby Wallet procurará sempre a melhor taxa possível dos principais agregadores e verificará a fiabilidade das suas ofertas. A Rabby cobra uma taxa de <1>0,25%</1> (0% para wrapping), que está automaticamente incluída na cotação."
+      },
+      "historyTitle": "Histórico de Swap",
+      "swapped": "Trocado",
+      "selectChainModalTitle": "Selecione Cadeia",
+      "results": "Resultados",
+      "approve": "Aprovar"
+    },
+    "approvals": {
+      "tab-switch": {
+        "contract": "Por Contracts",
+        "assets": "Por Ativos"
+      },
+      "search": {
+        "placeholder": "Pesquisar por nome/morada"
+      },
+      "list": {
+        "symbol": "Aprovações"
+      },
+      "component": {
+        "ViewMore": {
+          "text": "Ver mais"
+        },
+        "RevokeButton": {
+          "btnText": "Revogar",
+          "btnText_other": "Revogar ({{count}})",
+          "btnText_one": "Revogar ({{count}})",
+          "permit2Batch": {
+            "modalContent": "As aprovações do mesmo contrato Permit2 seriam agrupadas sob a mesma assinatura.",
+            "modalTitle_one": "É necessária um total de <2>{{count}}</2> assinatura.",
+            "modalTitle_other": "É necessário um total de <2>{{count}}</2> assinaturas."
+          },
+          "btnText_zero": "Revogar"
+        }
+      },
+      "tableConfig": {
+        "byAssets": {
+          "columnCell": {
+            "approvedAmount": {
+              "tipApprovedAmount": "Montante Aprovado",
+              "tipMyBalance": "O Meu Saldo"
+            }
+          }
+        },
+        "byContracts": {
+          "columnTitle": {
+            "revokeTrends": "Tendências de Revogação 24h",
+            "contractTrustValue": "Valor de confiança do Contract"
+          },
+          "columnTip": {
+            "contractTrustValueWarning": "O valor de confiança do contrato < $100,000",
+            "revokeWarningTitle": "Contrato 24h Revoke dobra do que Revoke",
+            "revokeRecenet": "Revogações recentes (24h): {{count}}",
+            "revokeNewApproved": "Novos utilizadores aprovados (24h): {{ count }}",
+            "contractTrustValue": "O valor de confiança refere-se ao valor total do ativo gasto por este contrato. Um valor de confiança baixo indica risco ou inatividade durante 180 dias.",
+            "button": "Entendi.",
+            "normalTrustValueDanger": "O valor de confiança do contrato: {{ contractUsdText }}",
+            "revokeTrendsValueWarning": "As revogações recentes são mais do que o dobro do número de novos utilizadores aprovados.",
+            "revokeTrendsValueDanger": "As revogações recentes são mais de 4 vezes o número de novos utilizadores aprovados.",
+            "contractTrustValueDanger": "O valor de confiança do contrato < $10,000",
+            "revokeDangerTitle": "Tendências de Revogação de Contratos em 24h > 4"
+          }
+        }
+      },
+      "revokeModal": {
+        "submitTxFailed": "Falha ao Submeter",
+        "approvalCount_one": "{{count}} aprovação",
+        "defaultFailed": "Transação falhou",
+        "approvalCount_other": "{{count}} aprovações",
+        "approvalCount": "{{count}} aprovação",
+        "paused": "Pausado",
+        "gasTooHigh": "A taxa de Gas é alta",
+        "simulationFailed": "Simulação Falhou",
+        "stillRevoke": "Ainda Revogar",
+        "gasNotEnough": "Gas insuficiente para submeter",
+        "iGotIt": "Eu entendi"
+      },
+      "errorReason": {
+        "title": "Falha ao Revogar"
+      },
+      "myBalance": "O Meu Saldo",
+      "contractAddress": "Endereço do Contrato",
+      "continueRevoke": "Continuar",
+      "revokeFrom": "Revogar de",
+      "selectAll": "Selecionar Tudo",
+      "approvedContracts": "Ativos Aprovados - Montante & Saldo",
+      "gasFee": "Taxa de Gas",
+      "approvedAssets": "Contratos Aprovados e Montante",
+      "startRevoke": "Começar a Revogar",
+      "approvedAssetsAndAmount": "Ativos e Quantidade Aprovados",
+      "unknownContract": "Contrato Desconhecido",
+      "asset": "Ativo",
+      "allApprovals": "Todas as Aprovações",
+      "unselectAll": "Deselecionar Tudo",
+      "pauseRevoke": "Pausar",
+      "leavingThisPageWillStopTheRevokeProcess": "Sair desta página irá interromper o processo de revogação.",
+      "revokeCompleted": "Concluído",
+      "stopTheRevokeProcess": "Parar o processo de revogação?",
+      "eip7702": {
+        "unsupportedTitle": "Endereço de tipo não suportado",
+        "unsupportedDesc": "Revogar delegações EIP-7702 é suportado apenas para endereços de chave privada ou frase-semente."
+      },
+      "delegatedAddress": "Endereço Delegado",
+      "supportedChains": "Cadeias Suportadas"
+    },
+    "nextComponent": {
+      "addAddress": {
+        "hardwareWallet": "Carteira de Hardware",
+        "syncRabbyExtension": "Sincronizar Rabby Extension",
+        "createAddress": "Criar Wallet",
+        "importAddress": "Importar Carteira",
+        "selectAddMethod": "Selecione Adicionar Método"
+      },
+      "multiAddressHome": {
+        "pin": "Pin",
+        "totalBalance": "Saldo Total",
+        "services": "Serviços",
+        "receiveCrypto": "Receber Crypto",
+        "noAssets": "Sem ativos?",
+        "buyWithFiat": "Comprar com Fiat",
+        "fundYourWallet": "Financiar a sua Wallet",
+        "buyWithFiatDesc": "Compra de criptomoeda simples",
+        "foundGuideTitle": "Financiar rapidamente",
+        "foundGuideDesc": "Adicione tokens à sua keyring para começar.",
+        "importAddress": "Importar uma Wallet",
+        "importAddressDesc": "Adicionar uma carteira existente com fundos",
+        "receiveCryptoDesc": "Transferir tokens de outra wallet"
+      },
+      "createNewAddress": {
+        "Continue": "Continuar",
+        "verificationFailed": "Falha na verificação",
+        "addressTopTips": "Use it to send and receive crypto no blockchain",
+        "Confirm": "Confirmar",
+        "selectWords": "Selecionar palavras",
+        "savedPhrase": "Guardei a Frase",
+        "Verify": "Verificar",
+        "inOrder": "na ordem correta.",
+        "confirmPasswordTips": "As senhas correspondem",
+        "WriteDownSeedPhrase": "Anote a sua Seed Phrase",
+        "createOnCurrent": "Usar a Seed Phrase Atual",
+        "BackupSeedPhrase": "Backup Manual da Seed Phrase",
+        "UnderstandsecurityPrecautions": "Compreendo estas precauções de segurança.",
+        "whatIsSeedPhrase": "O que é uma Seed Phrase",
+        "passwordTopTips": "Esta palavra-passe será usada para desbloquear a sua carteira e encriptar os seus dados locais.",
+        "VerifyDownSeedPhrase": "Verificar frase-semente",
+        "passwordMin": "Deve ter pelo menos 8 caracteres",
+        "createNewSeedPhrase": "Criar Nova Seed Phrase",
+        "backupSeedPhrase": "Faça backup da sua seed phrase para restaurar a sua carteira caso a aplicação seja apagada ou se o seu dispositivo for perdido.",
+        "riskTips": "Antes de começar, por favor, leia e mantenha estas dicas de segurança em mente:",
+        "createOnCurrentDesc": "Criar carteira com uma frase-semente importada existente",
+        "createNewDesc": "Gere uma nova frase-semente para novas carteiras",
+        "BackupYourSeedPhrase": "Faça o Backup da Sua Frase Semente",
+        "WriteSeedPhrase": "Esta é a sua frase semente. Anote-a e guarde-a com segurança. Se a perder ou a partilhar, os seus ativos podem ser perdidos para sempre. Você será solicitado a reintroduzir esta frase (na ordem) no próximo passo."
+      },
+      "importAddress": {
+        "privateKey": "Importar Private Key",
+        "seedPhrase": "Importar Seed Phrase",
+        "hardWare": "Ligar Carteiras de Hardware",
+        "tips": {
+          "gotIt": "Entendi.",
+          "title": "É seguro importar para o Rabby?",
+          "entry": "É seguro importar para o Rabby",
+          "description": "Os seus dados são encriptados de forma segura e armazenados localmente no seu dispositivo. A Rabby não tem acesso à sua informação privada e esta nunca é partilhada com terceiros."
+        },
+        "watch": "Carteira Apenas para Consulta",
+        "safeTitle": "Importar Wallet Seguro",
+        "importTitle": "Importar Wallet",
+        "watchOnlyTitle": "Importar Carteira Somente para Observação",
+        "ImportCloud": "Importar do {{cloud}}"
+      },
+      "rateModalTriggerOnHome": {
+        "description": "Como você avalia a Rabby Wallet?"
+      },
+      "rateModal": {
+        "feedbackSubmit": "Submeter",
+        "confirmButtonTitleAndroid": "Classifique na Google Play",
+        "confirmButtonTitleIOS": "Avaliação na App Store",
+        "descriptionAndroid": "Se você gosta do Rabby, uma rápida avaliação na Google Play significaria muito.",
+        "feedbackSuccess": "Obrigado pelo seu feedback",
+        "feedbackTitle": "Tem feedback? Estamos a ouvir.",
+        "descriptionIOS": "Se você gosta do Rabby, uma rápida avaliação na App Store significaria muito."
+      },
+      "homeCenterTipScreenshot": {
+        "description": "Tire uma captura de ecrã a qualquer momento para reportar rapidamente um bug."
+      },
+      "homeGuidanceMultipleTabs": {
+        "swipeToViewAllAssets": "Deslize para a direita para ver todos os ativos"
+      },
+      "copySeedPhraseSecureTip": {
+        "copyAnyway": "Copiar de qualquer maneira",
+        "subTitle": "Qualquer pessoa que obtenha a sua seed phrase pode controlar totalmente os seus fundos.",
+        "tip2": "Não cole nem salve a sua frase-semente em serviços de nuvem ou aplicações de notas.",
+        "tip3": "Nunca partilhe a sua frase-semente. Nunca a solicitaremos.",
+        "copied": "Frase-semente copiada. A área de transferência será limpa em 1 minuto.",
+        "title": "Mantenha a sua SeedPhrase em segredo",
+        "tip1": "Outras aplicações podem ler a sua área de transferência, por isso evite mudar de aplicações após copiar."
+      },
+      "screenshotSecureTip": {
+        "title": "Capturas de ecrã não são seguras",
+        "tip2": "Aplicações ou malware podem ler imagens armazenadas na sua biblioteca de fotografias.",
+        "tip3": "Qualquer pessoa que obtenha a sua seed phrase pode assumir o controlo total da sua wallet, e isso não pode ser revertido.",
+        "tip1": "As capturas de ecrã podem sincronizar para a nuvem ou outros dispositivos, e podem ser acedidas se um dispositivo for perdido, roubado ou comprometido.",
+        "subTitle": "Guardar a sua frase semente como uma imagem pode expô-la, por isso escrevê-la é uma opção mais segura."
+      }
+    },
+    "newAddress": {
+      "Quick": "Rápido",
+      "addContacts": {
+        "cameraTitle": "Por favor, escaneie o código QR com a sua câmara"
+      },
+      "createNewSeedPhrase": "Criar nova Seed Phrase",
+      "whatIsSeedPhrase": {
+        "title1": "Cópia de segurança",
+        "GotIt": "Entendi.",
+        "title3": "Segurança",
+        "description3": "Nunca partilhe a sua seed phrase—qualquer pessoa que tenha acesso a ela pode controlar os seus fundos.",
+        "title2": "Nunca partilhe",
+        "title": "O que é uma 'Seed phrase'",
+        "description2": "Se perder a sua seed phrase, não poderá restaurar a sua wallet.",
+        "description4": "A sua seed phrase é armazenada localmente no seu dispositivo e encriptada com a sua palavra-passe. Só você pode aceder a ela. Rabby não pode recuperar ou aceder à sua seed phrase.",
+        "description1": "Uma frase semente é uma série de palavras usadas para aceder e controlar a sua wallet. Você pode usá-la para recuperar a sua wallet em qualquer dispositivo."
+      },
+      "privateKey": {
+        "whatIsAPrivateKey": {
+          "question": "O que é uma private key?",
+          "answer": "Uma sequência de letras e números usada para controlar os seus ativos."
+        },
+        "isItSafeToImportItInRabby": {
+          "question": "É seguro importá-lo no Rabby?",
+          "answer": "Sim, será armazenado localmente no seu telemóvel e apenas acessível por si."
+        },
+        "repeatImportTips": "Esta carteira foi importada"
+      },
+      "keystone": {
+        "scan": {
+          "description": "Digitalize o código QR na sua carteira Keystone",
+          "title": "Digitalizar Keystone para Ligar"
+        },
+        "camera": {
+          "title": "Ligar Keystone",
+          "description": "Ative o acesso à câmara e digitalize o seu Keystone"
+        }
+      },
+      "onekey": {
+        "scan": {
+          "title": "A procurar Dispositivo",
+          "description": "Ative o Bluetooth e desbloqueie o OneKey"
+        },
+        "ble": {
+          "title": "Ligar OneKey",
+          "description": "Ative o Bluetooth e desbloqueie o OneKey"
+        },
+        "notFound": {
+          "title": "Dispositivo Não Encontrado",
+          "description": "Ative o Bluetooth e desbloqueie o OneKey"
+        },
+        "inputPin": {
+          "title": "Digite o PIN",
+          "onDevice": "Insira o código PIN no dispositivo",
+          "description": "Digite o código PIN de acordo com o layout dos números exibido na tela do dispositivo"
+        },
+        "select": {
+          "title": "Dispositivos Disponíveis",
+          "currentDevice": "atual",
+          "description": "Por favor, selecione um OneKey para conectar"
+        },
+        "connect": {
+          "description": "Digite o pin ou a frase-passe no dispositivo",
+          "title": "Conectando"
+        }
+      },
+      "ledger": {
+        "select": {
+          "title": "Dispositivos Disponíveis",
+          "description": "Mantenha o APP ETH aberto e selecione um Ledger para conectar",
+          "currentDevice": "atual"
+        },
+        "notFound": {
+          "title": "Dispositivo Não Encontrado",
+          "description": "Ative o Bluetooth e desbloqueie o Ledger",
+          "buttonText": "Ver o tutorial de suporte do Ledger"
+        },
+        "ble": {
+          "description": "Ative o Bluetooth e desbloqueie o Ledger",
+          "title": "Conectar Ledger"
+        },
+        "scan": {
+          "title": "A procurar o dispositivo",
+          "description": "Ligue o Bluetooth e desbloqueie o Ledger"
+        },
+        "imported": "Já importado",
+        "error": {
+          "unknown": "Conexão falhou, por favor volte e tente novamente.",
+          "ethereum_app_unconfirmed_error": "Você negou o pedido para abrir a aplicação Ethereum.",
+          "lockedOrNoEthApp": "Por favor, mantenha o Ledger desbloqueado e a APP Ethereum aberta.",
+          "ethereum_app_not_installed_error": "Por favor, instale a aplicação Ethereum no seu dispositivo Ledger.",
+          "ethereum_app_open_error": "Por favor, instale/aceite a aplicação Ethereum no seu dispositivo Ledger.",
+          "running_app_close_error": "Falha ao encerrar o aplicativo em execução no seu dispositivo Ledger."
+        },
+        "openEthApp": {
+          "title": "Ligando",
+          "description": "Por favor, abra a aplicação Ethereum na Ledger"
+        }
+      },
+      "seedPhrase": {
+        "riskTips": "Antes de começar, leia e tenha em mente as seguintes dicas de segurança.",
+        "showSeedPhrase": "Mostrar Seed Phrase",
+        "importQuestion2": "A seed phrase é apenas armazenada no meu telefone, e Rabby não tem acesso a ela.",
+        "whatIsASeedPhrase": {
+          "question": "O que é uma Seed Phrase?",
+          "answer": "Uma frase de 12, 18 ou 24 palavras usada para controlar os seus ativos."
+        },
+        "isItSafeToImportItInRabby": {
+          "question": "É seguro importá-lo no Rabby?",
+          "answer": "Sim, será armazenado localmente no seu telemóvel e apenas acessível para si."
+        },
+        "importQuestion3": "Se eu não fizer o backup da seed phrase e a aplicação for inadvertidamente eliminada, o dispositivo for perdido ou a reinstalação for necessária, a Rabby não a pode recuperar para mim.",
+        "importQuestion1": "Se eu perder a minha seed phrase ou a partilhar com outras pessoas, os meus ativos serão perdidos para sempre.",
+        "backupRestoreButton": "Importar Seed Phrase",
+        "backupUnlockPlaceholder": "Introduza a Palavra-passe para Confirmar",
+        "passwordMinTip": "Deve ter pelo menos 8 caracteres",
+        "backupUploadToGDrive": "A fazer backup para o Google Drive...",
+        "backupRestoreDownloadTitle": "A importar a Seed Phrase...",
+        "backupErrorCloudNotAvailable": "iCloud indisponível",
+        "backupUnlockButton": "Continuar",
+        "googleDriveBackup": "Google Drive Backup",
+        "createdSuccess": "A sua seed phrase foi criada",
+        "pastedAndClear": "Colado e área de transferência limpa",
+        "manuallyBackup": "Backup Manual",
+        "backupFailedTitle": "Cópia de Segurança Falhou",
+        "backupSuccessICloud": "Cópia de segurança no iCloud",
+        "chooseBackupMethodTitle": "Escolha um método de backup",
+        "icloudBackup": "Cópia de Segurança iCloud",
+        "backupUploadToICloud": "A fazer backup no iCloud...",
+        "maxAccountCount": "No máximo 50 endereços de cada vez",
+        "backupFailedButton": "Tentar novamente",
+        "backupRestoreCreatedAt": "Tempo de Backup:",
+        "backupRestoreTitle": "{{count}} seed phrase encontrada",
+        "backupUnlockTitle": "Encriptar com a Password da App",
+        "backupRestoreEmpty": "Não foi encontrada uma seed phrase de backup",
+        "backupRestoreUnlockDesc": "Use a mesma palavra-passe que definiu para encriptar os seus backups.",
+        "backupRestoreImported": "Importado",
+        "backupSuccessGDrive": "Backup no Google Drive",
+        "backupRestoreUnlockTitle": "Insira a Palavra-passe de Backup",
+        "backupRestoreLoadingText": "A procurar pela frase-semente de backup...",
+        "chooseBackupMethodDesc": "Os backups permitem que você restaure a sua carteira se você apagar o aplicativo ou perder o seu dispositivo.",
+        "backupUnlockDesc": "Mantenha a sua palavra-passe segura para restaurar os backups. A Rabby Wallet não a armazena e não a pode recuperar.",
+        "backupTips": "Certifique-se de que ninguém mais está a ver o seu ecrã quando faz o backup da seed phrase"
+      },
+      "hd": {
+        "balance": "Saldo",
+        "onekey": {
+          "hdPathTypeNoChain": {
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44."
+          },
+          "hdPathType": {
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44."
+          }
+        },
+        "keystone": {
+          "hdPathType": {
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44.",
+            "legacy": "Legado: caminho HD usado por MEW / Mycrypto.",
+            "ledgerLive": "Ledger Live: caminho HD oficial da Ledger. Você só pode gerenciar 10 endereços com o caminho do Ledger Live."
+          },
+          "hdPathTypeNoChain": {
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44.",
+            "ledgerLive": "Ledger Live: caminho HD oficial do Ledger. Você só pode gerir 10 endereços com o caminho Ledger Live.",
+            "legacy": "Legacy: caminho HD usado por MEW / Mycrypto."
+          }
+        },
+        "ledger": {
+          "hdPathTypeNoChain": {
+            "bip44": "Padrão BIP44: caminho HD definido pelo protocolo BIP44. Nos primeiros 3 wallets, não há wallets usadas on-chain.",
+            "legacy": "Legado: Caminho HD usado pelo MEW / Mycrypto. Nas primeiras 3 carteiras, não há carteiras usadas on-chain.",
+            "ledgerLive": "Ledger Live: Caminho HD oficial da Ledger. Nos primeiros 3 wallets, não há wallets utilizadas na cadeia."
+          },
+          "hdPathType": {
+            "legacy": "Legado: Caminho HD usado pelo MEW / Mycrypto. Nas primeiras 3 carteiras, há carteiras usadas na cadeia.",
+            "bip44": "Padrão BIP44: HDpath definido pelo protocolo BIP44. Nos primeiros 3 wallets, existem wallets usadas em cadeia.",
+            "ledgerLive": "Ledger Live: caminho HD oficial da Ledger. Nos primeiros 3 wallets, existem wallets utilizadas em cadeia."
+          }
+        },
+        "qrCode": {
+          "switch": {
+            "title": "Mudar para um novo dispositivo {{0}}",
+            "content": "Não é suportado importar múltiplos dispositivos {{0}}. Se mudar para um novo dispositivo {{0}}, a lista de endereços do dispositivo atual será removida antes de iniciar o processo de importação."
+          }
+        },
+        "customAddressHdPath": "Caminho HD da carteira personalizada",
+        "selectIndexTip": "Selecione o número de série das carteiras para começar:",
+        "manageAddressFrom": "Gerir a carteira de {{0}} para {{1}}",
+        "trezor": {
+          "hdPathType": {
+            "legacy": "Legado: caminho HD utilizado pelo MEW / Mycrypto.",
+            "ledgerLive": "Ledger Live: caminho HD oficial da Ledger.",
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44."
+          },
+          "hdPathTypeNoChain": {
+            "bip44": "BIP44: HDpath definido pelo protocolo BIP44.",
+            "ledgerLive": "Ledger Live: caminho HD oficial da Ledger.",
+            "legacy": "Legado: caminho HD usado pelo MEW / Mycrypto."
+          }
+        }
+      },
+      "createNewAddress": "Criar nova Wallet",
+      "whatIsPrivateKey": {
+        "title2": "Backup",
+        "title": "O que é uma key privada",
+        "ButtonGotIt": "Eu consegui.",
+        "title4": "Segurança",
+        "description2": "Se você perder sua chave privada, não poderá restaurar sua wallet.",
+        "title3": "Nunca o partilhe",
+        "description1": "Uma chave privada é uma sequência de letras e números usada para acessar e controlar a sua wallet. Você pode usá-la para recuperar a sua wallet em qualquer dispositivo.",
+        "description3": "Nunca partilhe a sua private key—qualquer pessoa com acesso a ela pode controlar os seus fundos.",
+        "description4": "A sua chave privada é armazenada localmente no seu dispositivo e encriptada com a sua palavra-passe. Apenas você pode aceder a ela. Rabby não pode recuperar ou aceder à sua chave privada."
+      },
+      "importing": "A importar..."
+    },
+    "unlock": {
+      "btn": {
+        "unlock": "Desbloquear",
+        "switchtype_faceid": "Desbloquear com Face ID",
+        "switchtype_pwd": "Desbloquear com Password",
+        "switchtype_fingerprint": "Desbloquear com impressão digital"
+      },
+      "password": {
+        "required": "Introduza a palavra-passe para desbloquear",
+        "placeholder": "Digite a Password para Desbloquear",
+        "error": "Senha incorreta"
+      },
+      "biometrics": {
+        "failedAndTipTitle": "Desbloqueio falhou",
+        "usePassword": "Alterado para usar senha para desbloquear.",
+        "enableBiometricAlert": {
+          "yes": "Sim",
+          "no": "Cancelar",
+          "content": "Deseja ativar {{ bioType }} para desbloquear Rabby Wallet?",
+          "title": "Ativar {{ bioType }}"
+        }
+      },
+      "unlocking": "Desbloqueando"
+    },
+    "switchChain": {
+      "requestRabbyToSupport": "Solicitar suporte para Rabby",
+      "requestsReceived": "1 request received",
+      "requestsReceivedPlural": "{{count}} pedidos recebidos"
+    },
+    "addToken": {
+      "noTokenFound": "Nenhum token encontrado",
+      "tokenNotFound": "Token não encontrado neste endereço de contrato",
+      "hasAdded": "Foi adicionado este token.",
+      "title": "Adicionar token personalizado ao Rabby",
+      "tokenCustomized": "O token atual já foi adicionado aos personalizados",
+      "tokenSupported": "Token has been supported on Rabby"
+    },
+    "signText": {
+      "title": "Assinar Texto",
+      "createKey": {
+        "interactDapp": "Interagir com Dapp",
+        "description": "Descrição"
+      },
+      "sameSafeMessageAlert": "A mesma mensagem está confirmada; nenhuma assinatura adicional é necessária."
+    },
+    "securityEngine": {
+      "riskProcessed": "O alerta de risco foi ignorado",
+      "whenTheValueIs": "quando o valor é {{value}}",
+      "yes": "Sim",
+      "undo": "Desfazer",
+      "viewRules": "Ver regras de segurança",
+      "no": "Não",
+      "ignoreAlert": "Ignorar o alerta",
+      "ruleDetailTitle": "Detalhe do Risco",
+      "unknownResult": "Resultado desconhecido porque o motor de segurança não está disponível no momento"
+    },
+    "connect": {
+      "connectBtn": "Conectar",
+      "popularLevelMedium": "Médio",
+      "markRuleText": "Minha marca",
+      "listedBy": "Listado por",
+      "SignTestnetPermission": {
+        "title": "Permissão de assinatura"
+      },
+      "myMark": "Minha Mark",
+      "popularLevelLow": "Baixo",
+      "trusted": "Confiável",
+      "noWebsite": "Nenhum",
+      "sitePopularity": "Popularidade do site",
+      "manageWhiteBlackList": "Gerir whitelist/blacklist",
+      "flagByMM": "Assinalado pelo MetaMask",
+      "markRemovedToast": "Mark removido",
+      "markAsBlockToast": "Marcar como \"Blocked\"",
+      "onYourWhitelist": "Na sua whitelist",
+      "verifiedByRabby": "Verificado por Rabby",
+      "flagByScamSniffer": "Marcado por ScamSniffer",
+      "title": "Conectar ao Dapp",
+      "blocked": "Bloqueado",
+      "popularLevelHigh": "Alto",
+      "markAsTrustToast": "Marcar como \"Confiável\"",
+      "popularLevelVeryLow": "Muito Baixo",
+      "flagByRabby": "Sinalizado por Rabby",
+      "noMark": "Sem marca",
+      "ignoreAll": "Ignorar tudo",
+      "foundForbiddenRisk": "Encontrados riscos proibidos. A conexão está bloqueada.",
+      "connectWallet": "Conectar Carteira"
+    },
+    "customRpc": {
+      "closed": "Fechado",
+      "add": "Modificar URL RPC",
+      "opened": "Aberto",
+      "empty": "Sem URL RPC personalizado",
+      "EditCustomTestnetModal": {
+        "quickAdd": "Adição rápida do Chainlist",
+        "title": "Adicionar Rede Personalizada"
+      },
+      "EditRPCModal": {
+        "rpcAuthFailed": "Falha na autenticação RPC",
+        "invalidChainId": "ID de Cadeia Inválido",
+        "rpcUrl": "URL RPC",
+        "invalidRPCUrl": "URL RPC inválido",
+        "title": "Modificar URL do RPC"
+      },
+      "desc": "Uma vez modificado, o RPC personalizado substituirá o node do Rabby. Para continuar a usar o node do Rabby, elimine o RPC personalizado."
+    },
+    "createPassword": {
+      "PrivacyPolicy": "Política de Privacidade",
+      "confirmTitle": "Confirmar palavra-passe",
+      "and": "e",
+      "agreeToTerms": "Li e concordo com o",
+      "enable": "Ativar {{ bioType }}",
+      "Newpassword": "Nova palavra-passe",
+      "settingUp": "Configuração de password",
+      "setUpSuccess": "Configuração da Palavra-passe Concluída com Sucesso",
+      "passwordRequired": "Por favor, insira a Password",
+      "passwordMinTip": "Deve ter pelo menos 8 caracteres",
+      "biometricsFail": "Falha ao ativar biometria",
+      "confirmRequired": "Por favor, confirme a palavra-passe",
+      "termOfUse": "Termos de Uso",
+      "passwordPlaceholder": "A senha deve ter pelo menos 8 caracteres",
+      "confirmPasswordPlaceholder": "Confirmar palavra-passe",
+      "confirmError": "As passwords não correspondem",
+      "subTitle": "Será utilizado para desbloquear a sua wallet e encriptar dados locais",
+      "title": "Definir Palavra-passe",
+      "passwordMin": "A palavra-passe deve ter pelo menos 8 caracteres",
+      "phoneNotSupport": "O seu telefone não suporta {{ bioType }}",
+      "agree": "Li e concordo com os<1/> <2>Termos de Uso</2>",
+      "confirmModalDesc": "Por favor, guarde a sua palavra-passe devidamente. Uma vez perdida, não pode ser alterada ou recuperada pelo Rabby.",
+      "ConfirmPassword": "Confirmar palavra-passe"
+    },
+    "ethSign": {
+      "alert": "Assinar com 'eth_sign' pode levar à perda de ativos. Para sua segurança, o Rabby não suporta este método."
+    },
+    "backupPrivateKey": {
+      "clickToShowQr": "Clique para mostrar o QR Code da chave privada",
+      "clickToShow": "Clique para mostrar a private key",
+      "alert": "Esta Private Key é a credencial para os seus ativos. NÃO a perca ou a revele a outras pessoas, caso contrário, poderá perder os seus ativos para sempre. Por favor, visualize-a num ambiente seguro e guarde-a com cuidado."
+    },
+    "addressDetail": {
+      "backup-seed-phrase": "Frase de Semente de Backup",
+      "address": "Endereço",
+      "add-to-whitelist": "Adicionar à Lista de Permissões",
+      "pin-in-list": "Fixar na Lista",
+      "safeAddressListScreen": {
+        "addSafeAddress": "Adicionar Carteiras Seguras"
+      },
+      "assets": "Ativos",
+      "hd-path": "Caminho HD",
+      "remove-from-whitelist": "Remover da Whitelist",
+      "address-note": "Nota do endereço",
+      "watchAddressListScreen": {
+        "addWatchAddress": "Adicionar Carteiras Apenas para Observação"
+      },
+      "manage-seed-phrase": "Gerir Seed Phrase",
+      "source": "Fonte",
+      "backup-private-key": "Backup Private Key",
+      "qr-code": "Código QR",
+      "delete-desc-needpassword": "Antes de excluir, tenha em mente os seguintes pontos para entender como proteger os seus ativos.",
+      "addressListScreen": {
+        "delete": "Eliminar",
+        "pin": "Pin",
+        "unpin": "Desafixar",
+        "detail": "Detalhes",
+        "edit": "Editar",
+        "importSafeAddress": "Carte de Segurança Importada",
+        "addAddress": "Adicionar uma Carteira",
+        "title_one": "{{count}} Carteira",
+        "importWatchAddress": "Carteira Importada Apenas para Observação",
+        "title_other": "{{count}} Carteiras",
+        "title_zero": "0 Carteira",
+        "moreWallets": "Mais Carteiras",
+        "notIncludedInTransactions": "Não incluído nas Transações",
+        "notIncludedInTotalBalance": "Não incluído no Saldo Total"
+      },
+      "admins": "Admins",
+      "delete-address": "Apagar carteira",
+      "delete-desc": "Tem certeza de que deseja eliminar esta wallet?",
+      "manage-addresses-under-this-seed-phrase": "Adicionar carteira a partir desta frase-semente",
+      "notMatterAddressDialog": {
+        "safeWallet": "Carteira Segura",
+        "title": "Os seguintes wallets não estão incluídos no Saldo Total",
+        "watchOnlyWallet": "Carteira Apenas para Monitorização",
+        "helpTitle": "Carteiras classificadas abaixo das top 10",
+        "notTop10Address": "Wallets classificados abaixo dos 10 melhores",
+        "helpDescription2": "Você pode pressionar longamente para fixar carteiras e ajustar quais estão incluídas.",
+        "helpDescription1": "Para garantir atualizações de dados em tempo hábil e precisas, apenas as suas 10 carteiras principais estão incluídas no Total Balance e no Portfolio."
+      },
+      "other": "Outro",
+      "basicInfo": "Informações Básicas",
+      "backup": "Cópia de segurança"
+    },
+    "backupSeedPhrase": {
+      "qrCodePopupTitle": "Código QR",
+      "copySeedPhrase": "Copiar seed phrase",
+      "clickToShow": "Clique para mostrar a Seed Phrase",
+      "showQrCode": "Mostrar Código QR",
+      "qrCodePopupTips": "Nunca partilhe o código QR da seed phrase com mais ninguém. Por favor, visualize-o num ambiente seguro e guarde-o com cuidado.",
+      "alert": "Esta seed phrase é a credencial para os seus ativos. NÃO a perca ou revele a terceiros, caso contrário, poderá perder os seus ativos para sempre. Visualize-a num ambiente seguro e guarde-a cuidadosamente."
+    },
+    "rabbyPoints": {
+      "claimItem": {
+        "claim": "Reivindicar"
+      },
+      "earn-points": "Ganhe Pontos",
+      "title": "Rabby Points",
+      "top-100": "Top 100",
+      "out-of-x-current-total-points": "De um total de {{total}} pontos distribuídos",
+      "initialPointsClaimEnded": "A reivindicação de Pontos Iniciais terminou",
+      "firstRoundEnded": "🎉 A primeira ronda de Rabby Points terminou",
+      "referralCode": {
+        "referral-code-cannot-be-empty": "O código de referência não pode estar vazio",
+        "my-referral-code": "Meu código de referência",
+        "referral-code-cannot-exceed-15-characters": "O código de referência não pode exceder 15 caracteres",
+        "referral-code-available": "Código de referência disponível",
+        "referral-code-already-exists": "Código de referência já existe",
+        "refer-a-new-user-to-get-50-points": "Indique um novo utilizador para obter 50 pontos",
+        "confirm": "Confirmar",
+        "set-my-referral-code": "Definir o meu código de referência",
+        "verifyAddressModal": {
+          "cancel": "Cancelar",
+          "verify-address": "Verificar Endereço",
+          "sign": "Assinar",
+          "please-sign-this-text-message-to-verify-that-you-are-the-owner-of-this-address": "Por favor, assine esta mensagem de texto para verificar que você é o proprietário deste endereço."
+        },
+        "set-my-code": "Definir o meu código",
+        "max-15-characters-use-numbers-and-letters-only": "Máximo de 15 caracteres, use apenas números e letras.",
+        "once-set-this-referral-code-is-permanent-and-cannot-change": "Depois de definido, este código de referência é permanente e não pode ser alterado."
+      },
+      "claimModal": {
+        "referral-code": "Código de Referência",
+        "snapshotTime": "Hora do instantâneo: {{time}}",
+        "addressBalance": "Saldo da Wallet",
+        "rabbyUser": "Rabby Active User",
+        "invalid-code": "código inválido",
+        "claim": "Reclamar",
+        "rabbyDesktopGenesisNft": "Rabby Desktop Genesis NFT",
+        "placeholder": "Insira o Código de Referência para pontos extra (opcional)",
+        "MetaMaskSwap": "MetaMask Swap",
+        "rabbyValuedUserBadge": "Distintivo de Utilizador Valorizado do Rabby",
+        "title": "Reivindicar Pontos Iniciais"
+      },
+      "code-set-successfully": "Código de recomendação definido com sucesso",
+      "xPoints": "{{point}} Pontos",
+      "alreadyClaimedXPoints": "Já reivindicado: {{point}}"
+    },
+    "safeQueue": {
+      "cancelExplain": "Cancelar {{token}} Aprovação para {{protocol}}",
+      "approvalExplain": "Aprovar {{counts}} {{token}} para {{protocol}}",
+      "replaceBtn": "Substituir",
+      "submitBtn": "Enviar transação",
+      "viewBtn": "Visualizar",
+      "unlimited": "ilimitado",
+      "accountSelectTitle": "Você pode submeter esta transação usando qualquer endereço",
+      "noData": "Sem transações pendentes",
+      "unknownProtocol": "Protocolo desconhecido",
+      "unknownTx": "Transação Desconhecida",
+      "action": {
+        "send": "Enviar",
+        "cancel": "Cancelar Transação Pendente"
+      },
+      "LowerNonceError": "A transação com nonce {{nonce}} precisa ser executada primeiro",
+      "ReplacePopup": {
+        "title": "Selecione como substituir esta transação",
+        "desc": "Uma transação assinada não pode ser removida, mas pode ser substituída por uma nova transação com o mesmo nonce.",
+        "options": {
+          "send": "Enviar Token",
+          "reject": "Rejeitar Transação"
+        }
+      },
+      "loadingFaild": "Devido à instabilidade do servidor Safe, os dados não estão disponíveis. Por favor, verifique novamente após 5 minutos.",
+      "sameNonceWarning": "Essas transações entram em conflito pois usam o mesmo nonce. Executar uma substituirá automaticamente a(s) outra(s).",
+      "loading": "A carregar transações pendentes",
+      "title": "Fila ({{total}})"
+    },
+    "importSafe": {
+      "loading": "A procurar na cadeia implementada deste endereço",
+      "gnosisChainDesc": "Este endereço foi encontrado implantado em {{count}} cadeias",
+      "title": "Adicionar morada Safe",
+      "error": {
+        "invalid": "Endereço não válido",
+        "required": "Por favor, insira o endereço"
+      }
+    },
+    "sign": {
+      "transactionSpeed": "Velocidade da Transação"
+    },
+    "approvalsAddressList": {
+      "title": "Aprovações"
+    },
+    "receiveAddressList": {
+      "selectChainTitle": "Selecionar Chain",
+      "title": "Selecionar Carteira para Receber"
+    },
+    "miniSignFooterBar": {
+      "signWithLedger": "Assinar",
+      "status": {
+        "txSigned": "Assinado. A criar transação",
+        "txSending": "A enviar pedido de assinatura",
+        "txSendings": "A enviar pedido de assinatura ({{current}}/{{total}})",
+        "txCreated": "Transação criada"
+      },
+      "fixedModeText": "Modo Fixo: Use sempre a sua configuração de gás personalizada"
+    },
+    "addChain": {
+      "desc": "Rabby não pode verificar a segurança das redes personalizadas. Por favor, adicione apenas redes confiáveis.",
+      "title": "Adicionar rede personalizada ao Rabby"
+    },
+    "singleHome": {
+      "sectionHeader": {
+        "Defi": "DeFi",
+        "Nft": "NFT",
+        "Token": "Token",
+        "NoData": "Sem {{name}}",
+        "totalChain_one": "Total {{count}} Chain",
+        "totalChain_other": "Total de {{count}} Chains"
+      },
+      "emptyToken": {
+        "receiveHeader": "Receber Crypto",
+        "buyBody": "Compra simples de cripto",
+        "title": "Financiar a Sua Wallet",
+        "buyHeader": "Comprar com Fiat",
+        "desc": "Financie rapidamente agora",
+        "importBody": "Adicionar uma carteira existente com fundos.",
+        "importHeader": "Importar uma Wallet",
+        "receiveBody": "Transferir tokens de outra wallet"
+      },
+      "nft": {
+        "floorPrice": "/Floor Price:"
+      },
+      "appChain": "Conta Dapp"
+    },
+    "search": {
+      "header": {
+        "placeHolder": "Pesquisa",
+        "searchPlaceHolder": "Pesquisar Nome / Endereço do Token",
+        "favoriteTitle": "Token Favorito",
+        "SearchChain": "Pesquisar Chain"
+      },
+      "sectionHeader": {
+        "Defi": "DeFi",
+        "token": "Tokens",
+        "NFT": "NFT",
+        "AllChains": "Todas as Chains"
+      },
+      "searchWeb": {
+        "searchTips": "Pesquisar na web",
+        "title": "Todos os Resultados",
+        "noResult": "Sem resultados para",
+        "noResults": "Sem Resultados",
+        "searching": "Resultados para"
+      },
+      "tokenItem": {
+        "verifyDangerTips": "Este é um token de scam",
+        "Issuedby": "Emitido por",
+        "scamWarningTips": "Este é um token de baixa qualidade e pode ser uma fraude"
+      },
+      "hotTokenList": {
+        "title": "Quente"
+      },
+      "globalSearch": {
+        "iosPlaceHolder": "Pesquisar Website/Token",
+        "placeHolder": "Pesquisar Dapp/Token"
+      }
+    },
+    "tokenDetail": {
+      "notSupportedOnChain": "Não suportado nesta cadeia",
+      "relateDefi": "Relacionado com DeFi",
+      "excludeBalanceTipsButton": "Entendi.",
+      "action": {
+        "unpin": "Desafixar",
+        "send": "Enviar",
+        "Sell": "Vender",
+        "Buy": "Comprar",
+        "includeBalance": "Incluir no Saldo",
+        "fold": "Dobrar",
+        "pin": "PIN",
+        "less": "Menos",
+        "unfold": "Desdobrar",
+        "all": "Todos",
+        "excludeBalance": "Excluir do Saldo",
+        "favorite": "Favorito",
+        "unfavorite": "Remover Favoritos"
+      },
+      "noBalance": "Sem saldo",
+      "excludeBalanceTips": "Este ativo é excluído do seu saldo total para precisão. Pode tocá-lo para ver detalhes e incluí-lo, se preferir.",
+      "actionsTips": {
+        "unpin_success": "Desafixado com sucesso",
+        "fold_success": "Dobrado com sucesso",
+        "unfold_success": "Desdobrado com sucesso",
+        "includeBalance_success": "Incluído no saldo",
+        "excludeBalance_success": "Excluído do saldo",
+        "pin_success": "Fixado com sucesso"
+      },
+      "Info": "Informação",
+      "SeeMore": "Ver mais",
+      "fdv": "FDV",
+      "Defi": "DeFi",
+      "OriginalToken": "Token Original",
+      "TokenName": "Nome do Token",
+      "fdvTitle": "O que é FDV?",
+      "NoListedSite": "Sem informações de listagem disponíveis",
+      "IssuedBy": "Emitido por",
+      "ListedBy": "Listado por",
+      "NoSupportedExchanges": "Nenhuma bolsa compatível disponível",
+      "SupportedExchanges": "Exchanges Suportadas",
+      "OriginIssue": "Emitido nativamente nesta blockchain",
+      "BridgeIssue": "Token em ponte por um terceiro",
+      "IssuerWebsite": "Website do Emissor",
+      "noTransactions": "Sem transações",
+      "NoIssuer": "Não há informações do emissor disponíveis",
+      "fdvContent": "A capitalização de mercado se o fornecimento máximo estivesse em circulação. Avaliação Totalmente Diluída (FDV) = Preço × Fornecimento Máximo. Se o Fornecimento Máximo for nulo, FDV = Preço × Fornecimento Total. Se nem o Fornecimento Máximo nem o Fornecimento Total estiverem definidos ou forem infinitos, a FDV não é exibida.",
+      "BridgeProvider": "Provedor de Bridge",
+      "Price": "Preço",
+      "HoldingValue": "Valor Retido",
+      "Introduction": "Introdução",
+      "ContentGeneratedByAI": "Este conteúdo foi gerado por IA",
+      "Fold": "Dobre",
+      "ShowMore": "Mostrar mais",
+      "Mybalance": "Saldo de Token",
+      "balance": "Saldo",
+      "notSupported": "Token não suportado",
+      "guideToMarketData": "Dados de Mercado:",
+      "Transaction": "Histórico de Tokens",
+      "tabs": {
+        "tokenSecurity": "Token Security",
+        "marketData": "Dados de mercado"
+      },
+      "marketInfo": {
+        "marketCap": "Capitalização de Mercado",
+        "holders": "Titulares",
+        "volume24h": "Volume de 24h",
+        "txns24h": "24h Txns",
+        "totalSupply": "Fornecimento Total",
+        "holderSections": {
+          "tableHeader": {
+            "address": "Endereço",
+            "ratio": "Relação",
+            "position": "Posição"
+          },
+          "top10HoldersRatio": "Rácio dos 10 Principais Detentores",
+          "top100HoldersRatio": "Rácio dos 100 Maiores Detentores"
+        },
+        "activitySections": {
+          "tableHeader": {
+            "hour": "Hora",
+            "type": "Tipo",
+            "volume": "Volume",
+            "buy": "Comprar",
+            "addresses": "Endereços",
+            "time": "Tempo",
+            "all": "Todos",
+            "sell": "Vender",
+            "address": "Endereço",
+            "min": "mín",
+            "qnt": "Qnt",
+            "price": "Preço",
+            "value": "Valor",
+            "transactionCount": "Contagem de Transações"
+          }
+        },
+        "summary": "Dados Resumidos",
+        "activity": "Atividade",
+        "details": "Detalhes",
+        "empty": "Sem Dados",
+        "pool": {
+          "tab": {
+            "liquidityDetail": "Detalhe de Liquidez",
+            "top5": "Top 5 pools"
+          },
+          "actions": {
+            "add": "Adicionar",
+            "all": "Todos",
+            "remove": "Remover"
+          },
+          "headers": {
+            "value": "Valor",
+            "time": "Tempo",
+            "amount": "Quantidade"
+          },
+          "value": "Valor",
+          "pair": "Par",
+          "dex": "Dex",
+          "amount": "Montante"
+        },
+        "pools": "Pools"
+      },
+      "headerTokenValueText": "Valor do Token",
+      "price": "Preço",
+      "headerBalanceText": "Saldo"
+    },
+    "customTestnet": {
+      "add": "Adicionar Rede Personalizada",
+      "currency": "Moeda",
+      "empty": "Sem rede personalizada",
+      "id": "ID",
+      "desc": "Rabby não pode verificar a segurança de redes personalizadas. Por favor, adicione apenas redes confiáveis.",
+      "signTx": {
+        "title": "Dados da Transação"
+      },
+      "ConfirmModifyRpcModal": {
+        "desc": "A cadeia já está integrada pelo Rabby. Precisa modificar o URL RPC dela?"
+      },
+      "AddFromChainList": {
+        "search": "Pesquisar nome ou ID de rede personalizada",
+        "title": "Adição rápida do Chainlist",
+        "empty": "Nenhuma chain encontrada",
+        "tips": {
+          "added": "Já adicionaste esta chain",
+          "supported": "A cadeia já está integrada pela Rabby Wallet"
+        }
+      },
+      "CustomTestnetForm": {
+        "nativeTokenSymbol": "Símbolo de moeda",
+        "name": "Nome da rede",
+        "nameRequired": "Por favor, insira o nome da rede",
+        "rpcUrl": "RPC URL",
+        "idRequired": "Por favor, insira o ID da cadeia",
+        "blockExplorerUrl": "URL do explorador de blocos (Opcional)",
+        "nativeTokenSymbolRequired": "Por favor, insira o símbolo da moeda",
+        "rpcUrlRequired": "Por favor, insira o URL RPC",
+        "id": "Chain ID"
+      }
+    },
+    "setting": {
+      "faceId": "Face ID",
+      "screenTitle": "Configurações",
+      "policy": "Política de Privacidade",
+      "currentVersion": "Versão Atual",
+      "fingerPrint": "Impressão digital",
+      "aboutUs": "Sobre Nós",
+      "autoLockTime": "Tempo de bloqueio automático",
+      "tou": "Term Of Use",
+      "touchId": "Touch ID",
+      "clearPending": "Limpar Pendentes Localmente",
+      "modifyRPCURL": "Modificar URL RPC",
+      "feedback": "Feedback",
+      "followUs": "Siga-nos",
+      "enableWhitelist": "Ativar whitelist para enviar ativos",
+      "addCustomNetwork": "Adicionar Rede Personalizada",
+      "themeMode": "Modo de Tema",
+      "clearPendingDesc2": "Isso não alterará os saldos nas suas contas nem exigirá que você reinsira a sua seed phrase. Todos os seus ativos e informações de contas permanecerão seguros.",
+      "clearPendingDesc1": "Isto limpará todas as suas transações pendentes. Isso pode ajudá-lo a resolver o problema em que, em alguns casos, o estado da transação no Rabby não corresponde ao estado na blockchain.",
+      "appCache": "Limpar Cache da App",
+      "currentLanguage": "Idioma Atual",
+      "clearPendingToast": "Transação pendente local removida",
+      "clearPendingResetDesc": "Também redefina meus dados locais de nonce e registro de assinatura.",
+      "clearPendingWarning": "A transação removida pode ainda estar confirmada na cadeia, a menos que seja substituída.",
+      "clearBrowserData": "Limpar dados do navegador",
+      "currency": "Moeda",
+      "searchCurrency": "Pesquisar Moeda",
+      "screenshotReportSwitch": "Captura de ecrã para reportar erro"
+    },
+    "gasAccount": {
+      "GasAccountDepositTipPopup": {
+        "title": "Abra o GasAccount e Deposite",
+        "gotIt": "Entendi"
+      },
+      "deposit": "Depósito",
+      "risk": "O seu endereço atual foi detectado como arriscado, portanto, esta funcionalidade não está disponível.",
+      "logout": "Terminar sessão na GasAccount atual",
+      "switchLoginAddressBeforeDeposit": {
+        "title": "Mude o endereço antes do depósito",
+        "desc": "Por favor, altere para o seu endereço de login."
+      },
+      "logoutConfirmModal": {
+        "title": "Terminar sessão do GasAccount atual",
+        "desc": "Uma vez desconectado, não poderá mais usar GasAccount para pagar as taxas de gás.",
+        "logout": "Terminar sessão",
+        "logoutSuccess": "Terminação da sessão bem-sucedida"
+      },
+      "loginInTip": {
+        "title": "Depositar USDC / USDT",
+        "desc": "Pagar Taxas de Gas em Todas as Cadeias"
+      },
+      "history": {
+        "noHistory": "Sem histórico nos últimos 30 dias"
+      },
+      "depositPopup": {
+        "amount": "Montante",
+        "selectToken": "Selecionar Token",
+        "invalidAmount": "Deve ter menos de 500",
+        "token": "Token",
+        "title": "Depósito",
+        "zeroInvalidAmount": "O montante não pode ser zero",
+        "followingTokenInSufficient": "O saldo do seguinte token é insuficiente",
+        "desc": "Faça um depósito na conta DeBank L2 do Rabby sem taxas adicionais — retire a qualquer momento.",
+        "googlePayDesc": "Inclui uma taxa de ${{ amount }} Google Pay. Sem levantamentos",
+        "applePayDesc": "Inclui uma taxa de ${{amount}} para Apple Pay. Sem levantamentos",
+        "googlePayFeeDesc": "Inclui uma taxa do Google Pay. Sem levantamentos",
+        "applePayFeeDesc": "Inclui uma taxa do Apple Pay. Sem levantamentos",
+        "paymentAddress": "Carteira de Pagamento",
+        "inSufficientTip1": "Esta carteira não tem tokens suficientes. Por favor, escolha uma carteira diferente.",
+        "pay": "Pagar",
+        "applePayFeeDesc1": "Inclui uma taxa da App Store. Sem retiradas."
+      },
+      "paymentAddressPopup": {
+        "balance": "Saldo",
+        "confirm": "Confirmar",
+        "address": "Carteira de Pagamento",
+        "title": "Selecionar Carteira de Pagamento"
+      },
+      "withdrawPopup": {
+        "noEnoughGas": "Montante demasiado baixo para cobrir as taxas de gas.",
+        "amount": "Montante",
+        "selectDestinationChain": "Selecione a cadeia de destino",
+        "title": "Levantar",
+        "riskMessageFromChain": "Devido ao controlo de riscos, o limite de levantamento depende do montante total depositado desta cadeia.",
+        "withdrawalLimit": "Limite de levantamento",
+        "noEnoughValuetBalance": "Saldo do Vault insuficiente. Mude de chain ou tente novamente mais tarde.",
+        "riskMessageFromAddress": "Devido ao controlo de risco, o limite de levantamento depende do montante total que este endereço depositou",
+        "desc": "Pode retirar o saldo da sua GasAccount para a sua carteira DeBank L2. Inicie sessão na sua carteira DeBank L2 para transferir os fundos para uma blockchain suportada conforme necessário.",
+        "to": "Para",
+        "selectChain": "Selecionar Chain",
+        "tipsBtn": "Entendi",
+        "destinationChain": "Cadeia de destino",
+        "deductGasFees": "O montante recebido deduzirá as taxas de gás",
+        "noEnoughValueBalance": "Saldo da Vault insuficiente. Mude de cadeia ou tente novamente mais tarde.",
+        "recipientAddress": "Carteira de destinatário",
+        "selectRecipientAddress": "Selecionar carteira do destinatário",
+        "noRecipient": "Nenhuma carteira de destinatário disponível",
+        "availableBalance": "Saldo de retirada disponível: {{balance}}"
+      },
+      "withdrawConfirmModal": {
+        "button": "Visualizar no DeBank",
+        "title": "Transferido para a sua carteira DeBank L2"
+      },
+      "gasExceed": "O saldo do GasAccount não pode exceder $1000",
+      "noBalance": "Sem saldo para levantar",
+      "withdraw": "Levantar",
+      "depositPayPopup": {
+        "title": "Comprar com Apple Pay",
+        "titleAndroid": "Comprar com Google Pay",
+        "depositCanceled": "Depósito Cancelado",
+        "depositFailed": "Depósito falhou",
+        "balance": "Saldo atual do GasAccount:",
+        "titleApple": "Comprar na App Store"
+      },
+      "depositSelectPopup": {
+        "buyWith": "Comprar com",
+        "title": "Depósito no GasAccount",
+        "desc": "Pague taxas de Gas em todas as cadeias",
+        "depositToken": "Depósito com Token",
+        "depositTokenDesc": "Sem taxa extra, levantamentos instantâneos",
+        "buyWithDesc": "30% taxa, sem levantamentos",
+        "buyWithApple": "Comprar na App Store"
+      },
+      "gasAccountList": {
+        "balance": "Saldo",
+        "gasAccountBalance": "Saldo do GasAccount",
+        "address": "Endereço",
+        "wallet": "Carteira"
+      },
+      "switchAccount": "Alternar GasAccount",
+      "loginFailed": "Falha no Login",
+      "depositCanceled": "Depósito cancelado",
+      "depositSuccess": "Depósito bem-sucedido",
+      "loginSuccess": "Login Successful",
+      "withdrawDisabledIAP": "Os levantamentos estão desativados porque o seu saldo inclui fundos fiduciários, que não podem ser levantados. Contacte o suporte para levantar o saldo dos seus tokens."
+    },
+    "settingModal": {
+      "themeMode": {
+        "title": "Modo de tema"
+      },
+      "clearAppCache": {
+        "button": {
+          "clear_and_quit": "Limpar e Fechar App",
+          "clear": "Claro"
+        },
+        "title": "Limpar Cache da App",
+        "clearAppCacheDesc": "'Isto removerá ficheiros temporários em cache sem afetar os seus dados pessoais ou definições. A aplicação precisa de reiniciar para concluir o processo. Deseja continuar?'",
+        "iOSToastTitle": "Sucesso claro do cache",
+        "iOSToastDesc": "Precisa de reiniciar a aplicação para que tenha efeito."
+      },
+      "clearBrowserData": {
+        "button": "Limpar",
+        "title": "Limpar Dados do Navegador",
+        "desc": "Isto fechará todas as abas do navegador e apagará todo o histórico de navegação."
+      }
+    },
+    "buy": {
+      "from": "De {{dex}}",
+      "purchased": "Comprado",
+      "regionBottomSheet": {
+        "title": "Selecione a sua região",
+        "searchPlaceholder": "Pesquisar moeda fiduciária",
+        "noRegionFound": "Nenhuma região encontrada"
+      },
+      "currencyBottomSheet": {
+        "NoFound": "Nenhuma moeda encontrada",
+        "searchPlaceholder": "Pesquisar moeda",
+        "title": "Selecione uma Currency"
+      },
+      "quote": {
+        "best": "Melhores Citações",
+        "title": "Cotações Para você"
+      },
+      "title": "Comprar",
+      "youWillPay": "Pagar",
+      "paymentMethod": "Método de Pagamento",
+      "paymentProviderTips": "Este fornecedor suporta os seguintes métodos de pagamento:",
+      "noQuote": "Não foram encontradas cotações: Tente inserir um valor mais alto.",
+      "searchRegionPlaceholder": "Pesquisar região",
+      "youWillReceive": "Receber",
+      "noQuotePlaceholder": "Sem Cotação",
+      "history": "Histórico de Compras",
+      "toBuy": "Continuar a Comprar",
+      "noQuote2": "Não foram encontradas cotações.",
+      "searchingQuote": "A procurar cotações para si...",
+      "paymentsOnly": "Os pagamentos só podem ser feitos em {{currency}}",
+      "quotesForYou": "Cotações para si"
+    },
+    "eip7702": {
+      "alert": "EIP-7702 ainda não foi suportado"
+    },
+    "sendPoly": {
+      "modals": {
+        "header": "Adicionar endereço à Whitelist",
+        "recentAddress": "Endereços Enviados Recentemente",
+        "addAddress": "Nova Carteira",
+        "importedAddress": "Carteira Importada",
+        "content": "Selecione como deseja adicionar uma wallet:"
+      },
+      "emptyWhitelistBtn": "Adicionar agora",
+      "enterAddress": "Inserir Endereço",
+      "whitelistTitle": "Os Meus Endereços da Whitelist",
+      "emptyWhitelistHeader": "Adicionar Endereço à Lista de Permissões",
+      "emptyWhitelistTip": "Ainda não há endereços na lista de permissões,",
+      "emptyWhitelistContent": "Adicione endereços confiáveis à lista branca para transferências rápidas—sem necessidade de confirmação na próxima vez",
+      "SendHistory": "Histórico de Envio",
+      "recent": "Recente",
+      "SelectFromHistory": "Selecionar do Histórico",
+      "sendTimeHeader": "Enviar",
+      "innerEnterAddress": "Introduzir Endereço / ENS",
+      "sentTimeHeader": "Enviado",
+      "sendToImportedAddress": "Enviar para as Minhas Carteiras Importadas",
+      "sendToSafeAddress": "Enviar para Carteiras Seguras",
+      "sendToWatchAddress": "Enviar para carteiras somente de visualização",
+      "dividerWatchOnlyWallets": "Endereços apenas para visualização",
+      "enterOrSearchAddress": "Introduza ou Pesquise Endereço"
+    },
+    "confirmAddress": {
+      "risks": {
+        "contractAddress": "O endereço do destinatário é um endereço de contrato, o que pode potencialmente causar perda de fundos",
+        "scamAddress": "O endereço do destinatário é um endereço de fraude sinalizado por Rabby",
+        "cexNoDeposite": "O endereço do destinatário é um endereço não-de-depósito de uma CEX. Por favor, assegure-se de que o seu endereço de depósito está correto.",
+        "noSend": "Não enviou para este endereço nos últimos 180 dias."
+      },
+      "brandNameTail": "Endereço",
+      "dexNameTail": "Endereço de Depósito",
+      "addToWhitelist": "Adicionar à lista de permissões",
+      "tipForWhiteList": "Adicione à sua whitelist para transferências rápidas, sem necessidade de confirmação na próxima vez.",
+      "title": "Confirmar Endereço",
+      "sendTo": "Enviar para este Endereço",
+      "checkbox": "Eu entendo os riscos e quero continuar"
+    },
+    "selectAddress": {
+      "selectSafeAddress": "Selecionar de endereços Safe",
+      "selectWatchAddress": "Selecione entre endereços apenas para visualização"
+    },
+    "whitelist": {
+      "confirm": "Confirmar",
+      "cancel": "Cancelar",
+      "addToWhitelist": "Adicionar à Whitelist",
+      "addSuccessful": "Endereço adicionado à lista branca",
+      "removeWhitelist": "Remover da Whitelist",
+      "alreadyAdded": "Já adicionado à sua lista de permissões",
+      "confirmPassword": "Introduza a Palavra-passe para Confirmar",
+      "copyAddress": "Copiar Endereço",
+      "header": {
+        "exchange": "Endereço de troca?",
+        "address": "Endereço",
+        "name": "Nome"
+      },
+      "placeholder": {
+        "name": "Nomeie o Seu Endereço",
+        "exchange": "selecionar troca"
+      },
+      "alreadyInYour": "Já na sua whitelist",
+      "alreadyIn": "Já na Whitelist"
+    },
+    "syncExtension": {
+      "syncingProgress": "A digitalização ({{ percent }})",
+      "scanTips2": "Digitalize o código e comece a sincronizar",
+      "newUserVerify": "Também servirá como a palavra-passe padrão para o seu Rabby Mobile",
+      "noNewAddr": "Nenhum novo endereço encontrado para importar",
+      "scanTips1": "Clique em “Mobile Sync” na extensão Rabby",
+      "syncingTips": "Mantenha a câmara imóvel até que a digitalização esteja concluída",
+      "imported": "Os endereços já presentes no Rabby Mobile não serão importados novamente. As notas e listas brancas dos endereços serão sincronizadas automaticamente.",
+      "importedSuccessfully": "Importado com sucesso!",
+      "verifyWithPassword": "Verifique com a sua Palavra-passe da Extensão Rabby",
+      "verifyTips": "Os seus dados são encriptados offline. Insira a senha da sua extensão Rabby para desencriptar e verificar.",
+      "importedTips": "Se a APP já tiver um endereço duplicado, não será importado. As notas de endereço e listas brancas também serão sincronizadas."
+    },
+    "safeMessageQueue": {
+      "noData": "Sem mensagens",
+      "loading": "A carregar mensagens"
+    },
+    "multiAddressAssets": {
+      "tabs": {
+        "portfolio": "Portefólio",
+        "address": "Endereço",
+        "wallet_one": "Carteira",
+        "wallet_other": "Carteiras"
+      },
+      "lowValueTokenHeader": "Tokens de baixo valor"
+    },
+    "browser": {
+      "BrowserBookmarkSection": {
+        "title": "Favoritos",
+        "fold": "Dobre",
+        "showAll": "Mostrar Todos"
+      },
+      "BrowserHeader": {
+        "searchAndroid": "Pesquisar Dapp",
+        "searchIos": "Pesquisar Website"
+      },
+      "CurrentPopup": {
+        "title": "Dapp Atual",
+        "disconnect": "Desconectar",
+        "connectChain": "Conectar Chain",
+        "connectWallet": "Conectar Wallet"
+      },
+      "BrowserSearch": {
+        "results": "Resultados",
+        "placeholder": "Pesquisar Websites",
+        "searchInGoogle": "Pesquisar \"{{searchText}}\" no Google",
+        "openUrl": "Abrir \"{{searchText}}\"",
+        "recent": "Recente",
+        "recentEmpty": "Começando a Explorar o Website",
+        "hot": "Quente",
+        "favorite": "Favorito",
+        "otherResults": "Outras Resultados",
+        "hot10": "Quente 10"
+      },
+      "BrowserSearchEntry": {
+        "openWebsites": "Abrir Websites",
+        "searchWebsite": "Pesquisar Website"
+      },
+      "menu": {
+        "disconnect": "Desconectar",
+        "refresh": "Atualizar",
+        "contentModeDesktop": "Solicitar Site de Desktop",
+        "favorite": "Favorito",
+        "contentModeMobile": "Solicitar Site Móvel",
+        "clearCache": "Limpar cache"
+      },
+      "HyperliquidInvitePopup": {
+        "title": "Programa de Referência Hyperliquid",
+        "btn": "Junte-se Agora",
+        "desc": "Junte-se agora utilizando o código da Rabby para obter um <1>desconto de 4%</1> nas suas taxas de Hyperliquid.",
+        "asterTitle": "Programa de Recompensas Aster",
+        "asterDesc": "Junte-se agora usando o código do Rabby para obter um <1>desconto de 4%</1> nas suas taxas do Aster."
+      },
+      "WebviewError": {
+        "error": "Erro:",
+        "failedToLoad": "Falha ao carregar a página",
+        "alertText": "Tente<1/><2>Abrir no navegador</2><3/>para verificar se é um problema do site"
+      },
+      "toast": {
+        "clearCacheSuccess": "Cache limpo"
+      },
+      "BrowserFavoriteInHome": {
+        "more": "Mais"
+      }
+    },
+    "browserManage": {
+      "option": {
+        "favorites": "Favoritos",
+        "history": "Histórico",
+        "tab": "Aba",
+        "recent": "Recente"
+      },
+      "BrowserBookmarkList": {
+        "title": "Favoritos",
+        "emptyTitle": "Ainda não foi adicionado nenhum website."
+      },
+      "BrowserHistoryList": {
+        "title": "Histórico",
+        "emptyTitle": "Sem histórico nos últimos 30 dias",
+        "clearAllHistory": "Limpar todo o Histórico"
+      },
+      "BrowserTabList": {
+        "closeAllTabs": "Fechar todas as abas",
+        "emptyDesc": "Abra uma nova aba agora",
+        "emptyTitle": "Ainda não há guias abertas"
+      }
+    },
+    "scan": {
+      "noQRCodeFound": "Nenhum QR-Code encontrado",
+      "selectFromAlbum": "Selecionar do Álbum",
+      "noCameraDevice": "Sem Dispositivo de Câmera"
+    },
+    "defiDetail": {
+      "viewSiteInApp": "Ver no Dapp",
+      "viewSiteInWebsite": "Ver no Website",
+      "appChain": "Na conta {{chain}}",
+      "dappActions": {
+        "queueDescription": "A retirada atual entrará em uma fila de espera. Uma vez processada, poderá ser retirada para a sua keyring."
+      }
+    },
+    "component": {
+      "ChainSelector": {
+        "title": "Selecionar Cadeia"
+      }
+    },
+    "copyTrading": {
+      "tipsDollar": {
+        "title": "Copy Trading do Smart Money",
+        "description": "Descubra tokens com base na atividade recente de carteiras de Smart Money. Toque em um token para ver os montantes de negociação detalhados e os lucros históricos dessas carteiras."
+      },
+      "buy": "Comprar",
+      "smartMoneyWallet": "Smart Money Wallet",
+      "smartMoneyWallets": "Smart Money Wallets",
+      "noMoreData": "Sem mais dados",
+      "recentBuy": "Compra Recentemente",
+      "refreshTitle": "A Carregar Mais Copy Trading Do Smart Money",
+      "comingSoon": "Em breve...",
+      "historyProfit": "Histórico de Lucros",
+      "updateText": "{{count}} Tendências Atualizadas",
+      "filterRule": {
+        "tokenCreate": "Recentemente Criado",
+        "24HChange": "Mudança em 24 horas",
+        "smartMoney": "Trading Smart Wallets",
+        "smartWalletCount": "Contagem de Smart Wallets"
+      },
+      "tokenName": "Nome do Token",
+      "earn": "Ganhar",
+      "loss": "Perda",
+      "currentToken": "Token Atual",
+      "myCopyTrading": "A Minha Negociação Copiada",
+      "myCopyTradingEarnings": "Meus Ganhos de Copy Trading",
+      "createdTime": "Hora de Criação",
+      "info": "Informação",
+      "contractAddress": "Endereço do Contrato",
+      "chain": "Cadeia",
+      "smartWalletsBuying": "{{len}} Carteiras Inteligentes a Comprar",
+      "tokenInfo": "Informação do Token",
+      "Liquidity": "Liquidez",
+      "token": "Token",
+      "bought": "Comprado",
+      "sameNameTokens": "Tokens com o Mesmo Nome",
+      "timeSmartWallet": "Tempo / Smart Wallet",
+      "timeLabelAgo": "Criado há {{time}}",
+      "buyEarn": "24H Comprar / Ganhar",
+      "earned": "Ganho",
+      "noOtherTokensWithSameName": "Nenhum outro token com o mesmo nome foi encontrado.",
+      "holdingProfit": "Holding/Profit",
+      "smartWallets": "Carteiras Inteligentes",
+      "twitterNews": "Notícias em X",
+      "myBalanceFromCopyTrading": "O meu saldo de Copy Trading",
+      "gettingLatest": "A obter as últimas informações do Smart Money...",
+      "updateTokenText": "{{count}} tokens atualizados"
+    },
+    "watchlist": {
+      "empty": {
+        "title": "Ainda não há tokens na sua lista de observação"
+      },
+      "search": {
+        "title": "Pesquisar tokens"
+      },
+      "tokenHeader": {
+        "price": "Preço",
+        "token": "Token/FDV",
+        "change": "Mudança em 24H"
+      },
+      "footer": {
+        "skip": "Saltar",
+        "add": "Adicionar à Lista de Observação ({{count}})"
+      },
+      "toast": {
+        "remove": "Remover da Lista de Vigilância com Sucesso"
+      }
+    },
+    "universalLink": {
+      "error": {
+        "setupWalletFirst": "Por favor, conclua a configuração da wallet primeiro.",
+        "unlockWalletFirst": "Por favor, desbloqueie o app para abrir o link."
+      }
+    },
+    "perpsHistory": {
+      "title": "Histórico"
+    },
+    "perps": {
+      "PerpsCard": {
+        "title": "Negociar Perps",
+        "available": "Disponível",
+        "depositBtn": "Depósito",
+        "loginDesc": "Inicie sessão com o seu endereço e deposite fundos para começar a negociar perps",
+        "withdrawBtn": "Retirar",
+        "loginBtn": "Inicie sessão em Trading Perps",
+        "learnBtn": "Saiba mais sobre Perps"
+      },
+      "PerpsGuidePopup": {
+        "step1Title": "Mestre de Futuros Perpétuos",
+        "step4Title": "Ajustar Alavancagem",
+        "step5Title": "Liquidação",
+        "step1Desc": "Com os contratos futuros perpétuos, você não está apenas negociando ativos. Você está negociando o que pensa que acontecerá a seguir.",
+        "step3Desc": "Quando espera que o preço caia, abre uma posição curta. Se o preço cair, ganha. Se subir, perde.",
+        "step4Desc": "A alavancagem permite que você negocie com mais do que você investe. Ela pode aumentar tanto seus ganhos quanto suas perdas.",
+        "step2Desc": "Quando espera que o preço suba, abre uma posição longa. Se o preço subir, ganha. Se cair, perde.",
+        "step3Title": "Venda a descoberto",
+        "step5Desc": "Cada posição tem um preço de liquidação. Se o preço de mercado atingir esse valor, a sua posição será encerrada. Usar um maior leverage aumenta o risco de ser liquidado.",
+        "step2Title": "Long"
+      },
+      "PerpsDepositPopup": {
+        "balance": "Saldo",
+        "title": "Depósito",
+        "amount": "Quantia",
+        "insufficientBalance": "Saldo insuficiente",
+        "depositBtn": "Depositar",
+        "fetchQuoteFailed": "Falha ao obter a cotação de depósito. Por favor, mude o token.",
+        "invalidNumber": "Por favor, insira um número válido",
+        "estReceive": "Est. Receber: {{balance}}",
+        "minimumDepositSize": "O valor mínimo de depósito é de $5",
+        "estReceiveTooltip": "O depósito em cadeia cruzada é processado através do LiFi, podendo incorrer em algum deslizamento. Tempo estimado de chegada em {{number}}s."
+      },
+      "PerpsWithdrawPopup": {
+        "amount": "Quantidade",
+        "title": "Levantar",
+        "insufficientBalance": "Saldo insuficiente",
+        "withdrawBtn": "Retirar",
+        "available": "disponível",
+        "feeTooltipTitle": "Taxa",
+        "feeTooltipDesc": "Taxa de Retirada cobrada pela Hyperliquid: $1",
+        "minimumWithdrawSize": "O valor mínimo de retirada é de $2.",
+        "invalidNumber": "Por favor, insira um número válido",
+        "feeTip": "Taxa: $1.00"
+      },
+      "PerpsWithdrawFeePopup": {
+        "title": "Taxa",
+        "desc": "Taxa de retirada cobrada pela Hyperliquid: $1",
+        "btn": "Eu percebi."
+      },
+      "historyDetail": {
+        "title": {
+          "openLong": "Abrir Longo",
+          "closeLong": "Fechar Long",
+          "openShort": "Abrir Short",
+          "closeShort": "Fechar Short",
+          "closeLongTp": "Fechar Longo Realizar Lucro",
+          "closeShortTp": "Fechar Short Realizar Lucro",
+          "closeShortLiquidation": "Fechar Short Liquidação",
+          "closeShortSl": "Fechar Short Stop Loss",
+          "closeLongLiquidation": "Fechar Long Liquidação",
+          "closeLongSl": "Fechar Long Stop Loss"
+        },
+        "gotItBtn": "Eu entendi",
+        "date": "Data",
+        "price": "Preço",
+        "fee": "Taxa",
+        "closedPnl": "PNL Fechado",
+        "size": "Tamanho",
+        "perps": "Perpetuais",
+        "provider": "Fornecedor",
+        "tradeValue": "Valor de Negociação",
+        "sizeTips": "O valor total ou a quantidade da sua negociação, definida pela margem e pela alavancagem."
+      },
+      "PerpsAutoCloseModal": {
+        "takeProfit": "Levar lucro",
+        "loss": "Perda",
+        "takeProfitTipsLong": "O preço de realização de lucro deve ser superior ao preço atual.",
+        "stopLossTipsLongLiquidation": "O preço é inferior ao preço de liquidação ({{price}})",
+        "stopLossTipsLong": "O preço de stop loss deve ser inferior ao preço atual.",
+        "stopLoss": "Ordem de paragem de perdas",
+        "takeProfitTipsShort": "O preço de realização de lucro deve ser inferior ao preço atual.",
+        "profit": "Lucro",
+        "stopLossTipsShort": "O preço de stop loss deve ser superior ao preço atual.",
+        "stopLossTipsShortLiquidation": "O preço é superior ao preço de liquidação ({{price}})",
+        "noPosition": "Você deve inserir a margem primeiro."
+      },
+      "PerpsDepositTokenModal": {
+        "bridgeBtn": "Ponte",
+        "swapBtn": "Troca",
+        "directTag": "Depósito Direto",
+        "goSwapDesc": "Apenas USDC na Arbitrum é suportado para depósito direto. Por favor, troque seu token atual por USDC antes de depositar.",
+        "goBridgeDesc": "Apenas USDC na Arbitrum é suportado para depósito direto. Por favor, faça a ponte do seu token atual para USDC na Arbitrum antes de depositar."
+      },
+      "history": {
+        "status": {
+          "completed": "Concluído",
+          "pending": "Pendente"
+        },
+        "title": "Histórico",
+        "closeLongTp": "Fechar Longa Levar Lucro",
+        "closeLongSl": "Fechar Long stop loss",
+        "openShort": "Abrir Short",
+        "deposit": "Depósito",
+        "closeLongLiquidation": "Fechar Long Liquidation",
+        "closeShort": "Fechar Short",
+        "closeShortLiquidation": "Fechar Short Liquidação",
+        "closeShortSl": "Fechar Short Stop Loss",
+        "withdraw": "Retirar",
+        "closeShortTp": "Fechar Short Lucro de Toma",
+        "closeLong": "Fechar Long",
+        "openLong": "Abrir Longo"
+      },
+      "PerpsSelectTokenPopup": {
+        "title": "Selecionar Token para Depositar"
+      },
+      "PerpsAccountLogoutPopup": {
+        "logout": "Sair",
+        "title": "Sair do Endereço Atual",
+        "desc": "Está a sair da sua conta Perps atual. Pode restaurá-la a qualquer momento ao entrar com este endereço."
+      },
+      "PerpsDepositCard": {
+        "availableToTrade": "Disponível para negociar:",
+        "deposit": "Depositar"
+      },
+      "PerpsAccountSelectorPopup": {
+        "notActivatedAddress": "Não Ativado",
+        "hyperliquidBalance": "Saldo de Perps",
+        "activatedAddress": "Ativado",
+        "noPosition": "Sem Posição",
+        "lastUsed": "Último Uso"
+      },
+      "selectAccountTitle": "Selecione uma Wallet para Iniciar Sessão",
+      "title": "Perps",
+      "more": "Mais",
+      "explorePerps": "Explorar Perps",
+      "positions": "Posições",
+      "leverageRangeMinError": "A alavancagem mínima é {{min}}x",
+      "deleteAgentSuccess": "Agente eliminado com sucesso",
+      "leverageRangeMaxError": "A alavancagem máxima é {{max}}x",
+      "regionNotSupport": "Abrir posições não é suportado na sua região.",
+      "deleteAgentModal": "Você atingiu o número máximo de agentes. Deseja excluir um agente existente para criar um novo?",
+      "searchPerpsPopup": {
+        "searchPerps": "Pesquisar Perps",
+        "searchPlaceholder": "Pesquisar Perps",
+        "empty": "Nenhum resultado encontrado",
+        "searchPosition": "Pesquisar Posição",
+        "openPosition": "Abrir Posição"
+      },
+      "PerpsRiskPopup": {
+        "level": {
+          "safe": "Seguro",
+          "danger": "Perigo",
+          "warning": "Aviso"
+        },
+        "currentPrice": "Preço Atual",
+        "subtitle": "Distância de liquidação em tempo real (%)",
+        "liquidationPrice": "Preço de Liquidação",
+        "title": "Nível de Risco",
+        "liqIntro": "A Distância de Liquidação (%) mostra quão longe o preço atual está do seu preço de liquidação. Uma distância maior indica uma posição mais segura, enquanto uma distância menor significa um risco de liquidação mais alto.",
+        "distanceLabel": "Distância de Liquidação",
+        "liqDistanceTipsShort": "Subir <1>{{distance}}</1> irá ativar a liquidação.",
+        "liqDistanceTipsLong": "Descer <1>{{distance}}</1> acionará a liquidação."
+      },
+      "closeAll": "Fechar Tudo",
+      "closeAllConfirmMessage": "Todas as suas posições abertas serão fechadas ao preço de mercado.",
+      "closeAllConfirmTitle": "Confirmar Fechar Todas as Posições",
+      "assetPage": {
+        "hyperliquidPosition": "Hyperliquid Position"
+      },
+      "invitePopup": {
+        "activateFailed": "Falhou",
+        "activateNow": "Ativar Agora",
+        "title": "Poupe nas Taxas do Hyperliquid",
+        "description": "Utilize o código do Rabby para ativar",
+        "activatedFailed": "Ativação falhou",
+        "activatedSuccess": "4% de poupança em taxas Hyperliquid ativada",
+        "hyperliquidFee": "Taxas de negociação Hyperliquid."
+      }
+    },
+    "perpsDetail": {
+      "PerpsPosition": {
+        "cross": "Cruz",
+        "pnl": "PNL",
+        "title": "Posição",
+        "justMargin": "Margem",
+        "liqPrice": "Preço de Liquidação",
+        "marginIsolated": "Margem (isolada)",
+        "markPrice": "Preço de Marca",
+        "autoClose": "Fechar Automaticamente",
+        "fundingPayments": "Pagamentos de Financiamento",
+        "direction": "Direção",
+        "entryPrice": "Preço de Entrada",
+        "sizeTips": "O valor total ou a quantidade da sua negociação, definido pela margem e alavancagem.",
+        "liquidationPrice": "Preço de Liquidação",
+        "margin": "Margem (Isolada)",
+        "slPrice": "Preço de Stop-Loss",
+        "closePosition": "Fechar {{direction}}",
+        "liquidationPriceTips": "O preço pelo qual a sua posição é automaticamente encerrada pela bolsa para evitar mais perdas quando a sua margem cai abaixo do nível de margem de manutenção.",
+        "fundingPaymentsTips": "Este é o pagamento líquido de financiamento desde que a posição foi aberta. O financiamento é uma taxa horária que os negociantes pagam ou recebem para manter o preço do contrato perp próximo ao preço real do token.",
+        "size": "Tamanho",
+        "tpPrice": "Preço de Take-Profit",
+        "marginCross": "Margem (Cross)",
+        "isolated": "Isolado",
+        "fundingGainsTips": "Este é o ganho líquido de financiamento desde que a posição foi aberta. O financiamento é uma taxa horária que os comerciantes pagam ou recebem para manter o preço do contrato perp próximo ao preço real do token.",
+        "fundingGains": "Financiamento de Ganhos",
+        "positionValue": "Valor da Posição",
+        "currentPrice": "Preço Atual",
+        "details": "Detalhes",
+        "unrealizedPnl": "PNL Não Realizado",
+        "realizedPnl": "Lucro e Prejuízo Realizado",
+        "settings": "Configurações",
+        "marginMode": "Modo de Margem"
+      },
+      "PerpsInfo": {
+        "funding": "Financiamento",
+        "24Vol": "24h Volume",
+        "title": "Info",
+        "openInterestTips": "A posição total em aberto de todos os utilizadores neste contrato.",
+        "fundingTips": "Esta é uma taxa horária que os traders pagam ou recebem para manter o preço do contrato perp próximo ao preço real do token. Se positivo, long paga short. Se negativo, short paga long.",
+        "openInterest": "Interesse em Aberto",
+        "fundingRate": "Taxa de Financiamento"
+      },
+      "PerpsIntro": {
+        "title": "O que são Perps?",
+        "desc": "Negociar contratos perpétuos envolve riscos significativos, incluindo a possibilidade de perder rapidamente seu investimento e colateral devido à alta alavancagem e volatilidade do mercado. Esse tipo de negociação pode não ser adequado para todos os usuários. Os preços podem ser afetados por taxas de financiamento e liquidez, e você pode ser automaticamente liquidado sem aviso prévio. Os dados do mercado são fornecidos pela Hyperliquid."
+      },
+      "PerpsClosePositionPopup": {
+        "title": "Fechar Posição",
+        "positionSize": "Tamanho da Posição",
+        "fee": "Taxa:",
+        "pnl": "PNL",
+        "rabbyFeeTips": "Taxa do Rabby: 0,04%",
+        "providerFeeTips": "Taxa Hyperliquid: {{fee}}",
+        "closeBtn": "Fechar {{direction}}",
+        "total": "Total",
+        "receive": "Receber",
+        "confirm": "Confirmar",
+        "closedPnl": "PNL Fechado",
+        "amount": "Montante",
+        "minimumWarning": "O valor mínimo é {{percent}}%"
+      },
+      "PerpsOpenPositionPopup": {
+        "sizeTips": "O valor total ou a quantidade da sua negociação, definido pela margem e pela alavancagem.",
+        "autoClose": "Fechar Automaticamente",
+        "minimumOrderSize": "O tamanho mínimo do pedido é de 10 $.",
+        "margin": "Margem",
+        "maximumOrderSize": "O tamanho máximo do pedido é {{amount}}",
+        "available": "disponível",
+        "tpPrice": "Preço de Take-Profit",
+        "invalidNumber": "Por favor, insira um número válido",
+        "leverage": "Alavancagem",
+        "insufficientBalance": "Saldo insuficiente",
+        "slPrice": "Preço de Stop-Loss",
+        "size": "Tamanho",
+        "stopLossWhenPriceAbove": "Stop Loss Quando o Preço Estiver Acima",
+        "stopLossWhen": "Parar Perda Quando",
+        "takeProfitWhenPriceAbove": "Levar Lucro Quando o Preço Estiver Acima",
+        "stopLossWhenPriceBelow": "Stop Loss Quando o Preço Estiver Abaixo",
+        "takeProfitWhenPriceBelow": "Levar Lucro Quando o Preço Estiver Abaixo",
+        "maxMargin": "Margem máxima é {{amount}}",
+        "upTo": "Até",
+        "minMargin": "A margem mínima é {{amount}}"
+      },
+      "PerpsOpenPositionCheckPopup": {
+        "initialMargin": "Margem Inicial",
+        "perps": "Perps",
+        "size": "Tamanho",
+        "direction": "Direção",
+        "title": "Verificar Pedido",
+        "price": "Preço",
+        "fee": "Taxa",
+        "btn": "Abrir Posição {{direction}}",
+        "autoClose": "Fecho Automático",
+        "slPrice": "Preço de Stop-Loss",
+        "margin": "Margem (Isolada)",
+        "liquidationPriceTips": "O preço ao qual a sua posição é automaticamente encerrada pela bolsa para evitar perdas adicionais quando a sua margem cai abaixo do nível de margem de manutenção.",
+        "rabbyFeeTips": "Taxa do Rabby: 0%",
+        "providerFeeTips": "Taxa Hyperliquid: {{fee}}",
+        "tpPrice": "Preço de Lucro",
+        "estLqPrice": "Preço de Liquidação Estimado",
+        "sizeTips": "O valor total ou a quantidade da sua negociação, definido pela margem e pela alavancagem.",
+        "rabbyFee": "Taxa Rabby",
+        "free": "Grátis",
+        "providerFee": "Taxa Hyperliquid",
+        "marginCross": "Margem (Cross)"
+      },
+      "action": {
+        "long": "Long: Comprar",
+        "closePosition": "Fechar Posição {{direction}}",
+        "noPermission": "A abertura de posições não é suportada na sua região.",
+        "short": "Vender",
+        "add": "Adicionar",
+        "close": "Fechar"
+      },
+      "PerpsAutoCloseModal": {
+        "setTpPrice": "Definir Preço de Lucro",
+        "setSlPrice": "Definir Preço de Stop-Loss",
+        "price": "Preço:",
+        "slPrice": "Preço de Stop Loss",
+        "tpPrice": "Preço de Fecho de Lucro",
+        "entryPrice": "Preço de Entrada:",
+        "stopLossWhen": "Stop Loss Quando",
+        "youLoss": "Você Perdeu",
+        "priceReaches": "Preço Atinge",
+        "stopLossExpectedPNL": "Stop loss esperado PNL",
+        "EntryAndCurrentPrice": "Entrada {{entryPrice}}  Atual {{price}}",
+        "priceBelow": "Preço abaixo",
+        "takeProfitExpectedPNL": "Levar lucro PNL esperado",
+        "youGain": "Você Ganha",
+        "priceAbove": "Preço acima",
+        "currentPrice": "Preço atual {{price}}",
+        "takeProfitWhen": "Levar Lucro Quando"
+      },
+      "PerpsEditMarginPopup": {
+        "title": "Ajustar margem",
+        "currentPrice": "Preço Atual",
+        "amountToReduce": "Montante a reduzir",
+        "insufficientMargin": "Margem insuficiente",
+        "perpsBalance": "Saldo de Perps",
+        "insufficientMarginToReduce": "Margem insuficiente para reduzir a posição.",
+        "available": "disponível",
+        "reduceMargin": "Reduzir Margem",
+        "addMargin": "Adicionar Margem",
+        "liqPrice": "Preço de Liquidação",
+        "amountToAdd": "Montante a adicionar",
+        "liqDistance": "Liq.Distância"
+      },
+      "PerpsAddPositionPopup": {
+        "addToLong": "Adicionar a Longo",
+        "addSize": "Adicionar Tamanho",
+        "totalSize": "Tamanho Total",
+        "addToShort": "Adicionar ao Short"
+      },
+      "needDepositFirst": "Você precisa depositar fundos primeiro.",
+      "PerpMarginModePopup": {
+        "cannotChangeMarginMode": "Não é possível alterar o Modo de Margem com posições abertas.",
+        "crossTitle": "Margem Cruzada",
+        "isolatedTitle": "Margem Isolada",
+        "isolatedDesc": "Cada posição utiliza a sua própria margem. As perdas estão limitadas a essa posição, mas pode ser liquidada mais facilmente.",
+        "crossDesc": "Todas as posições partilham a mesma margem. Isto reduz a probabilidade de uma única posição ser liquidada, mas todos os fundos de margem cruzada podem ser perdidos em movimentos de mercado extremos."
+      }
+    },
+    "devUIBuiltInPages": {
+      "builtInPageTitle": "Página Integrada"
+    },
+    "selectAccountSheetModal": {
+      "title": {
+        "sendTo": "Enviar Para",
+        "selectFromHistory": "Selecione a partir do Histórico",
+        "viewSentTx": "Enviado",
+        "addNewWhitelistAddr": "Adicionar Novo Endereço à Lista Branca",
+        "sendFrom": "Enviar De"
+      },
+      "addressEditorBadge": {
+        "nameUnknown": "Nome o endereço"
+      }
+    },
+    "Lending": {
+      "availableCard": {
+        "needSupply": "Para pedir emprestado, precisa fornecer ativos como colateral.",
+        "canBorrow": "Você pode tomar emprestado com base na sua garantia fornecida, até o limite de empréstimo.",
+        "isolated": "O poder de empréstimo e os ativos estão limitados devido ao modo de Isolamento.",
+        "emode": "No E-Mode, alguns ativos não são passíveis de empréstimo. Saia do E-Mode para ter acesso a todos os ativos.",
+        "emodeNoAssets": "Não conseguimos encontrar ativos relacionados à sua pesquisa. Tente novamente com uma categoria diferente."
+      },
+      "list": {
+        "headers": {
+          "token": "Token",
+          "myBorrows": "Meus empréstimos",
+          "apy": "APY",
+          "mySupplies": "Meus suprimentos",
+          "token_balance": "Token/Saldo",
+          "token_tvl": "Token/TVL",
+          "totalBorrowed": "Total Emprestado"
+        },
+        "item": {
+          "wrapperToken": "Token embrulhado para {{name}}"
+        }
+      },
+      "summary": {
+        "empty": {
+          "description": "Impulsionado pela AAVE. Seguro e sem taxas.",
+          "title": "Ganhe juros com os seus ativos",
+          "endDesc": "Ainda não tem depósitos. Confira abaixo os ativos recomendados para começar a ganhar juros."
+        },
+        "risky": "Arriscado",
+        "more": "Mais",
+        "lq": "Se descer abaixo de 1, a liquidação pode ser acionada.",
+        "healthy": "Saudável"
+      },
+      "repayDetail": {
+        "actions": "Reembolsar",
+        "approveAndRepay": "Aprovar e Reembolsar",
+        "tabs": {
+          "wallet": "Saldo da carteira",
+          "collateral": "Colateral"
+        },
+        "repayWith": "Reembolsar com"
+      },
+      "supplyDetail": {
+        "availableToBorrow": "Disponível para emprestar",
+        "actions": "Fornecimento",
+        "approveAndSupply": "Aprovar e Fornecer",
+        "supplyAPY": "Fornecer APY",
+        "collateralization": "Colateralização",
+        "supplyBalance": "Fornecer Balanço",
+        "enabled": "Ativado",
+        "isolatedTips": "Os seus ativos de empréstimo/ empréstimo existentes não são suportados.",
+        "unavailable": "Indisponível",
+        "supplied": "Fornecido"
+      },
+      "withdrawDetail": {
+        "actions": "Retirar",
+        "remainingSupply": "Fornecimento restante"
+      },
+      "borrowDetail": {
+        "actions": "Emprestar",
+        "approveAndBorrow": "Aprovar e Pedir Emprestado",
+        "almostReachedError": "O montante máximo disponível para empréstimo é limitado porque o limite de empréstimo do protocolo está quase atingido.",
+        "almostReachedWarning": "O limite de empréstimo do protocolo está em 100% para este ativo. Novos empréstimos não estão disponíveis.",
+        "swapDebt": "Trocar",
+        "borrowed": "Emprestado"
+      },
+      "popup": {
+        "amount": "Montante",
+        "available": "disponível",
+        "title": "Visão Geral da Transação",
+        "liquidationAt": "Liquidação a < 1.0",
+        "remainingDebt": "Divida restante"
+      },
+      "borrowOverview": {
+        "totalBorrowed": "Total Emprestado",
+        "borrowCap": "Limite de Empréstimo",
+        "availableToBorrow": "Disponível para emprestar",
+        "title": "Detalhes do Empréstimo",
+        "myBorrow": "Meu Empréstimo",
+        "liquidityPenalty": "Penalização de Liquidação",
+        "reachCapTip": "Este ativo atingiu o limite de empréstimo."
+      },
+      "supplyOverview": {
+        "totalSupplied": "Total Fornecido",
+        "title": "Detalhes da Oferta",
+        "walletBalance": "Saldo da Carteira",
+        "mySupply": "Meu Fornecimento",
+        "almostCap": "Este ativo quase atingiu o seu limite de empréstimo. Há apenas {{available}} disponível para ser emprestado a partir deste mercado.",
+        "reachCap": "Este ativo atingiu o seu limite de fornecimento. Não há nada disponível para ser fornecido a partir deste mercado.",
+        "availableToSupply": "Disponível para Fornecer",
+        "useAsCollateral": "Usar como colateral",
+        "collateral": "Colateral"
+      },
+      "risk": {
+        "checkbox": "Eu entendo o alerta e quero continuar.",
+        "warning": "Emprestar esta quantia irá reduzir o seu Fator de Saúde para um nível arriscado para liquidação.",
+        "withdrawWarning": "Retirar este montante irá baixar o seu Fator de Saúde para um nível arriscado de liquidação.",
+        "toggleCollateralWarning": "Desativar este ativo como colateral diminuirá o seu Fator de Saúde para um nível arriscado de liquidação.",
+        "emodeBlockWarning": "Desativar o E-mode irá diminuir o seu Fator de Saúde para um nível arriscado para liquidação.",
+        "blockEmodeWarning": "Não pode desativar o E-Mode porque isso pode causar liquidação. Para sair do E-Mode, forneça ou reembolse posições emprestadas."
+      },
+      "lqDescription": {
+        "over3title": "Fator de saúde > 3.0:",
+        "risky": "Arriscado",
+        "over3desc": "As suas posições estão seguras",
+        "below1desc": "A sua posição está em risco de liquidação.",
+        "desc": "Valor de liquidação",
+        "below1title": "Fator de Saúde ≤ 1.0:",
+        "warningText": "O seu Fator de Saúde está muito baixo. Para evitar a liquidação:\n1. Reembolse parte ou toda a sua dívida\n2. Adicione mais colateral",
+        "liquidation": "Liquidação: Se o seu Fator de Saúde cair abaixo de 1.0, parte do seu colateral pode ser vendida automaticamente para reembolsar a dívida. Uma penalização de liquidação será aplicada, resultando em uma perda parcial do seu colateral.",
+        "introText": "O seu Fator de Saúde mostra quão segura é a sua posição de empréstimo. Se ele cair demasiado baixo, o seu colateral pode ser liquidado."
+      },
+      "modalDesc": {
+        "availableToBorrow": "Disponível para emprestar",
+        "maxAmount": "Este é o montante máximo que você pode emprestar com base em todo o seu colateral fornecido. O seu poder total de empréstimo é calculado multiplicando o valor de mercado de cada ativo colateral pelo seu LTV Máx, e, em seguida, somando os resultados.",
+        "availableToBorrowDesc": "Você pode pegar emprestado com base na sua garantia fornecida e até que o limite de empréstimo seja alcançado.",
+        "lqDesc": "Quando ocorre uma liquidação, os liquidatários reembolsam até 50% do montante emprestado em aberto em nome do devedor. Em troca, podem comprar o colateral a um desconto e manter a diferença (penalização de liquidação) como um bónus.",
+        "isolatedTitle": "O ativo não pode ser utilizado como colateral.",
+        "isolatedDesc": "Este ativo pode ser utilizado apenas como garantia no modo de isolamento, onde não é possível fornecer outras garantias de ativos para empréstimos. Os ativos utilizados como garantia no modo de isolamento podem ser emprestados apenas até um limite de endividamento específico.",
+        "isolatedSupplyDesc": "O uso de colaterais é limitado devido ao modo de isolamento.",
+        "globalIsolatedDesc": "No modo de Isolamento, não pode fornecer outros ativos como colateral. Um limite global de dívida limita o poder de empréstimo do ativo isolado. Para sair do modo de isolamento, desative o UNI como colateral antes de emprestar outro ativo.",
+        "maxLTV": "A taxa máxima de LTV representa o poder máximo de empréstimo de uma garantia específica. Por exemplo, se uma garantia tem um LTV de 75%, o usuário pode emprestar até 0,75 em valor de ETH na moeda principal para cada 1 ETH em valor de garantia."
+      },
+      "supplied": "Fornecido",
+      "gotIt": "Entendi",
+      "submitted": "submetido",
+      "netWorth": "Valor líquido",
+      "estDailyEarning": "Est. Ganhos Diários",
+      "selectChain": "Selecionar Cadeia",
+      "borrowed": "Emprestado",
+      "hfTitle": "Fator de Saúde",
+      "enterAmount": "Introduza o montante",
+      "hf": "Fator de saúde",
+      "estNetApy": "Est. rendimento líquido APY",
+      "toggleCollateralDetail": {
+        "disable": "Desativar {{asset}} como Colateral",
+        "error": "Há um erro com o serviço AAVE. Por favor, tente novamente mais tarde.",
+        "enable": "Ativar {{asset}} como Colateral",
+        "actions": "Alternar {{asset}} Colateral"
+      },
+      "toggleCollateralModal": {
+        "openTitle": "Revisar Ativação",
+        "closeTitle": "Revisar Desativação",
+        "exitIsolationModeTitle": "Sair do Modo de Isolamento",
+        "enableIsolationModeTitle": "Ativar o Modo de Isolamento",
+        "closeDesc": "Desativar este ativo como colateral afeta o seu poder de empréstimo e o Fator de Saúde.",
+        "exitIsolationModeDesc": "Você sairá do modo de Isolamento e outros tokens agora podem ser usados como colateral.",
+        "riskToLiquidationText": "Não pode mudar o uso para o modo de colateral para esta moeda, porque irá causar uma chamada de colateral.",
+        "openDesc": "Ativar este ativo como colateral aumenta seu poder de empréstimo e o Fator de Saúde. No entanto, ele pode ser liquidado se seu fator de saúde cair abaixo de 1.",
+        "enableIsolationModeDesc": "Está a entrar no modo de Isolamento. No modo de Isolamento, não pode fornecer outros ativos como colateral. Um teto global de dívida limita o poder de empréstimo do ativo isolado. Para sair do modo de isolamento, desative o CRV como colateral antes de emprestar outro ativo.",
+        "toggleRiskTexts": {
+          "canNotUseThisCurrencyAsCollateral": "Não pode usar esta moeda como colateral.",
+          "canNotSwitchUsageAsCollateralMode": "Não é possível alternar o modo de utilização como colateral para esta moeda, pois isso causar uma chamada de colateral.",
+          "doNotHaveSuppliesInThisCurrency": "Não tem suprimentos nesta moeda.",
+          "zeroLTVWithdrawBlocked": "Ativos com LTV zero ({{assets}}) devem ser retirados ou desativados como garantia para realizar esta ação."
+        }
+      },
+      "searchMarket": "Pesquisar Mercado",
+      "selectMarket": "Selecionar Mercado",
+      "manageEmode": {
+        "actions": {
+          "enable": "Ativar E-Mode",
+          "disable": "Desativar E-Mode"
+        },
+        "guide": {
+          "description": "O E-Mode aumenta o seu LTV para uma categoria de ativos selecionada.",
+          "buttonTitle": "Gerir E-Mode",
+          "title": "Modo de eficiência (E-Mode)"
+        },
+        "categorySelector": {
+          "header": {
+            "asset": "Ativos"
+          },
+          "label": "Categoria de ativos",
+          "placeholder": "Selecionar",
+          "desc": "Todas as posições de empréstimo fora desta categoria devem ser fechadas para ativar esta categoria."
+        },
+        "overview": {
+          "row": {
+            "borrowable": "Emprestável",
+            "asset": "Ativo",
+            "collateral": "Colateral"
+          },
+          "title": "Categoria de ativo"
+        },
+        "title": "Gerir E-Mode",
+        "enabled": "• Ativado",
+        "unavailable": "• Indisponível",
+        "disableTitle": "Desativar",
+        "unavailableTips": "Os seus ativos de empréstimo/empréstimo existentes não são suportados.",
+        "description": "Ativar o E-Mode permite maximizar o seu poder de empréstimo. No entanto, o empréstimo está restrito a ativos dentro da categoria selecionada.",
+        "debtSwapSelector": {
+          "header": {
+            "borrow": "Meus empréstimos",
+            "assets": "Token/Saldo"
+          },
+          "title": "Selecionar Token de Empréstimo"
+        },
+        "collateralSwapSelector": {
+          "header": {
+            "collateral": "O meu colateral",
+            "assets": "Token"
+          },
+          "title": "Selecionar Token de Colateral"
+        }
+      },
+      "disabled": "DESABILITADO",
+      "debtSwap": {
+        "actions": {
+          "title": "Troca de Dívida",
+          "select": "Selecionar",
+          "swapTo": "Trocar para",
+          "borrowed": "Emprestado",
+          "amount": "Quantidade"
+        },
+        "overview": {
+          "title": "Visão Geral da Transação",
+          "borrowAPY": "Empréstimo apy",
+          "borrowValueAfter": "Saldo de empréstimo após troca"
+        },
+        "button": {
+          "swap": "Trocar"
+        },
+        "borrowBalance": "Saldo de empréstimo",
+        "title": "Trocar Posição de Empréstimo",
+        "entryTips": "Troque o seu ativo emprestado com um clique, reduzindo etapas e taxas.",
+        "lpDangerWarning": "O seu fator de saúde após esta troca ficará criticamente baixo e pode resultar em liquidação. Por favor, escolha um ativo diferente ou reduza o valor da troca para se manter seguro.",
+        "lpRiskWarning": "Fator de saúde baixo após a troca. Sua posição terá um risco maior de liquidação.",
+        "priceImpactTips": "Impacto de preço elevado ({{lostValue}}). Esta rota pode retornar mais devido à baixa liquidez ou ao tamanho pequeno da ordem."
+      },
+      "hfTips": {
+        "more": "Mais",
+        "desc": "Se cair abaixo de 1,0, a sua garantia pode ser liquidada."
+      },
+      "disableBorrowTip": {
+        "desc": "Sem fornecimento: Para emprestar, você precisa fornecer ativos como garantia."
+      },
+      "netApy": "Net APY",
+      "totalBorrowed": "Total emprestado",
+      "totalSupplied": "Total fornecido",
+      "repayWithCollateral": {
+        "action": {
+          "title": "Reembolsar com {{collateral}}"
+        },
+        "overview": {
+          "title": "Visão Geral da Transação",
+          "borrowValueAfter": "Após o reembolso, saldo de empréstimo",
+          "collateralValueAfter": "Saldo de colateral após reembolso"
+        },
+        "button": {
+          "repay": "Reembolsar"
+        },
+        "collateralNotEnough": "O seu saldo de colateral é inferior ao montante selecionado.",
+        "toRepay": "Montante esperado para reembolso",
+        "repayWith": "Garantia para reembolso com"
+      }
+    },
+    "address": {
+      "receiveAssets": {
+        "importTip": {
+          "title": "Importar uma wallet",
+          "desc": "Adicionar um endereço existente com fundos."
+        },
+        "title": "Receber ativos",
+        "btnCopyAddress": "Copiar Endereço"
+      }
+    }
+  },
+  "constant": {
+    "IMPORTED_HD_KEYRING_NEED_PASSPHRASE": "Importado por Seed Phrase (Passphrase)",
+    "IMPORTED_HD_KEYRING": "Importado por Seed Phrase",
+    "KEYRING_TYPE_TEXT": {
+      "HdKeyring": "Criado por Seed Phrase",
+      "SimpleKeyring": "Importado por Private Key",
+      "WatchAddressKeyring": "Contacto"
+    }
+  },
+  "background": {
+    "transactionWatcher": {
+      "more": "clique para ver mais informações",
+      "completed": "Transação concluída",
+      "submitted": "Transação enviada",
+      "failed": "Transação falhou",
+      "txFailedMoreContent": "{{chain}} #{{nonce}} falhou. Clique para ver mais.",
+      "txCompleteMoreContent": "{{chain}} #{{nonce}} concluído. Clique para ver mais."
+    },
+    "error": {
+      "noCurrentAccount": "Sem conta atual",
+      "notFoundGnosisKeyring": "Nenhum keyring Gnosis encontrado",
+      "emptyAccount": "a conta atual está vazia",
+      "invalidMnemonic": "A seed phrase é inválida, por favor verifique!",
+      "unknownAbi": "ABI de contrato desconhecido",
+      "invalidChainId": "ID de cadeia inválido",
+      "canNotUnlock": "Não é possível desbloquear sem um cofre anterior",
+      "notFoundTxGnosisKeyring": "Nenhuma transação encontrada no keyring Gnosis",
+      "duplicateAccount": "A conta que está a tentar importar é duplicada",
+      "notFindChain": "Não foi possível encontrar a cadeia {{chain}}",
+      "invalidPrivateKey": "A chave privada é inválida",
+      "invalidAddress": "Endereço inválido",
+      "addKeyring404": "falha ao adicionar keyring, keyring não está definido",
+      "notFoundKeyringByAddress": "Não é possível encontrar o keyring pelo endereço",
+      "errorWords_one": "1 palavra incorreta",
+      "errorWords_other": "{{count}} palavras incorretas"
+    }
+  },
+  "bluetooth": {
+    "permissions_alert": {
+      "title": "\"O 'Rabby Wallet' Gostaria de Usar Bluetooth\"",
+      "open_settings": "OK",
+      "message": "Rabby Wallet utiliza acesso Bluetooth para conectar Ledger",
+      "cancel": "Não Permitir"
+    },
+    "update_firmware_alert": {
+      "cancel": "Cancelar",
+      "update": "Atualizar",
+      "message": "Consulte como atualizar o firmware do Ledger no suporte do Ledger",
+      "title": "Firmware da Ledger desatualizado"
+    },
+    "powered_off_alert": {
+      "cancel": "Não Permitir",
+      "message": "Por favor, ative o Bluetooth para usar esta funcionalidade.",
+      "open_settings": "OK",
+      "title": "Bluetooth está desligado"
+    }
+  },
+  "common": {
+    "dialog": {
+      "button": {
+        "cancel": "Cancelar"
+      }
+    },
+    "dialogs": {
+      "blockedTransaction": {
+        "title": "Transação Bloqueada",
+        "content": "Esta transação interage com um endereço que está na lista de sanções do OFAC.",
+        "button": "Eu Sei"
+      }
+    }
+  }
+}

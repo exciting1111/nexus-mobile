@@ -1,0 +1,195 @@
+require 'base64'
+
+platform :ios do
+  private_lane :prepare_apple_sign do |opts|
+    # setup_ci
+
+    # enforce configuration
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      sdk: "iphoneos*",
+      path: './ios/RabbyMobile.xcodeproj',
+      profile_name: opts[:type] == 'adhoc' ? 'RabbyMobileAdHocRegression' : 'RabbyMobileAppStore',
+      bundle_identifier: opts[:type] == 'adhoc' ? 'com.debank.rabby-mobile-regression' : 'com.debank.rabby-mobile',
+    )
+
+    ENV['CONFIGURATION'] = opts[:type] == 'adhoc' ? 'Regression' : 'Release'
+
+    match(
+      type: opts[:type],
+      app_identifier: opts[:type] == 'adhoc' ? 'com.debank.rabby-mobile-regression' : 'com.debank.rabby-mobile',
+      profile_name: opts[:type] == 'adhoc' ? 'RabbyMobileAdHocRegression' : 'RabbyMobileAppStore',
+      readonly: true,
+      shallow_clone: true,
+      verbose: false,
+      force_for_new_devices: true,
+      clone_branch_directly: true)
+  end
+
+  desc "Release for the iOS adhoc"
+  lane :adhoc do
+    prepare_apple_sign(type: 'adhoc', profile_name: "RabbyMobileAdHocRegression")
+
+    gym(
+      scheme: 'RabbyMobileRegression',
+      workspace: './ios/RabbyMobile.xcworkspace',
+      configuration: 'Regression',
+      output_directory: "./ios/Package/adhoc",
+      build_path: "./ios/Package/adhoc",
+      destination: "generic/platform=iOS",
+      clean: true,
+      ## if you wanna output log to stdout, uncomment below 2 lines
+      # xcodebuild_formatter: '',
+      # suppress_xcode_output: false,
+      skip_package_pkg: true,
+      export_method: 'ad-hoc',
+      # export_method: 'release-testing',
+      export_options: {
+        method: 'ad-hoc',
+        signingStyle: 'manual',
+        provisioningProfiles: {
+          "com.debank.rabby-mobile-regression": "RabbyMobileAdHocRegression"
+        },
+        manifest: {
+          appURL: "https://download.rabby.io/downloads/wallet-mobile/ios/rabbymobile.ipa",
+          displayImageURL: "https://download.rabby.io/downloads/wallet-mobile/ios/icon_57x57@57w.png",
+          fullSizeImageURL: "https://download.rabby.io/downloads/wallet-mobile/ios/icon_512x512@512w.png",
+        }
+      })
+
+    # # shell executeb on ./fastlane directory, add `sh "pwd"` below to check it
+    # sh "/usr/libexec/PlistBuddy -c \"Set:items:0:metadata:title Rabby Wallet\" ../ios/Package/adhoc/manifest.plist"
+  end
+
+  desc "Valid ios adhoc"
+  lane :hashcheck do
+    gym(
+      scheme: 'RabbyMobile',
+      workspace: './ios/RabbyMobile.xcworkspace',
+      configuration: 'Release',
+      output_directory: "./ios/Package",
+      # build_path: "./ios/Package/adhoc",
+      destination: "generic/platform=iOS",
+      clean: true,
+      ## if you wanna output log to stdout, uncomment below 2 lines
+      xcodebuild_formatter: '',
+      suppress_xcode_output: false,
+      skip_package_ipa: true,
+      skip_package_pkg: true,
+      export_method: 'ad-hoc',
+      derived_data_path: './ios/DerivedData',
+      archive_path: './ios/Package/RabbyMobile.xcarchive',
+      skip_codesigning: true,
+      # skip_archive: true,
+      # xcargs: "-jobs 1", # 禁用并行编译
+      xcconfig: "./ios/RabbyMobile/ValidHash.xcconfig",
+      buildlog_path: './ios/Package'
+    )
+  end
+
+  desc "Release for the iOS production"
+  lane :appstore do
+      prepare_apple_sign(type: 'appstore', profile_name: "RabbyMobileAppStore")
+      gym(
+        scheme: 'RabbyMobile',
+        workspace: './ios/RabbyMobile.xcworkspace',
+        configuration: 'Release',
+        output_directory: "./ios/Package/appstore",
+        build_path: "./ios/Package/appstore",
+        destination: "generic/platform=iOS",
+        skip_profile_detection: true,
+        clean: true,
+        ## if you wanna output log to stdout, uncomment below 2 lines
+        # xcodebuild_formatter: '',
+        # suppress_xcode_output: false,
+        skip_package_pkg: true,
+        export_method: "app-store",
+        verbose: true,
+        export_options: {
+          method: "app-store",
+          signingStyle: 'manual',
+          provisioningProfiles: {
+            "com.debank.rabby-mobile-regression": "RabbyMobileAdHocRegression",
+            "com.debank.rabby-mobile": "RabbyMobileAppStore"
+          }
+        })
+      pilot(
+        apple_id: '6474381673',
+        username: ENV["RABBY_MOBILE_PILOT_USERNAME"],
+        ipa: "./ios/Package/appstore/RabbyMobile.ipa",
+        skip_waiting_for_build_processing: true,
+        distribute_only: ENV["RABBY_MOBILE_PILOT_DISTRIBUTE_ONLY"] || false,
+      )
+  end
+end
+
+platform :android do
+  private_lane :write_key_store do
+    # keystore is stored as base64 from environment variable
+    if !ENV["RABBY_MOBILE_ANDROID_KEY_STORE"].empty?
+      File.open("../android/app/app-upload-key.keystore", 'w') do |file|
+        file.write(Base64.decode64(ENV["RABBY_MOBILE_ANDROID_KEY_STORE"]))
+      end
+    end
+  end
+
+  private_lane :build_rabbymobile_app do |opts|
+    gradle(tasks: opts[:tasks], project_dir: './android', properties: {
+      "MYAPP_UPLOAD_STORE_FILE" => "app-upload-key.keystore",
+      "MYAPP_UPLOAD_STORE_PASSWORD" => ENV['RABBY_MOBILE_ANDROID_STORE_PASSWORD'],
+      "MYAPP_UPLOAD_KEY_ALIAS" => ENV['RABBY_MOBILE_ANDROID_KEY_ALIAS'],
+      "MYAPP_UPLOAD_KEY_PASSWORD" => ENV['RABBY_MOBILE_ANDROID_KEY_PASSWORD']
+    }.merge(opts.fetch(:properties, {})))
+
+    android_version_code = android_get_version_code(gradle_file: "./android/app/build.gradle")
+    android_version_name = android_get_version_name(gradle_file: "./android/app/build.gradle")
+  end
+
+  desc "Valid android adhoc"
+  lane :hashcheck do |options|
+    gradle(task: 'clean', project_dir: './android')
+    build_rabbymobile_app(tasks: ['assembleHash'], properties: {
+      "org.gradle.daemon"=>false,
+      "org.gradle.caching"=>false,
+      "org.gradle.parallel"=>false,
+      "android.useAndroidX"=>true,
+      "android.buildfeatures.buildId"=>false,
+      "hashcheck" => true,
+    })
+
+    apk_path = lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]
+
+    destination_path = options[:destination_path]
+    if destination_path
+      begin
+        FileUtils.cp(apk_path, destination_path)
+        UI.success("Successfully copied APK to: #{destination_path}")
+      rescue => ex
+        UI.user_error!("Failed to copy APK from '#{apk_path}' to '#{destination_path}'. Error: #{ex}")
+      end
+    else
+      sh "shasum -a 256 #{apk_path}"
+    end
+
+  end
+
+
+  desc "Release for the Android selfhost"
+  lane :selfhost do
+    write_key_store
+    gradle(task: 'clean', project_dir: './android')
+    build_channel = ENV['buildchannel'] || 'selfhost-reg'
+    if build_channel == 'selfhost-reg'
+      build_rabbymobile_app(tasks: ['assembleRegression'])
+    else
+      build_rabbymobile_app(tasks: ['assembleRelease'])
+    end
+  end
+
+  desc "Release for the Android playstore"
+  lane :playstore do
+    write_key_store
+    gradle(task: 'clean', project_dir: './android')
+    build_rabbymobile_app(tasks: ['assembleRelease', 'bundleRelease'])
+  end
+end

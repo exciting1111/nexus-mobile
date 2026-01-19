@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Bold.otf",
+      "sha1": "cdd39cc963a7fb3093abd2cfaa4340a42bd4ebf1"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Heavy.otf",
+      "sha1": "1fcebff6d74754c73a3333344aab894fd953b6c2"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Medium.otf",
+      "sha1": "cb9b87e13f1dae7302b892436538873085eb2d66"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Regular.otf",
+      "sha1": "5fb4e36094c38db08a95bde5e075dc0efaf50039"
+    },
+    {
+      "path": "assets/custom/InpageBridgeWeb3.js",
+      "sha1": "551e54c759796ab91e1f398b438e5e480dd39e40"
+    },
+    {
+      "path": "assets/custom/bignumber.js@9.3.1-bignumber.min.js",
+      "sha1": "09467302eb67e5242fce85907c41404d8736bbe3"
+    },
+    {
+      "path": "assets/custom/lightweight-charts.standalone.production.js",
+      "sha1": "32a6a882c2c565b348c39d15921863350e11b4ec"
+    },
+    {
+      "path": "assets/custom/vconsole.min.js",
+      "sha1": "cc79a9522ef457188c18283228b2b8759b7faf1e"
+    }
+  ]
+}

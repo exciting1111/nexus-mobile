@@ -1,0 +1,43 @@
+# node
+npm-debug.log
+yarn-error.log
+node_modules
+package-lock.json
+folder-alias.json
+
+# tarball from `yarn pack`
+*.tgz
+
+# eslint cache
+.eslintcache
+
+.DS_STORE
+.idea
+.vscfavoriterc
+# Build preview message
+preview-build-message.txt
+
+/packages*/*/coverage
+/packages*/*/dist
+/packages*/*/docs
+
+# yarn v3 (w/o zero-install)
+# See: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# typescript
+/packages*/*/*.tsbuildinfo
+
+/scripts/inpage-bridge/dist
+
+# Cursor AI rules (local development only)
+.cursor/
+.claude/
+docs
+CLAUDE*.md

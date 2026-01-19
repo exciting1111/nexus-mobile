@@ -1,0 +1,131 @@
+name: Build and deploy iOS release
+on:
+  push:
+    tags:
+      - 'ios-release-*'
+    branches:
+      - 'ci/ios-release-*'
+      - ci/universal-release-*
+  workflow_dispatch:
+    inputs:
+      REALLY_UPLOAD:
+        required: true
+        type: boolean
+        default: true
+      SENTRY_DISABLE_AUTO_UPLOAD:
+        required: true
+        type: boolean
+        default: false
+      macos_machine_location:
+        required: true
+        type: choice
+        options:
+          - 'mobile'
+          - 'mobile-local'
+        default: 'mobile'
+  workflow_call:
+    secrets:
+      KEYCHAIN_PASS:
+        required: true
+
+defaults:
+  run:
+    shell: bash -ieol pipefail {0}
+
+env:
+  BUILD_TARGET_PLATFORM: ios
+
+jobs:
+  setup:
+    name: iOS-release-build
+    strategy:
+      matrix:
+        include:
+          - host: macOS
+            machine_loc: ${{ inputs.macos_machine_location }}
+    runs-on:
+      - self-hosted
+      - ${{ matrix.host }}
+      - ${{ matrix.machine_loc }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Actions Variables
+        id: actionvars
+        shell: bash
+        run: |
+          trigger_date=$(date +'%Y%m%d%H%M%S')
+          echo "trigger_date=$trigger_date" >> "$GITHUB_OUTPUT"
+
+          flatten_refname=${GITHUB_REF_NAME//\//'_'}
+          flatten_refname=${flatten_refname//\./'_'}
+          echo "flatten_refname=$flatten_refname" >> "$GITHUB_OUTPUT"
+
+      # - name: Setup Nodejs and Yarn
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 22
+
+      # - name: Setup Ruby & Fastlane
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: '2.7'
+      #     bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        id: setup-xcode
+        with:
+          # use specific version rather than 'latest-stable' if multiple Xcodes installed
+          xcode-version: '16.2'
+
+      - name: Install dependencies && Build app
+        run: |
+          cd apps/mobile;
+          rm -rf node_modules;
+          yarn install;
+          yarn postinstall;
+
+          if [ "$INPUT_MOBILE_LOC" != "mobile-local" ]; then
+            RABBY_MOBILE_UNLOCK_KEYCHAIN_PASS=${{ secrets.KEYCHAIN_PASS }}
+          fi
+          # security unlock-keychain -p $RABBY_MOBILE_UNLOCK_KEYCHAIN_PASS ~/Library/Keychains/login.keychain-db
+          security unlock-keychain -p $RABBY_MOBILE_UNLOCK_KEYCHAIN_PASS login.keychain
+          ./scripts/deploy-ios-appstore.sh
+
+        env:
+          KEYCHAIN_PASS: ${{ secrets.KEYCHAIN_PASS }}
+          RABBY_MOBILE_BUILD_BUCKET: ${{ secrets.RABBY_MOBILE_BUILD_BUCKET }}
+          RABBY_MOBILE_KR_PWD: ${{ secrets.RABBY_MOBILE_KR_PWD }}
+          RABBY_MOBILE_SAFE_API_KEY: ${{ secrets.MOBILE_SAFE_API_KEY }}
+          RABBY_MOBILE_CODE: ${{ secrets.RABBY_MOBILE_CODE2 }}
+          RABBY_MOBILE_SENTRY_AUTH_TOKEN2: ${{ secrets.RABBY_MOBILE_SENTRY_AUTH_TOKEN2 }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.RABBY_MOBILE_SENTRY_AUTH_TOKEN2 }}
+          MATCH_PASSWORD: ${{ secrets.RABBY_MOBILE_MATCH_PASSWORD }}
+          INPUT_MOBILE_LOC: ${{ inputs.macos_machine_location }}
+          REALLY_UPLOAD: ${{ inputs.REALLY_UPLOAD }}
+          SENTRY_DISABLE_AUTO_UPLOAD: ${{ inputs.SENTRY_DISABLE_AUTO_UPLOAD }}
+          CONFIGURATION: release
+          TYPE: appstore
+          RABBY_MOBILE_BUILD_ENV: production
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.RABBY_MOBILE_APPLE_TRANSPORT_PASSWORD }}
+          RABBY_MOBILE_PILOT_USERNAME: ${{ secrets.RABBY_MOBILE_PILOT_USERNAME }}
+          RABBY_MOBILE_LARK_CHAT_URL: ${{ secrets.LARK_CHAT_URL }}
+          RABBY_MOBILE_LARK_CHAT_SECRET: ${{ secrets.LARK_CHAT_SECRET }}
+          RABBY_ROBOT_LARK_APP_ID: ${{ secrets.RABBY_ROBOT_LARK_APP_ID }}
+          RABBY_ROBOT_LARK_APP_SECRET: ${{ secrets.RABBY_ROBOT_LARK_APP_SECRET }}
+          # see more details on https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
+          GIT_ACTIONS_JOB_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TRIGGERING_ACTOR: ${{ github.triggering_actor }}
+          GIT_COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          GIT_REF_NAME: ${{ github.ref_name }}
+          GIT_REF_URL: ${{ github.server_url }}/${{ github.repository }}/tree/${{ github.ref_name }}
+          GITHUB_REF: ${{ github.ref }}
+
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: rabbymobile-${{ steps.actionvars.outputs.flatten_refname }}-${{ steps.actionvars.outputs.trigger_date }}
+      #     path: |
+      #       ./apps/mobile/ios/Package/appstore/*.ipa
+      #       ./apps/mobile/ios/Package/appstore/*.zip
+      #     retention-days: 90
