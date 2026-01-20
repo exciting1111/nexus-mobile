@@ -69,7 +69,7 @@ export const themeColors = {
     'neutral-bg-3': 'rgba(28, 31, 43, 1)',
     'neutral-bg-4': 'rgba(32, 36, 54, 1)',
     'neutral-card1': 'rgba(255, 255, 255, 0.06)',
-    'neutral-card-1': 'rgba(255, 255, 255, 0.06)',
+    'neutral-card-1': 'rgba(30, 41, 59, 1)',
     'neutral-card2': 'rgba(255, 255, 255, 0.06)',
     'neutral-card-2': 'rgba(255, 255, 255, 0.06)',
     'neutral-card3': 'rgba(255, 255, 255, 0.06)',
@@ -140,9 +140,9 @@ export const themeColorsNext2024 = {
     'neutral-bg-gray': 'rgba(246, 247, 247, 1)',
   },
   dark: {
-    'brand-default': 'rgba(112, 132, 255, 1)',
-    'brand-default-light': 'rgba(112, 132, 255, 0.7)',
-    'brand-default-icon': 'rgba(82, 103, 232, 1)',
+    'brand-default': 'rgba(99, 102, 241, 1)',
+    'brand-default-light': 'rgba(99, 102, 241, 0.7)',
+    'brand-default-icon': 'rgba(99, 102, 241, 1)',
 
     'brand-light-1': 'rgba(112, 132, 255, 0.12)',
     'brand-light-2': 'rgba(112, 132, 255, 0.25)',
@@ -175,9 +175,9 @@ export const themeColorsNext2024 = {
     'blue-disable': 'rgba(10, 132, 255, 0.4)',
     'blue-light-4': 'rgba(10, 132, 255, 0.7)',
 
-    'neutral-bg-0': 'rgba(19, 20, 22, 1)',
-    'neutral-bg-1': 'rgba(19, 20, 22, 1)',
-    'neutral-bg-2': 'rgba(35, 36, 40, 1)',
+    'neutral-bg-0': 'rgba(15, 23, 42, 1)',
+    'neutral-bg-1': 'rgba(15, 23, 42, 1)',
+    'neutral-bg-2': 'rgba(30, 41, 59, 1)',
     'neutral-bg-3': 'rgba(28, 28, 29, 1)',
     'neutral-bg-4': 'rgba(56, 59, 65, 1)',
     'neutral-bg-5': 'rgba(47, 49, 53, 0.5)',
@@ -185,7 +185,7 @@ export const themeColorsNext2024 = {
     'neutral-title-1': 'rgba(247, 250, 252, 1)',
     /** @deprecated just for compability, use classcial's, not next's */
     'neutral-title-2': 'rgba(255, 255, 255, 1)',
-    'neutral-card-1': 'rgba(255, 255, 255, 0.06)',
+    'neutral-card-1': 'rgba(30, 41, 59, 1)',
     /** @deprecated just for compability, use classcial's, not next's */
     'neutral-card-2': 'rgba(242, 244, 247, 1)',
     'neutral-body': 'rgba(211, 216, 224, 1)',
