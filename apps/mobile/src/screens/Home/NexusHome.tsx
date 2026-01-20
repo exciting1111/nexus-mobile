@@ -1,41 +1,60 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
-import { useThemeColors } from '@/hooks/theme';
-import { AssetCard } from '@/components/Nexus/AssetCard';
-import { ActionButtons } from '@/components/Nexus/ActionButtons';
+import { StyleSheet, View, ScrollView, StatusBar, SafeAreaView } from 'react-native';
+import { NexusBackground } from '@/components/Nexus/NexusBackground';
+import { NexusAssetCard } from '@/components/Nexus/NexusAssetCard';
+import { useNavigation } from '@react-navigation/native';
 import { TabsMultiAssets } from '../Address/components/MultiAssets/TabsMultiAssets';
-import { useMyAccounts } from '@/hooks/account';
-import { useSortAddressList } from '../Address/useSortAddressList';
 import { useAccountInfo } from '../Address/components/MultiAssets/hooks';
 
 export const NexusHome = () => {
-  const colors = useThemeColors();
-  const { accounts } = useMyAccounts({ disableAutoFetch: true });
-  const sortedAccounts = useSortAddressList(accounts);
+  const navigation = useNavigation();
   const { myTop10Addresses } = useAccountInfo();
 
-  // Mock data for now, will connect to real data later
-  const totalBalance = "12,345.67";
-  const change = "+5.24%";
-  const currentAddress = sortedAccounts[0]?.address || "0x0000...0000";
+  const handleDeposit = () => {
+    // TODO: Navigate to Deposit
+    console.log('Deposit pressed');
+  };
+
+  const handleSend = () => {
+    navigation.navigate('Send');
+  };
+
+  const handleSwap = () => {
+    navigation.navigate('Swap');
+  };
+
+  const handleReceive = () => {
+    navigation.navigate('Receive');
+  };
 
   return (
-    <View style={[styles.container, { backgroundColor: '#09090B' }]}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        <AssetCard 
-          balance={totalBalance}
-          change={change}
-          address={currentAddress}
-        />
-        
-        <ActionButtons />
-
-        <View style={styles.assetsContainer}>
-          <TabsMultiAssets 
-            sceneAccountList={myTop10Addresses}
+    <View style={styles.container}>
+      <StatusBar barStyle="light-content" />
+      <NexusBackground />
+      
+      <SafeAreaView style={styles.safeArea}>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          {/* Header Space */}
+          <View style={styles.headerSpace} />
+          
+          {/* Main Asset Card */}
+          <NexusAssetCard
+            totalUsd="$128,450.00"
+            changePercent="+2.5%"
+            onDeposit={handleDeposit}
+            onSend={handleSend}
+            onSwap={handleSwap}
+            onReceive={handleReceive}
           />
-        </View>
-      </ScrollView>
+
+          {/* Assets List */}
+          <View style={styles.assetsContainer}>
+            <TabsMultiAssets 
+              sceneAccountList={myTop10Addresses}
+            />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };
@@ -43,12 +62,19 @@ export const NexusHome = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#09090B',
+  },
+  safeArea: {
+    flex: 1,
   },
   scrollContent: {
-    paddingBottom: 100, // Space for TabBar
+    paddingBottom: 100,
+  },
+  headerSpace: {
+    height: 20,
   },
   assetsContainer: {
-    marginTop: 32,
+    marginTop: 10,
     flex: 1,
     minHeight: 500,
   },

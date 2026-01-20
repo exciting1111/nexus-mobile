@@ -37,6 +37,7 @@ import {
   RerenderDetector,
   useRendererDetect,
 } from './components/Perf/PerfDetector';
+import { NexusSplash } from '@/components/Nexus/NexusSplash';
 
 BigNumber.config({ EXPONENTIAL_AT: [-20, 100] });
 
@@ -66,6 +67,11 @@ const MainScreen = React.memo(({ rabbitCode }: AppProps) => {
   useRendererDetect({ name: 'MainScreen' });
 
   const { couldRender } = useAppCouldRender();
+  const [showSplash, setShowSplash] = React.useState(true);
+
+  const handleSplashFinish = React.useCallback(() => {
+    setShowSplash(false);
+  }, []);
 
   return (
     <AppProvider
@@ -73,6 +79,7 @@ const MainScreen = React.memo(({ rabbitCode }: AppProps) => {
       <RerenderDetector name="UnderAppProvider" />
       <BottomSheetModalProvider>
         <ScreenSceneAccountProvider>
+          {showSplash && <NexusSplash onFinish={handleSplashFinish} />}
           {couldRender && <MemoziedAppNav />}
         </ScreenSceneAccountProvider>
       </BottomSheetModalProvider>
