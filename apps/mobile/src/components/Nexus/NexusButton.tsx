@@ -20,7 +20,7 @@ export const NexusButton = ({ title, onPress, variant = 'primary', disabled }: N
         style={[styles.container, disabled && styles.disabled]}
       >
         <LinearGradient
-          colors={['#3B82F6', '#9333EA']}
+          colors={['#38BDF8', '#818CF8']} // Electric Blue to Indigo
           start={{x: 0, y: 0}}
           end={{x: 1, y: 0}}
           style={styles.gradient}
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   container: {
     width: 280,
     height: 56,
-    borderRadius: 28,
+    borderRadius: 16, // Web Design Token: 1rem
     overflow: 'hidden',
     marginVertical: 8,
   },
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.2)',
-    borderRadius: 28,
+    borderRadius: 16, // Web Design Token: 1rem
   },
   secondaryText: {
     color: 'white',

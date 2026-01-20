@@ -104,7 +104,7 @@ export const NexusBackground = () => {
 const styles = StyleSheet.create({
   backgroundContainer: {
     flex: 1,
-    backgroundColor: '#09090B', // Zinc-950 equivalent
+    backgroundColor: '#0F172A', // Web Design Token: oklch(0.12 0.03 260)
     overflow: 'hidden',
   },
   blob: {
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     right: -width * 0.1,
     width: 500,
     height: 500,
-    backgroundColor: 'rgba(59, 130, 246, 0.4)', // Blue-500
+    backgroundColor: 'rgba(56, 189, 248, 0.4)', // Electric Blue
   },
   blob2: {
     bottom: -height * 0.1,

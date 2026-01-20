@@ -1,22 +1,6 @@
-import NormalScreenContainer from '@/components/ScreenContainer/NormalScreenContainer';
 import React, { useCallback, useState } from 'react';
-
-import {
-  StyleSheet,
-  View,
-  Text,
-  StyleProp,
-  TextStyle,
-  TouchableWithoutFeedback,
-  Keyboard,
-} from 'react-native';
-import { RootNames } from '@/constant/layout';
-import { KEYRING_CLASS, KEYRING_TYPE } from '@rabby-wallet/keyring-utils';
+import { StyleSheet, View, Text, TouchableWithoutFeedback, Keyboard, StatusBar } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { useTheme2024 } from '@/hooks/theme';
-import { createGetStyles2024 } from '@/utils/styles';
-import { ProgressBar } from '@/components2024/progressBar';
-import { Button } from '@/components2024/Button';
 import { apiMnemonic } from '@/core/apis';
 import { activeAndPersistAccountsByMnemonics } from '@/core/apis/mnemonic';
 import useAsync from 'react-use/lib/useAsync';
@@ -25,51 +9,29 @@ import { contactService, keyringService } from '@/core/services';
 import { Skeleton } from '@rneui/themed';
 import { useRabbyAppNavigation } from '@/hooks/navigation';
 import { StackActions, useRoute } from '@react-navigation/native';
-import { GetNestedScreenRouteProp } from '@/navigation-type';
-import { useSafeSetNavigationOptions } from '@/components/AppStatusBar';
-import LinearGradient from 'react-native-linear-gradient';
 import { replaceToFirst } from '@/utils/navigation';
 import { useCreateAddressProc } from '@/hooks/address/useNewUser';
-import HeaderTitleText2024 from '@/components2024/ScreenHeader/HeaderTitleText';
 import { WalletIcon } from '@/components2024/WalletIcon/WalletIcon';
+import { KEYRING_CLASS, KEYRING_TYPE } from '@rabby-wallet/keyring-utils';
+import { RootNames } from '@/constant/layout';
+import { NexusBackground } from '@/components/Nexus/NexusBackground';
+import { NexusButton } from '@/components/Nexus/NexusButton';
+import { NexusProgressBar } from '@/components/Nexus/NexusProgressBar';
+import { NexusCard } from '@/components/Nexus/NexusCard';
+import { HeaderBackPressable } from '@/hooks/navigation';
+import LinearGradient from 'react-native-linear-gradient';
 
 const MAX_ACCOUNT_COUNT = 50;
-const PROGRESS_BAR_STEP = {
-  ONE: 1,
-  TWO: 2,
-  THREE: 3,
-};
+const PROGRESS_BAR_STEP = { ONE: 1, TWO: 2, THREE: 3 };
 
-function MainListBlocks() {
+function CreateNewAddress(): JSX.Element {
   const { t } = useTranslation();
   const [newAddress, setNewAddress] = useState('');
-  const { styles } = useTheme2024({ getStyle });
   const navigation = useRabbyAppNavigation();
-  const { setNavigationOptions } = useSafeSetNavigationOptions();
-
-  const route =
-    useRoute<
-      GetNestedScreenRouteProp<'AddressNavigatorParamList', 'CreateNewAddress'>
-    >();
+  const route = useRoute<any>();
   const state = route.params;
 
-  const getHeaderTitle = React.useCallback(() => {
-    return (
-      <HeaderTitleText2024 style={styles.title}>
-        {state?.title || state?.isFirstCreate
-          ? t('screens.addressStackTitle.CreateNewAddress')
-          : t('screens.addressStackTitle.ConfrimAddress')}
-      </HeaderTitleText2024>
-    );
-  }, [state?.isFirstCreate, state?.title, styles.title, t]);
-
-  React.useEffect(() => {
-    setNavigationOptions({
-      headerTitle: getHeaderTitle,
-    });
-  }, [setNavigationOptions, getHeaderTitle, state?.title]);
-
-  const { value, loading, error } = useAsync(async () => {
+  const { value, loading } = useAsync(async () => {
     let seedPhrase = '';
     let accountsToCreate: any[] | undefined = [];
     if (state?.mnemonics) {
@@ -77,92 +39,43 @@ function MainListBlocks() {
       const currentAddressArr = state?.accounts;
       const api = apiMnemonic.getKeyringByMnemonic(seedPhrase, '');
       for (let i = 0; i < MAX_ACCOUNT_COUNT; i++) {
-        console.log('requestKeyring res find count', i);
         const res = await api?.getAddresses(i, i + 1);
-        const idx = currentAddressArr?.findIndex(
-          item => item === res?.[0].address,
-        );
+        const idx = currentAddressArr?.findIndex(item => item === res?.[0].address);
         if (idx === -1) {
           accountsToCreate = res;
-          break; // has find a address
+          break;
         }
       }
     } else {
-      // first create
       seedPhrase = await apiMnemonic.generatePreMnemonic();
-      const Keyring = keyringService.getKeyringClassForType(
-        KEYRING_CLASS.MNEMONIC,
-      ) as any;
+      const Keyring = keyringService.getKeyringClassForType(KEYRING_CLASS.MNEMONIC) as any;
       const keyring = new Keyring({ mnemonic: seedPhrase, passphrase: '' });
       accountsToCreate = keyring?.getAddresses(0, 1);
     }
     const words = seedPhrase.split(' ');
     const address = accountsToCreate?.[0].address;
     setNewAddress(address);
-    return {
-      seedPhrase,
-      words,
-      accountsToCreate,
-      addressIndex: accountsToCreate?.[0].index,
-    };
+    return { seedPhrase, words, accountsToCreate, addressIndex: accountsToCreate?.[0].index };
   });
-
-  const WalletAddress = useCallback(
-    ({ style }: { style?: StyleProp<TextStyle> }) => {
-      return (
-        <Text style={StyleSheet.flatten([styles.addressText, style])}>
-          {ellipsisAddress(newAddress)}
-        </Text>
-      );
-    },
-    [styles.addressText, newAddress],
-  );
 
   const { storeSeedPharse, storeAddressList } = useCreateAddressProc();
   const handleContinue = useCallback(() => {
-    storeAddressList([
-      {
-        address: newAddress,
-        aliasName: '',
-        index: value?.addressIndex,
-      },
-    ]);
-    console.log('exe handleContinue');
-
-    if (value?.seedPhrase) {
-      storeSeedPharse(value?.seedPhrase);
-    }
+    storeAddressList([{ address: newAddress, aliasName: '', index: value?.addressIndex }]);
+    if (value?.seedPhrase) storeSeedPharse(value?.seedPhrase);
 
     if (state?.noSetupPassword) {
-      navigation.dispatch(
-        StackActions.push(RootNames.StackAddress, {
-          screen: RootNames.CreateChooseBackup,
-          params: {},
-        }),
-      );
+      navigation.dispatch(StackActions.push(RootNames.StackAddress, { screen: RootNames.CreateChooseBackup, params: {} }));
     } else {
       navigation.replace(RootNames.StackAddress, {
         screen: RootNames.SetPassword2024,
-        params: {
-          finishGoToScreen: RootNames.CreateChooseBackup,
-          delaySetPassword: true,
-          isFirstCreate: !!state?.isFirstCreate,
-        },
+        params: { finishGoToScreen: RootNames.CreateChooseBackup, delaySetPassword: true, isFirstCreate: !!state?.isFirstCreate },
       });
     }
   }, [newAddress, value, navigation, state, storeSeedPharse, storeAddressList]);
 
   const handleDone = useCallback(async () => {
-    contactService.setAlias({
-      address: newAddress,
-      alias: '',
-    });
-    await activeAndPersistAccountsByMnemonics(
-      state?.mnemonics || '',
-      '',
-      value?.accountsToCreate || [],
-      false,
-    );
+    contactService.setAlias({ address: newAddress, alias: '' });
+    await activeAndPersistAccountsByMnemonics(state?.mnemonics || '', '', value?.accountsToCreate || [], false);
     replaceToFirst(RootNames.StackAddress, {
       screen: RootNames.ImportSuccess2024,
       params: {
@@ -179,124 +92,110 @@ function MainListBlocks() {
   }, [newAddress, state, value]);
 
   const currentProgressCount = React.useMemo(() => {
-    return state?.useCurrentSeed
-      ? PROGRESS_BAR_STEP.THREE
-      : state?.noSetupPassword
-      ? PROGRESS_BAR_STEP.TWO
-      : PROGRESS_BAR_STEP.ONE;
+    return state?.useCurrentSeed ? PROGRESS_BAR_STEP.THREE : state?.noSetupPassword ? PROGRESS_BAR_STEP.TWO : PROGRESS_BAR_STEP.ONE;
   }, [state]);
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-      }}>
-      <View style={[styles.container]}>
-        {!!state?.isFirstCreate && (
-          <ProgressBar
-            amount={PROGRESS_BAR_STEP.THREE}
-            currentCount={currentProgressCount}
-          />
-        )}
-        <Text style={[styles.text]}>
-          {t('page.nextComponent.createNewAddress.addressTopTips')}
-        </Text>
-        <WalletIcon
-          style={styles.icon}
-          address={newAddress}
-          width={66}
-          height={66}
-        />
-        {loading ? (
-          <Skeleton
-            circle
-            width={254}
-            height={42}
-            animation="wave"
-            LinearGradientComponent={LinearGradient}
-            style={[styles.item1]}
-          />
-        ) : (
-          <WalletAddress style={styles.walletAddress} />
-        )}
-        <Button
-          disabled={loading}
-          containerStyle={styles.btnContainer}
-          type="primary"
-          title={t('page.nextComponent.createNewAddress.Continue')}
-          onPress={state?.useCurrentSeed ? handleDone : handleContinue}
-        />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <NexusBackground />
+        
+        <View style={styles.header}>
+          <HeaderBackPressable style={{ marginLeft: 16 }} />
+          <Text style={styles.headerTitle}>Create Wallet</Text>
+          <View style={{ width: 40 }} />
+        </View>
+
+        <View style={styles.content}>
+          {!!state?.isFirstCreate && (
+            <NexusProgressBar step={currentProgressCount} total={3} />
+          )}
+
+          <Text style={styles.tips}>
+            {t('page.nextComponent.createNewAddress.addressTopTips')}
+          </Text>
+
+          <NexusCard style={styles.addressCard}>
+            <View style={styles.addressContent}>
+              <WalletIcon style={styles.icon} address={newAddress} width={66} height={66} />
+              {loading ? (
+                <Skeleton circle width={200} height={30} animation="wave" LinearGradientComponent={LinearGradient} style={{ marginTop: 16 }} />
+              ) : (
+                <Text style={styles.addressText}>{ellipsisAddress(newAddress)}</Text>
+              )}
+            </View>
+          </NexusCard>
+
+          <View style={styles.footer}>
+            <NexusButton
+              disabled={loading}
+              title={t('page.nextComponent.createNewAddress.Continue')}
+              onPress={state?.useCurrentSeed ? handleDone : handleContinue}
+            />
+          </View>
+        </View>
       </View>
     </TouchableWithoutFeedback>
   );
 }
 
-function CreateNewAddress(): JSX.Element {
-  const { colors2024 } = useTheme2024({ getStyle });
-  return (
-    <NormalScreenContainer
-      overwriteStyle={{
-        backgroundColor: colors2024['neutral-bg-1'],
-      }}>
-      <MainListBlocks />
-    </NormalScreenContainer>
-  );
-}
-
-const getStyle = createGetStyles2024(({ colors2024 }) => ({
-  item1: {
-    marginTop: 10,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0F172A',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: 56,
+    marginTop: 44,
+  },
+  headerTitle: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '700',
+    fontFamily: 'SF Pro Rounded',
+  },
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: 20,
+    paddingHorizontal: 20,
+  },
+  tips: {
+    color: 'rgba(255, 255, 255, 0.6)',
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 30,
+    fontFamily: 'SF Pro Rounded',
+  },
+  addressCard: {
+    width: '100%',
+    alignItems: 'center',
+    paddingVertical: 30,
+  },
+  addressContent: {
+    alignItems: 'center',
+    width: '100%',
   },
   icon: {
-    marginTop: 29,
-    marginBottom: 0,
-    borderRadius: 16,
-  },
-  btnContainer: {
-    width: '100%',
-    position: 'absolute',
-    bottom: 56,
-  },
-  text: {
-    color: colors2024['neutral-secondary'],
-    fontWeight: '400',
-    fontSize: 17,
-    marginTop: 34,
-    textAlign: 'center',
-    fontFamily: 'SF Pro Rounded',
-  },
-  container: {
-    height: '100%',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    gap: 12,
-    paddingHorizontal: 20,
-    marginBottom: 20,
+    borderRadius: 20,
   },
   addressText: {
-    fontSize: 16,
-    lineHeight: 20,
-    fontWeight: '400',
-    color: colors2024['neutral-secondary'],
-    fontFamily: 'SF Pro Rounded',
-  },
-  walletAddress: {
-    marginTop: 10,
-    fontSize: 36,
-    lineHeight: 42,
+    color: 'white',
+    fontSize: 32,
     fontWeight: '700',
-    color: colors2024['neutral-title-1'],
+    marginTop: 16,
     fontFamily: 'SF Pro Rounded',
-    textAlign: 'center',
   },
-  title: {
-    color: colors2024['neutral-title-1'],
-    fontWeight: '800',
-    fontSize: 20,
-    fontFamily: 'SF Pro Rounded',
-    lineHeight: 24,
+  footer: {
+    position: 'absolute',
+    bottom: 50,
+    width: '100%',
+    alignItems: 'center',
   },
-}));
+});
 
 export default CreateNewAddress;

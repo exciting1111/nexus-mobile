@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, ScrollView, StatusBar, SafeAreaView } from 'react-native';
+import React, { useCallback } from 'react';
+import { StyleSheet, View, StatusBar, SafeAreaView } from 'react-native';
 import { NexusBackground } from '@/components/Nexus/NexusBackground';
 import { NexusAssetCard } from '@/components/Nexus/NexusAssetCard';
 import { useNavigation } from '@react-navigation/native';
@@ -11,7 +11,6 @@ export const NexusHome = () => {
   const { myTop10Addresses } = useAccountInfo();
 
   const handleDeposit = () => {
-    // TODO: Navigate to Deposit
     console.log('Deposit pressed');
   };
 
@@ -27,33 +26,35 @@ export const NexusHome = () => {
     navigation.navigate('Receive');
   };
 
+  // This component will be rendered inside the Tabs header
+  const HeaderComponent = useCallback(() => {
+    return (
+      <View style={styles.headerContainer}>
+        <View style={styles.headerSpace} />
+        <NexusAssetCard
+          totalUsd="$128,450.00"
+          changePercent="+2.5%"
+          onDeposit={handleDeposit}
+          onSend={handleSend}
+          onSwap={handleSwap}
+          onReceive={handleReceive}
+        />
+      </View>
+    );
+  }, []);
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       <NexusBackground />
       
       <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={styles.scrollContent}>
-          {/* Header Space */}
-          <View style={styles.headerSpace} />
-          
-          {/* Main Asset Card */}
-          <NexusAssetCard
-            totalUsd="$128,450.00"
-            changePercent="+2.5%"
-            onDeposit={handleDeposit}
-            onSend={handleSend}
-            onSwap={handleSwap}
-            onReceive={handleReceive}
+        <View style={styles.contentContainer}>
+          <TabsMultiAssets 
+            onIndexChange={() => {}}
+            OverViewComponent={HeaderComponent}
           />
-
-          {/* Assets List */}
-          <View style={styles.assetsContainer}>
-            <TabsMultiAssets 
-              sceneAccountList={myTop10Addresses}
-            />
-          </View>
-        </ScrollView>
+        </View>
       </SafeAreaView>
     </View>
   );
@@ -67,15 +68,13 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
   },
-  scrollContent: {
-    paddingBottom: 100,
+  contentContainer: {
+    flex: 1,
+  },
+  headerContainer: {
+    paddingBottom: 20,
   },
   headerSpace: {
     height: 20,
-  },
-  assetsContainer: {
-    marginTop: 10,
-    flex: 1,
-    minHeight: 500,
   },
 });
