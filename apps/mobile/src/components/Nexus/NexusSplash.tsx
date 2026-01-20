@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View, Dimensions } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -25,6 +26,9 @@ export const NexusSplash = ({ onFinish }: NexusSplashProps) => {
   const opacity = useSharedValue(1);
 
   useEffect(() => {
+    // Hide native splash screen immediately when this component mounts
+    SplashScreen.hide();
+
     // Animation Sequence
     progress.value = withSequence(
       // Phase 1: Gather energy (0 -> 0.5)
